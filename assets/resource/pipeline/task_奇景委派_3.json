@@ -1,0 +1,327 @@
+{
+  "$__mpe_config_task_奇景委派_3": {
+    "$__mpe_code": {
+      "coordinateMode": "absolute-v1",
+      "filename": "task_奇景委派_3",
+      "prefix": "",
+      "savedViewport": {
+        "x": -245,
+        "y": 1766,
+        "zoom": 0.61
+      },
+      "version": "v1.10.1"
+    }
+  },
+  "backBTN_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2698,
+        "y": -2319
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "claim_3"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "bluedot": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2230,
+        "y": -2519
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          -61,
+          32,
+          39,
+          39
+        ]
+      },
+      "type": "Click"
+    },
+    "max_hit": 4,
+    "next": [
+      "step1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          12,
+          99,
+          696,
+          792
+        ],
+        "template": [
+          "bluedot.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "claim_3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3158,
+        "y": -2300
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          452,
+          110,
+          242,
+          1057
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "emptylogic2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 952,
+        "y": -2315
+      }
+    },
+    "next": [
+      "reddot",
+      "emptylogic3"
+    ],
+    "post_delay": 1000
+  },
+  "emptylogic3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1810,
+        "y": -2291
+      }
+    },
+    "next": [
+      "bluedot",
+      "backBTN_3"
+    ]
+  },
+  "reddot": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1473,
+        "y": -2540
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          -63,
+          34,
+          41,
+          36
+        ]
+      },
+      "type": "Click"
+    },
+    "max_hit": 4,
+    "next": [
+      "弹窗关闭"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          7,
+          87,
+          699,
+          840
+        ],
+        "template": [
+          "reddot.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "step1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2229,
+        "y": -2151
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "step2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "快速选择"
+        ],
+        "roi": [
+          69,
+          1054,
+          292,
+          83
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "step2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2229,
+        "y": -1928
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "弹窗关闭2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "开始委派"
+        ],
+        "roi": [
+          359,
+          1057,
+          294,
+          76
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "task_奇景委派": {
+    "$__mpe_code": {
+      "position": {
+        "x": 553,
+        "y": -2318
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          432,
+          54,
+          5,
+          40
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "emptylogic2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "完成1次奇景委派"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "弹窗关闭": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1472,
+        "y": -2139
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          -102,
+          670,
+          215,
+          194
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "reddot",
+      "emptylogic2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "委派结束"
+        ],
+        "roi": [
+          91,
+          199,
+          539,
+          191
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "弹窗关闭2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2230,
+        "y": -1704
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          -69,
+          603,
+          184,
+          196
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "bluedot",
+      "emptylogic3"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "委派开始"
+        ],
+        "roi": [
+          152,
+          320,
+          413,
+          136
+        ]
+      },
+      "type": "OCR"
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "$__mpe_config_task_素材秘境_2": {
+    "$__mpe_code": {
+      "coordinateMode": "absolute-v1",
+      "filename": "task_素材秘境_2",
+      "prefix": "",
+      "savedViewport": {
+        "x": -629,
+        "y": 1215,
+        "zoom": 0.61
+      },
+      "version": "v1.10.1"
+    }
+  },
+  "backBTN_4": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3403,
+        "y": -1271
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "claim_7"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "backBTN2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3101,
+        "y": -1270
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "backBTN_4"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "claim_7": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3726,
+        "y": -1242
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          452,
+          110,
+          242,
+          1057
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "dig": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2731,
+        "y": -1426
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "max_hit": 10,
+    "next": [
+      "dig_sp",
+      "emptylogic",
+      "backBTN2"
+    ],
+    "post_delay": 2130,
+    "recognition": {
+      "param": {
+        "roi": [
+          275,
+          836,
+          176,
+          175
+        ],
+        "template": [
+          "wakuang1.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "dig_sp": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2734,
+        "y": -1049
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "emptylogic"
+    ],
+    "post_delay": 3659,
+    "recognition": {
+      "param": {
+        "template": [
+          "dig_sp.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "emptylogic": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2405,
+        "y": -1232
+      }
+    },
+    "next": [
+      "dig",
+      "dig_sp",
+      "backBTN2"
+    ]
+  },
+  "kuangdong": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1844,
+        "y": -1363
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "switchoff",
+      "switchon"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "黄金矿洞"
+        ],
+        "roi": [
+          377,
+          388,
+          317,
+          134
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "purchase_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1546,
+        "y": -1023
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "kuangdong"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "购买"
+        ],
+        "roi": [
+          368,
+          859,
+          252,
+          85
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "purchase_1click": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1539,
+        "y": -1248
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "purchase_2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "键购买"
+        ],
+        "roi": [
+          526,
+          1089,
+          193,
+          80
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "switchoff": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2108,
+        "y": -1365
+      }
+    },
+    "next": [
+      "emptylogic"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "关"
+        ],
+        "roi": [
+          366,
+          1035,
+          94,
+          41
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "switchon": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2107,
+        "y": -1132
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "emptylogic"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "开"
+        ],
+        "roi": [
+          369,
+          1036,
+          92,
+          40
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "task_素材秘境": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1254,
+        "y": -1365
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          440,
+          49,
+          -15,
+          41
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "purchase_1click",
+      "kuangdong"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "探索5次素材秘境"
+        ]
+      },
+      "type": "OCR"
+    }
+  }
+}

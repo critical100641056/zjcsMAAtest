@@ -1,0 +1,333 @@
+{
+    "$__mpe_config_task_公会讨伐": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "task_公会讨伐",
+            "prefix": "",
+            "savedViewport": {
+                "x": -972,
+                "y": 3270,
+                "zoom": 0.4
+            },
+            "version": "v1.10.1"
+        }
+    },
+    "$__mpe_sticker_便签_副本1_task_公会讨伐": {
+        "$__mpe_code": {
+            "color": "yellow",
+            "content": "未制作公会讨伐，仅用于贡献+收取公会资源",
+            "height": 160,
+            "position": {
+                "x": 3967,
+                "y": -7385
+            },
+            "width": 200
+        }
+    },
+    "$__mpe_sticker_便签_副本2_task_公会讨伐": {
+        "$__mpe_code": {
+            "color": "yellow",
+            "content": "todo 返回到家园或者任务界面",
+            "height": 160,
+            "position": {
+                "x": 5583,
+                "y": -6730
+            },
+            "width": 200
+        }
+    },
+    "backBTN公会": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4250,
+                "y": -7193
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "大厅"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "公会back2.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "backBTN公会2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5110,
+                "y": -6476
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "claim挂机资源"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "claim挂机资源": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5556,
+                "y": -7192
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    -109,
+                    31,
+                    69,
+                    56
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "空白关闭2"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    426,
+                    898,
+                    293,
+                    129
+                ],
+                "template": [
+                    "reddot公会.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "task_公会讨伐": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3959,
+                "y": -7173
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    457,
+                    56,
+                    -39,
+                    33
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "backBTN公会"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "参与1次公会讨伐"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "大厅": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4513,
+                "y": -7189
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    -7,
+                    -169,
+                    13,
+                    119
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "捐赠图标"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "公会大厅"
+                ],
+                "roi": [
+                    12,
+                    239,
+                    593,
+                    447
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "捐赠": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5123,
+                "y": -7197
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "max_hit": 3,
+        "next": [
+            "捐赠",
+            "确认弹窗"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "捐赠"
+                ],
+                "roi": [
+                    195,
+                    907,
+                    333,
+                    73
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "捐赠图标": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4806,
+                "y": -7181
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    22,
+                    -59,
+                    -46,
+                    13
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "捐赠"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "公会捐赠"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "确认弹窗": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5129,
+                "y": -6907
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "捐赠",
+            "空白关闭"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "确定"
+                ],
+                "roi": [
+                    364,
+                    696,
+                    261,
+                    82
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "空白关闭": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5120,
+                "y": -6690
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "backBTN公会2"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    65,
+                    1052,
+                    597,
+                    202
+                ]
+            },
+            "type": "DirectHit"
+        }
+    },
+    "空白关闭2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5563,
+                "y": -6891
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "roi": [
+                    341,
+                    811,
+                    126,
+                    215
+                ]
+            },
+            "type": "DirectHit"
+        }
+    }
+}

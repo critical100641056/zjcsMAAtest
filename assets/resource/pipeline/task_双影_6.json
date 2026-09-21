@@ -1,0 +1,291 @@
+{
+    "$__mpe_config_task_双影_6": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "task_双影_6",
+            "prefix": "",
+            "savedViewport": {
+                "x": -3141,
+                "y": 2632,
+                "zoom": 0.8
+            },
+            "version": "v1.10.1"
+        }
+    },
+    "backBTN": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5742,
+                "y": -2693
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "claim"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "claim": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6038,
+                "y": -2662
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "expected": [
+                    "领取"
+                ],
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "claim宝石": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5164,
+                "y": -2702
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    -32,
+                    31,
+                    16,
+                    11
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "空白"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    204,
+                    873,
+                    123,
+                    126
+                ],
+                "template": [
+                    "reddot.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "task_双影": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3963,
+                "y": -3038
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    431,
+                    50,
+                    -3,
+                    42
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "匹配2"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "双影幻境击破第3波"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "匹配2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4378,
+                "y": -3050
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "接受界面"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "匹配"
+                ],
+                "roi": [
+                    506,
+                    1081,
+                    59,
+                    30
+                ]
+            },
+            "type": "OCR"
+        },
+        "timeout": 300000
+    },
+    "接受界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4376,
+                "y": -2747
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "匹配2",
+            "检测",
+            "等待logic"
+        ],
+        "post_delay": 20000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "接受"
+                ],
+                "roi": [
+                    356,
+                    1007,
+                    330,
+                    237
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "检测": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4375,
+                "y": -2413
+            }
+        },
+        "next": [
+            "接受界面"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "取消匹配"
+                ],
+                "roi": [
+                    368,
+                    1051,
+                    345,
+                    101
+                ]
+            },
+            "type": "OCR"
+        },
+        "timeout": 300000
+    },
+    "检测宝石本结束界面": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4899,
+                "y": -2693
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    -58,
+                    932,
+                    116,
+                    34
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "claim宝石"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "战斗结束"
+                ],
+                "roi": [
+                    199,
+                    157,
+                    338,
+                    205
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "空白": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5441,
+                "y": -2687
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    551,
+                    826,
+                    149,
+                    52
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "backBTN"
+        ],
+        "post_delay": 500
+    },
+    "等待logic": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4641,
+                "y": -2679
+            }
+        },
+        "next": [
+            "检测宝石本结束界面"
+        ],
+        "timeout": 610000
+    }
+}

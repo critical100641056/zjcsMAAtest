@@ -1,0 +1,655 @@
+{
+  "$__mpe_config_task_商店_1": {
+    "$__mpe_code": {
+      "coordinateMode": "absolute-v1",
+      "filename": "task_商店_1",
+      "prefix": "",
+      "savedViewport": {
+        "x": -365,
+        "y": 564,
+        "zoom": 0.61
+      },
+      "version": "v1.10.1"
+    }
+  },
+  "$__mpe_sticker_便签_task_商店_1": {
+    "$__mpe_code": {
+      "color": "yellow",
+      "content": "购买无折扣的狗粮和精华",
+      "height": 160,
+      "position": {
+        "x": 2074,
+        "y": -551
+      },
+      "width": 200
+    }
+  },
+  "$__mpe_sticker_便签_副本1_task_商店_1": {
+    "$__mpe_code": {
+      "color": "yellow",
+      "content": "这里是刷新次数。maxhit=5是刷到4.8w",
+      "height": 160,
+      "position": {
+        "x": 2413,
+        "y": -547
+      },
+      "width": 200
+    }
+  },
+  "1-2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1721,
+        "y": -175
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "1-3"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          299,
+          391,
+          125,
+          36
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "1-2宝库": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2699,
+        "y": -178
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "1-3宝库"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          299,
+          391,
+          125,
+          36
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "1-3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1722,
+        "y": 14
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "2排+3排",
+      "补充购买狗粮精华"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          520,
+          390,
+          139,
+          38
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "1-3宝库": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2694,
+        "y": 20
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "baoku2-1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          520,
+          390,
+          139,
+          38
+        ]
+      },
+      "type": "DirectHit"
+    },
+    "repeat": 2,
+    "repeat_delay": 542
+  },
+  "2排+3排": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2062,
+        "y": -359
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          50,
+          220,
+          85,
+          -20
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "2排+3排",
+      "补充购买狗粮精华",
+      "refresh",
+      "切换到宝库"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          3,
+          451,
+          702,
+          572
+        ],
+        "template": [
+          "9zhe.png",
+          "5折.png",
+          "6折.png",
+          "8折.png",
+          "4折.png",
+          "7zhe.png"
+        ],
+        "threshold": [
+          0.88
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "backBTN_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3561,
+        "y": -365
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "claim_1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back_middle.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "baoku2-1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3003,
+        "y": -361
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "baoku2-2"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          52,
+          675,
+          152,
+          34
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "baoku2-2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3004,
+        "y": -160
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "baoku3-1",
+      "baoku3-2",
+      "backBTN_1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          292,
+          673,
+          137,
+          35
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "baoku3-1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3276,
+        "y": -389
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          54,
+          225,
+          81,
+          -32
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "baoku3-2",
+      "backBTN_1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          6,
+          734,
+          62,
+          66
+        ],
+        "template": [
+          "5折.png",
+          "6折.png",
+          "4折.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "baoku3-2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3277,
+        "y": -58
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          7,
+          151,
+          -24,
+          -73
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "backBTN_1"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          289,
+          782,
+          142,
+          145
+        ],
+        "template": [
+          "heka.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "claim_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3924,
+        "y": -333
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          452,
+          110,
+          242,
+          1057
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "cube_home": {
+    "$__mpe_code": {
+      "position": {
+        "x": 236,
+        "y": -308
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "cube_sheet"
+    ],
+    "post_delay": 213,
+    "recognition": {
+      "param": {
+        "roi": [
+          610,
+          961,
+          110,
+          86
+        ],
+        "template": [
+          "cube_home.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "cube_sheet": {
+    "$__mpe_code": {
+      "position": {
+        "x": 493,
+        "y": -309
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "task_claim",
+      "task_商店"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "任务"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "firstitem1-1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1724,
+        "y": -376
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "1-2"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          60,
+          392,
+          143,
+          34
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "firstitem1-1宝库": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2701,
+        "y": -366
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "1-2宝库"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          60,
+          392,
+          143,
+          34
+        ]
+      },
+      "type": "DirectHit"
+    }
+  },
+  "refresh": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2409,
+        "y": -368
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "max_hit": 6,
+    "next": [
+      "firstitem1-1"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "刷新"
+        ],
+        "roi": [
+          450,
+          95,
+          244,
+          52
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "task_claim": {
+    "$__mpe_code": {
+      "position": {
+        "x": 936,
+        "y": -525
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "task_商店"
+    ],
+    "post_wait_freezes": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          452,
+          110,
+          242,
+          1057
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "task_商店": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1375,
+        "y": -308
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          418,
+          43,
+          68,
+          61
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "firstitem1-1"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "家园商店购买"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "切换到宝库": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2413,
+        "y": -77
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "firstitem1-1宝库"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "宝库"
+        ],
+        "roi": [
+          276,
+          1183,
+          317,
+          71
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "家园": {
+    "$__mpe_code": {
+      "position": {
+        "x": -27,
+        "y": -309
+      }
+    },
+    "next": [
+      "cube_home"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "家园"
+        ],
+        "roi": [
+          297,
+          1231,
+          124,
+          47
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "补充购买狗粮精华": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2062,
+        "y": 73
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          -8,
+          153,
+          19,
+          -82
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "补充购买狗粮精华",
+      "refresh",
+      "切换到宝库"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          6,
+          443,
+          696,
+          581
+        ],
+        "template": [
+          "狗粮.png",
+          "精华.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  }
+}

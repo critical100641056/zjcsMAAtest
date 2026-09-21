@@ -1,0 +1,555 @@
+{
+  "$__mpe_config_每日委托4个": {
+    "$__mpe_code": {
+      "coordinateMode": "absolute-v1",
+      "filename": "每日委托4个",
+      "prefix": "",
+      "savedViewport": {
+        "x": 1322,
+        "y": 4004,
+        "zoom": 0.8
+      },
+      "version": "v1.10.1"
+    }
+  },
+  "$__mpe_sticker_便签_副本1_每日委托4个": {
+    "$__mpe_code": {
+      "color": "yellow",
+      "content": "首先，重金悬赏和神谕委托一定要做，因此，首先识别是否有这两个 \n识别到之后，需要识别是提交还是前往。前往也分两种，1种是去地图探索获取，一种是直接合成。\n每次完成之后，查看今日可提取次数，如果是0/4说明完成，可以返回。\n\n\n提交会直接完成，后方的卡片会上移。\n前往会有两种弹窗，分别检查一键提交 和 确认 ",
+      "height": 460,
+      "position": {
+        "x": -2169,
+        "y": -4955
+      },
+      "width": 217
+    }
+  },
+  "cube_home_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": -1509,
+        "y": -4875
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "cube_sheet_1"
+    ],
+    "post_delay": 213,
+    "recognition": {
+      "param": {
+        "roi": [
+          610,
+          961,
+          110,
+          86
+        ],
+        "template": [
+          "cube_home.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "cube_sheet_1": {
+    "$__mpe_code": {
+      "position": {
+        "x": -1249,
+        "y": -4833
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "切换到委托"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "任务"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "一键提交合成": {
+    "$__mpe_code": {
+      "position": {
+        "x": 132,
+        "y": -4952
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "好感度提升",
+      "逻辑节点2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "一键提交"
+        ],
+        "roi": [
+          320,
+          681,
+          319,
+          114
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "从地图返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 388,
+        "y": -3899
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "家园_2"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back_middle.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "切换到委托": {
+    "$__mpe_code": {
+      "position": {
+        "x": -986,
+        "y": -4845
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "逻辑节点2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "委托"
+        ],
+        "roi": [
+          138,
+          1155,
+          571,
+          114
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "去往地图确认": {
+    "$__mpe_code": {
+      "position": {
+        "x": 99,
+        "y": -4721
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "识别小齿轮自动"
+    ],
+    "post_delay": 5876,
+    "recognition": {
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          362,
+          665,
+          278,
+          149
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "好感度提升": {
+    "$__mpe_code": {
+      "position": {
+        "x": 697,
+        "y": -4992
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          115,
+          760,
+          -185,
+          29
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "逻辑节点2"
+    ],
+    "pre_delay": 1295,
+    "recognition": {
+      "param": {
+        "expected": [
+          "好感度提升"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "如果没有能做的就上划": {
+    "$__mpe_code": {
+      "position": {
+        "x": -264,
+        "y": -4198
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          130,
+          815,
+          449,
+          173
+        ],
+        "duration": [
+          596
+        ],
+        "end": [
+          [
+            186,
+            437,
+            434,
+            147
+          ]
+        ],
+        "end_hold": [
+          687
+        ]
+      },
+      "type": "Swipe"
+    },
+    "max_hit": 10,
+    "next": [
+      "逻辑节点2"
+    ]
+  },
+  "家园_2": {
+    "$__mpe_code": {
+      "position": {
+        "x": -1755,
+        "y": -4847
+      }
+    },
+    "next": [
+      "cube_home_1"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "家园"
+        ],
+        "roi": [
+          297,
+          1231,
+          124,
+          47
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "托管": {
+    "$__mpe_code": {
+      "position": {
+        "x": 387,
+        "y": -4404
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "识别是否完成"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "开始托管"
+        ],
+        "roi": [
+          222,
+          835,
+          266,
+          125
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 40000
+  },
+  "普通委托": {
+    "$__mpe_code": {
+      "position": {
+        "x": -268,
+        "y": -4679
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          12,
+          99,
+          -23,
+          -54
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "一键提交合成",
+      "去往地图确认",
+      "直接提交"
+    ],
+    "post_delay": 654,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          17,
+          163,
+          685,
+          933
+        ],
+        "template": [
+          "紫色背景.png",
+          "橙色背景.png",
+          "紫色背景2.png",
+          "紫色背景3.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "特殊委托2种": {
+    "$__mpe_code": {
+      "position": {
+        "x": -265,
+        "y": -4975
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          124,
+          317,
+          -10,
+          7
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "一键提交合成",
+      "去往地图确认",
+      "直接提交"
+    ],
+    "post_delay": 560,
+    "recognition": {
+      "param": {
+        "expected": [
+          "神谕委托",
+          "重金悬赏"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "直接提交": {
+    "$__mpe_code": {
+      "position": {
+        "x": 95,
+        "y": -4433
+      }
+    },
+    "next": [
+      "好感度提升",
+      "逻辑节点2"
+    ]
+  },
+  "识别到全部完成": {
+    "$__mpe_code": {
+      "position": {
+        "x": -681,
+        "y": -4603
+      }
+    },
+    "next": [
+      "返回家园"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "今日可提交次数：0/4"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "识别小齿轮自动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 387,
+        "y": -4734
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "托管"
+    ],
+    "post_delay": 597,
+    "recognition": {
+      "param": {
+        "roi": [
+          188,
+          773,
+          143,
+          345
+        ],
+        "template": [
+          "auto.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "识别是否完成": {
+    "$__mpe_code": {
+      "position": {
+        "x": 386,
+        "y": -4125
+      }
+    },
+    "next": [
+      "从地图返回",
+      "识别是否完成"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "1/1",
+          "3/3",
+          "4/4"
+        ],
+        "roi": [
+          53,
+          858,
+          140,
+          103
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "返回家园": {
+    "$__mpe_code": {
+      "position": {
+        "x": 698,
+        "y": -4712
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "next": [
+      "返回家园2"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back_middle.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "返回家园2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 1012,
+        "y": -4690
+      }
+    },
+    "action": {
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "roi": [
+          5,
+          1168,
+          142,
+          111
+        ],
+        "template": [
+          "back_middle.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "逻辑节点2": {
+    "$__mpe_code": {
+      "position": {
+        "x": -692,
+        "y": -4846
+      }
+    },
+    "next": [
+      "识别到全部完成",
+      "特殊委托2种",
+      "普通委托",
+      "如果没有能做的就上划"
+    ],
+    "on_error": [
+      "返回家园"
+    ],
+    "recognition": {
+      "type": "OCR"
+    }
+  }
+}
