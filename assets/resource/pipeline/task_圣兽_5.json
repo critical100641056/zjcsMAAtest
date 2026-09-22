@@ -3,7 +3,7 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790066194653,
+            "lastSyncTime": 1790067949326,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_圣兽_5.json",
@@ -130,10 +130,10 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    431,
-                    50,
-                    -3,
-                    42
+                    517,
+                    75,
+                    -158,
+                    -2
                 ]
             }
         },

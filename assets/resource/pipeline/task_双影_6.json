@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790066208778,
+            "lastSyncTime": 1790067946759,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_双影_6.json",
             "savedViewport": {
-                "x": -959,
-                "y": 2026,
-                "zoom": 0.55
+                "x": -4470,
+                "y": 3947,
+                "zoom": 1.25
             },
             "filename": "task_双影_6",
             "version": "v1.10.1"
@@ -118,10 +118,10 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    431,
-                    50,
-                    -3,
-                    42
+                    529,
+                    75,
+                    -194,
+                    -6
                 ]
             }
         },

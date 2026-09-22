@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790065752771,
+            "lastSyncTime": 1790067951539,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_竞技场_4.json",
             "savedViewport": {
-                "x": 1323,
-                "y": 2822,
+                "x": 953,
+                "y": 2835,
                 "zoom": 0.72
             },
             "filename": "task_竞技场_4",
@@ -269,10 +269,10 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    455,
-                    53,
-                    -59,
-                    36
+                    519,
+                    77,
+                    -188,
+                    -3
                 ]
             }
         },

@@ -1,134 +1,148 @@
 {
-    // 本文件主要定义了通用 UI 的行为和显示内容
-    // 可参考文档和示例添加更多您需要的功能
-    // 文档：https://maafw.xyz/docs/3.3-ProjectInterfaceV2
-    // 示例：https://github.com/MaaXYZ/MaaFramework/blob/main/sample/interface.json
-    "interface_version": 2,
-    "name": "zjcsMAAtest",
-    "description": "杖剑传说 多账号日常自动化（MaaFramework）。",
-    "contact": "QQ群: 123456789",
-    "license": "MIT",
-    "welcome": "首次使用！欢迎使用 MAA!",
-    // 填写项目地址和版本号可实现自动更新功能
-    "github": "https://github.com/MaaXYZ/MaaPracticeBoilerplate",
-    "version": "1.0.0",
-    // Mirror酱为第三方分发服务，新项目默认关闭
-    // 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
-    // "mirrorchyan_rid": "MaaXXX",
-    // "mirrorchyan_multiplatform": true,
-    "controller": [
-        {
-            "name": "安卓端",
-            "type": "Adb",
-            "display_short_side": 720 // 默认缩放分辨率的短边长度
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio",
-                // 截图及控制方式，请根据项目实际情况修改
-                // 文档: https://maafw.xyz/docs/2.4-ControlMethods
-                "screencap": "PrintWindow", // 截图方式
-                "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
-                "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
-            }
-        }
-    ],
-    "resource": [
-        {
-            "name": "官服",
-            "path": [
-                "./resource"
-            ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "./resource"
-                // "./resource_bilibili"
-            ]
-        }
-    ],
-    // 可选的 agent 示例
-    // "agent": {
-    //     "child_exec": "python",
-    //     "child_args": [
-    //         "./agent/main.py"
-    //     ]
-    // },
-    "task": [
-        {
-            "name": "商店购买",
-            "entry": "start商店"
-        },
-        {
-            "name": "素材秘境",
-            "entry": "start秘境"
-        },
-        {
-            "name": "奇景委派",
-            "entry": "start奇景委派"
-        },
-        {
-            "name": "竞技场",
-            "entry": "start竞技场"
-        },
-        {
-            "name": "圣兽",
-            "entry": "start圣兽"
-        },
-        {
-            "name": "双影",
-            "entry": "start双影"
-        },
-        {
-            "name": "日常副本标准",
-            "entry": "start日常副本标准"
-        },
-        {
-            "name": "日常副本君临",
-            "entry": "start日常副本深渊"
-        },
-        {
-            "name": "每日委托",
-            "entry": "start每日委托"
-        },
-        {
-            "name": "收取商城红点",
-            "entry": "start收取商城红点"
-        },
-        {
-            "name": "收取精彩活动红点",
-            "entry": "start收取精彩活动红点"
-        },
-        {
-            "name": "公会讨伐收菜",
-            "entry": "start公会"
-        }
-    ],
-    "option": {
-        "任务选项1": {
-            "type": "select",
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
+  // 本文件主要定义了通用 UI 的行为和显示内容
+  // 可参考文档和示例添加更多您需要的功能
+  // 文档：https://maafw.xyz/docs/3.3-ProjectInterfaceV2
+  // 示例：https://github.com/MaaXYZ/MaaFramework/blob/main/sample/interface.json
+  "interface_version": 2,
+  "name": "zjcsMAAtest",
+  "description": "杖剑传说 多账号日常自动化（MaaFramework）。",
+  "contact": "QQ群: 123456789",
+  "license": "MIT",
+  "welcome": "首次使用！欢迎使用 MAA!",
+  // 填写项目地址和版本号可实现自动更新功能
+  "github": "https://github.com/MaaXYZ/critical100641056/zjcsMAAtest",
+  "version": "1.0.0",
+  // Mirror酱为第三方分发服务，新项目默认关闭
+  // 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
+  // "mirrorchyan_rid": "MaaXXX",
+  // "mirrorchyan_multiplatform": true,
+  "controller": [
+    {
+      "name": "安卓端",
+      "type": "Adb",
+      "display_short_side": 720 // 默认缩放分辨率的短边长度
+    },
+    {
+      "name": "桌面端",
+      "type": "Win32",
+      "win32": {
+        "class_regex": ".*",
+        "window_regex": "Visual Studio",
+        // 截图及控制方式，请根据项目实际情况修改
+        // 文档: https://maafw.xyz/docs/2.4-ControlMethods
+        "screencap": "PrintWindow", // 截图方式
+        "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
+        "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
+      }
     }
+  ],
+  "resource": [
+    {
+      "name": "官服",
+      "path": [
+        "./resource"
+      ]
+    },
+    {
+      "name": "B 服",
+      "path": [
+        "./resource"
+        // "./resource_bilibili"
+      ]
+    }
+  ],
+  // 可选的 agent 示例
+  // "agent": {
+  //     "child_exec": "python",
+  //     "child_args": [
+  //         "./agent/main.py"
+  //     ]
+  // },
+  "task": [
+    {
+      "name": "商店购买",
+      "entry": "start商店",
+      "default_check": false,
+      "description": "杂货+宝库，按折扣规则购买",
+      "option": [ "商店刷新次数" ]
+
+    },
+    {
+      "name": "素材秘境",
+      "entry": "start秘境"
+    },
+    {
+      "name": "奇景委派",
+      "entry": "start奇景委派"
+    },
+    {
+      "name": "竞技场",
+      "entry": "start竞技场"
+    },
+    {
+      "name": "圣兽",
+      "entry": "start圣兽"
+    },
+    {
+      "name": "双影",
+      "entry": "start双影"
+    },
+    {
+      "name": "日常副本标准",
+      "entry": "start日常副本标准"
+    },
+    {
+      "name": "日常副本君临",
+      "entry": "start日常副本深渊"
+    },
+    {
+      "name": "每日委托",
+      "entry": "start每日委托"
+    },
+    {
+      "name": "收取商城红点",
+      "entry": "start收取商城红点"
+    },
+    {
+      "name": "收取精彩活动红点",
+      "entry": "start收取精彩活动红点"
+    },
+    {
+      "name": "公会讨伐收菜",
+      "entry": "start公会"
+    }
+  ],
+  "option": {
+    "商店刷新次数": {
+      "type": "select",
+      "label": "商店刷新次数",
+      "default_case": "到4.8万停",
+      "cases": [
+        {
+          "name": "到4.8万停",
+          "label": "到4.8万停",
+          "pipeline_override": {
+            "refresh": { "max_hit": 5 }
+          }
+        },
+        {
+          "name": "到8万停",
+          "label": "到8万停",
+          "pipeline_override": {
+            "refresh": { "max_hit": 6 }
+          }
+        },
+        {
+          "name": "到12万停",
+          "label": "到12万停",
+          "pipeline_override": {
+            "refresh": { "max_hit": 7 }
+          }
+        }
+      ]
+    }
+  }
 }
+    
+      
+    

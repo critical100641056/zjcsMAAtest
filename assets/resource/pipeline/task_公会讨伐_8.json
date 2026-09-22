@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790068516001,
+            "lastSyncTime": 1790068658055,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_公会讨伐_8.json",
             "savedViewport": {
-                "x": -5523,
-                "y": 7438,
-                "zoom": 1.06
+                "x": -1930,
+                "y": 5383,
+                "zoom": 0.7
             },
             "filename": "task_公会讨伐_8",
             "version": "v1.10.1"
@@ -246,10 +246,10 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    457,
-                    56,
-                    -39,
-                    33
+                    518,
+                    74,
+                    -160,
+                    0
                 ]
             }
         },
