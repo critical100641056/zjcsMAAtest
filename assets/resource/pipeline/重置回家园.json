@@ -1,0 +1,167 @@
+{
+    "$__mpe_config_重置回家园": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -1514,
+                "y": 5180,
+                "zoom": 0.92
+            },
+            "filename": "重置回家园",
+            "version": "v1.10.1"
+        }
+    },
+    "$__mpe_sticker_便签_副本1_重置回家园": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2017,
+                "y": -5432
+            },
+            "content": "任意一个界面返回至家园场景",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "任意返回btn": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    1167,
+                    145,
+                    104
+                ],
+                "template": [
+                    "back.png",
+                    "副本结算back.png",
+                    "back_min.png",
+                    "chatclose.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "任意返回btn",
+            "家园_main",
+            "家园未切换",
+            "什么都检测不到"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2379,
+                "y": -5269
+            }
+        }
+    },
+    "家园未切换": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "家园未打开.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "家园_main"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2787,
+                "y": -5032
+            }
+        }
+    },
+    "家园_main": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "处于家园"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2789,
+                "y": -5259
+            }
+        }
+    },
+    "处于家园": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3139,
+                "y": -5226
+            }
+        }
+    },
+    "位置检测与重置": {
+        "next": [
+            "家园_main",
+            "家园未切换",
+            "任意返回btn",
+            "什么都检测不到"
+        ],
+        "on_error": [
+            "处于无法识别区域"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2009,
+                "y": -5244
+            }
+        }
+    },
+    "处于无法识别区域": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3144,
+                "y": -5091
+            }
+        }
+    },
+    "什么都检测不到": {
+        "max_hit": 5,
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    14,
+                    1198,
+                    64,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "位置检测与重置"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2381,
+                "y": -4941
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+{
+    "$__mpe_config_重置回家园V2": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\重置回家园V2.json",
+            "lastSyncTime": 1790065112946,
+            "savedViewport": {
+                "x": 317,
+                "y": 246,
+                "zoom": 0.72
+            },
+            "filename": "重置回家园V2",
+            "version": "v1.10.1"
+        }
+    },
+    "任意返回btn_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    2,
+                    1164,
+                    184,
+                    115
+                ],
+                "template": [
+                    "chatclose.png",
+                    "副本结算back.png",
+                    "back_middle.png",
+                    "活动汇总backbtn.png",
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "任意返回btn_1",
+            "家园_main_1",
+            "家园未切换_1",
+            "什么都检测不到_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 162
+            }
+        }
+    },
+    "家园未切换_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    258,
+                    1142,
+                    187,
+                    136
+                ],
+                "template": "家园未打开.png"
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "家园_main_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 48
+            }
+        }
+    },
+    "家园_main_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "处于家园_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 59
+            }
+        }
+    },
+    "处于家园_1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1265,
+                "y": 92
+            }
+        }
+    },
+    "位置检测与重置_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "inverse": true,
+        "next": [
+            "家园_main_1",
+            "家园未切换_1",
+            "任意返回btn_1",
+            "什么都检测不到_1"
+        ],
+        "on_error": [
+            "处于无法识别区域_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 19,
+                "y": 7
+            }
+        }
+    },
+    "处于无法识别区域_1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 23
+            }
+        }
+    },
+    "什么都检测不到_1": {
+        "max_hit": 5,
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 654,
+                "y": 320
+            }
+        }
+    },
+    "$__mpe_sticker_便签_重置回家园V2": {
+        "$__mpe_code": {
+            "position": {
+                "x": 23,
+                "y": 366
+            },
+            "content": "意思就是没检测到在家园，就执行next",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    }
+}

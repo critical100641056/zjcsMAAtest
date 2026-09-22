@@ -1,55 +1,56 @@
 {
-    "$__mpe_config_task_公会讨伐": {
+    "$__mpe_config_task_公会讨伐_8": {
         "$__mpe_code": {
-            "coordinateMode": "absolute-v1",
-            "filename": "task_公会讨伐",
             "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1790068516001,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_公会讨伐_8.json",
             "savedViewport": {
-                "x": -972,
-                "y": 3270,
-                "zoom": 0.4
+                "x": -5523,
+                "y": 7438,
+                "zoom": 1.06
             },
+            "filename": "task_公会讨伐_8",
             "version": "v1.10.1"
         }
     },
-    "$__mpe_sticker_便签_副本1_task_公会讨伐": {
+    "$__mpe_external_位置检测与重置_1_task_公会讨伐_8": {
         "$__mpe_code": {
-            "color": "yellow",
-            "content": "未制作公会讨伐，仅用于贡献+收取公会资源",
-            "height": 160,
+            "position": {
+                "x": 2829,
+                "y": -6949
+            }
+        }
+    },
+    "$__mpe_sticker_便签_副本1_task_公会讨伐_8": {
+        "$__mpe_code": {
             "position": {
                 "x": 3967,
                 "y": -7385
             },
-            "width": 200
+            "content": "未制作公会讨伐，仅用于贡献+收取公会资源",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
         }
     },
-    "$__mpe_sticker_便签_副本2_task_公会讨伐": {
+    "$__mpe_sticker_便签_副本2_task_公会讨伐_8": {
         "$__mpe_code": {
-            "color": "yellow",
-            "content": "todo 返回到家园或者任务界面",
-            "height": 160,
             "position": {
-                "x": 5583,
-                "y": -6730
+                "x": 5996,
+                "y": -6842
             },
-            "width": 200
+            "content": "todo 返回到家园或者任务界面",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
         }
     },
     "backBTN公会": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4250,
-                "y": -7193
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "大厅"
-        ],
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     5,
@@ -60,24 +61,24 @@
                 "template": [
                     "公会back2.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "backBTN公会2": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5110,
-                "y": -6476
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "claim挂机资源"
+            "大厅"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4250,
+                "y": -7193
+            }
+        }
+    },
+    "backBTN公会2": {
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     5,
@@ -88,32 +89,24 @@
                 "template": [
                     "back.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "claim挂机资源": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5556,
-                "y": -7192
             }
         },
         "action": {
-            "param": {
-                "target_offset": [
-                    -109,
-                    31,
-                    69,
-                    56
-                ]
-            },
             "type": "Click"
         },
         "next": [
-            "空白关闭2"
+            "claim挂机资源"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5110,
+                "y": -6476
+            }
+        }
+    },
+    "claim挂机资源": {
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     426,
@@ -124,18 +117,133 @@
                 "template": [
                     "reddot公会.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "task_公会讨伐": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3959,
-                "y": -7173
             }
         },
         "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -109,
+                    31,
+                    69,
+                    56
+                ]
+            }
+        },
+        "next": [
+            "空白关闭2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5556,
+                "y": -7192
+            }
+        }
+    },
+    "cube_home_11": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "cube_sheet_11"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3130,
+                "y": -7209
+            }
+        }
+    },
+    "cube_sheet_11": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_11",
+            "task_公会讨伐"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3411,
+                "y": -7162
+            }
+        }
+    },
+    "start公会": {
+        "next": [
+            "家园_11",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2513,
+                "y": -7154
+            }
+        }
+    },
+    "task_claim_11": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 2000,
+        "next": [
+            "task_公会讨伐"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3700,
+                "y": -7406
+            }
+        }
+    },
+    "task_公会讨伐": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "参与1次公会讨伐"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
             "param": {
                 "target_offset": [
                     457,
@@ -143,29 +251,35 @@
                     -39,
                     33
                 ]
-            },
-            "type": "Click"
+            }
         },
         "next": [
             "backBTN公会"
         ],
-        "recognition": {
-            "param": {
-                "expected": [
-                    "参与1次公会讨伐"
-                ]
-            },
-            "type": "OCR"
+        "$__mpe_code": {
+            "position": {
+                "x": 3959,
+                "y": -7173
+            }
         }
     },
     "大厅": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4513,
-                "y": -7189
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    12,
+                    239,
+                    593,
+                    447
+                ],
+                "expected": [
+                    "公会大厅"
+                ]
             }
         },
         "action": {
+            "type": "Click",
             "param": {
                 "target_offset": [
                     -7,
@@ -173,65 +287,84 @@
                     13,
                     119
                 ]
-            },
-            "type": "Click"
+            }
         },
         "next": [
             "捐赠图标"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4513,
+                "y": -7189
+            }
+        }
+    },
+    "家园_11": {
         "recognition": {
+            "type": "OCR",
             "param": {
-                "expected": [
-                    "公会大厅"
-                ],
                 "roi": [
-                    12,
-                    239,
-                    593,
-                    447
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
                 ]
-            },
-            "type": "OCR"
+            }
+        },
+        "next": [
+            "cube_home_11"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2830,
+                "y": -7172
+            }
         }
     },
     "捐赠": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5123,
-                "y": -7197
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
         "max_hit": 3,
-        "next": [
-            "捐赠",
-            "确认弹窗"
-        ],
         "recognition": {
+            "type": "OCR",
             "param": {
-                "expected": [
-                    "捐赠"
-                ],
                 "roi": [
                     195,
                     907,
                     333,
                     73
+                ],
+                "expected": [
+                    "捐赠"
                 ]
-            },
-            "type": "OCR"
-        }
-    },
-    "捐赠图标": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4806,
-                "y": -7181
             }
         },
         "action": {
+            "type": "Click"
+        },
+        "next": [
+            "捐赠",
+            "确认弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5123,
+                "y": -7197
+            }
+        }
+    },
+    "捐赠图标": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "公会捐赠"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
             "param": {
                 "target_offset": [
                     22,
@@ -239,26 +372,31 @@
                     -46,
                     13
                 ]
-            },
-            "type": "Click"
+            }
         },
         "next": [
             "捐赠"
         ],
-        "recognition": {
-            "param": {
-                "expected": [
-                    "公会捐赠"
-                ]
-            },
-            "type": "OCR"
+        "$__mpe_code": {
+            "position": {
+                "x": 4806,
+                "y": -7181
+            }
         }
     },
     "确认弹窗": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5129,
-                "y": -6907
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    364,
+                    696,
+                    261,
+                    82
+                ],
+                "expected": [
+                    "确定"
+                ]
             }
         },
         "action": {
@@ -268,26 +406,23 @@
             "捐赠",
             "空白关闭"
         ],
-        "recognition": {
-            "param": {
-                "expected": [
-                    "确定"
-                ],
-                "roi": [
-                    364,
-                    696,
-                    261,
-                    82
-                ]
-            },
-            "type": "OCR"
+        "$__mpe_code": {
+            "position": {
+                "x": 5129,
+                "y": -6907
+            }
         }
     },
     "空白关闭": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5120,
-                "y": -6690
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    65,
+                    1052,
+                    597,
+                    202
+                ]
             }
         },
         "action": {
@@ -296,29 +431,16 @@
         "next": [
             "backBTN公会2"
         ],
-        "recognition": {
-            "param": {
-                "roi": [
-                    65,
-                    1052,
-                    597,
-                    202
-                ]
-            },
-            "type": "DirectHit"
+        "$__mpe_code": {
+            "position": {
+                "x": 5120,
+                "y": -6690
+            }
         }
     },
     "空白关闭2": {
-        "$__mpe_code": {
-            "position": {
-                "x": 5563,
-                "y": -6891
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
         "recognition": {
+            "type": "DirectHit",
             "param": {
                 "roi": [
                     341,
@@ -326,8 +448,42 @@
                     126,
                     215
                 ]
-            },
-            "type": "DirectHit"
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "家园未切换_1_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5563,
+                "y": -6891
+            }
+        }
+    },
+    "家园未切换_1_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    258,
+                    1142,
+                    187,
+                    136
+                ],
+                "template": "家园未打开.png"
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5563,
+                "y": -6701
+            }
         }
     }
 }

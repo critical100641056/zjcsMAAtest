@@ -1,549 +1,679 @@
 {
-  "$__mpe_config_task_日常副本标准": {
-    "$__mpe_code": {
-      "coordinateMode": "absolute-v1",
-      "filename": "task_日常副本标准",
-      "prefix": "",
-      "savedViewport": {
-        "x": -4206,
-        "y": 3167,
-        "zoom": 0.8
-      },
-      "version": "v1.10.1"
-    }
-  },
-  "$__mpe_sticker_便签_副本1_task_日常副本标准": {
-    "$__mpe_code": {
-      "color": "yellow",
-      "content": "进入结算界面，如果为S，则领取奖励，如果不为S，直接返回。\nB评分没截图",
-      "height": 160,
-      "position": {
-        "x": 6156,
-        "y": -3589
-      },
-      "width": 200
-    }
-  },
-  "$__mpe_sticker_便签_副本2_task_日常副本标准": {
-    "$__mpe_code": {
-      "color": "yellow",
-      "content": "好像要单独截图加号\n2.到不了step2说明买过了 直接进入匹配环节",
-      "height": 160,
-      "position": {
-        "x": 5298,
-        "y": -3861
-      },
-      "width": 200
-    }
-  },
-  "$__mpe_sticker_便签_副本3_task_日常副本标准": {
-    "$__mpe_code": {
-      "color": "yellow",
-      "content": "两次识别，就是同时识别！",
-      "height": 160,
-      "position": {
-        "x": 6575,
-        "y": -3566
-      },
-      "width": 200
-    }
-  },
-  "Srank识别_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6413,
-        "y": -3327
-      }
+    "$__mpe_config_task_日常副本标准_7": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1790066431173,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_日常副本标准.json",
+            "savedViewport": {
+                "x": -1952,
+                "y": 2857,
+                "zoom": 0.72
+            },
+            "filename": "task_日常副本标准_7",
+            "version": "v1.10.1"
+        }
     },
-    "next": [
-      "领取_1"
-    ],
-    "recognition": {
-      "param": {
-        "template": [
-          "Srank.png"
+    "$__mpe_sticker_便签_副本1_task_日常副本标准_7": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6156,
+                "y": -3589
+            },
+            "content": "进入结算界面，如果为S，则领取奖励，如果不为S，直接返回。\nB评分没截图",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "$__mpe_sticker_便签_副本2_task_日常副本标准_7": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5298,
+                "y": -3861
+            },
+            "content": "好像要单独截图加号\n2.到不了step2说明买过了 直接进入匹配环节",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "$__mpe_sticker_便签_副本3_task_日常副本标准_7": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6575,
+                "y": -3566
+            },
+            "content": "两次识别，就是同时识别！",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "Srank识别_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "Srank.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "领取_1"
         ],
-        "threshold": [
-          0.9
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "claim_5": {
-    "$__mpe_code": {
-      "position": {
-        "x": 8063,
-        "y": -3302
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 6413,
+                "y": -3327
+            }
+        }
     },
-    "action": {
-      "type": "Click"
+    "claim_5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8063,
+                "y": -3302
+            }
+        }
     },
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取"
+    "purchase_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    357,
+                    668,
+                    276,
+                    123
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "日常副本匹配_1"
         ],
-        "roi": [
-          452,
-          110,
-          242,
-          1057
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "purchase_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5282,
-        "y": -3123
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5282,
+                "y": -3123
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "日常副本匹配_1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "购买"
+    "task_日常副本_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "完成1次日常副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    431,
+                    50,
+                    -3,
+                    42
+                ]
+            }
+        },
+        "next": [
+            "副本选择_标准"
         ],
-        "roi": [
-          357,
-          668,
-          276,
-          123
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "task_日常副本_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4599,
-        "y": -3467
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4599,
+                "y": -3467
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          431,
-          50,
-          -3,
-          42
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "副本选择_标准"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "完成1次日常副本"
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "不领取_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6425,
-        "y": -2942
-      }
-    },
-    "next": [
-      "副本返回btn_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          198,
-          86,
-          347,
-          319
+    "不领取_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    198,
+                    86,
+                    347,
+                    319
+                ],
+                "template": [
+                    "CRank.png",
+                    "ARank.png"
+                ]
+            }
+        },
+        "next": [
+            "副本返回btn_1"
         ],
-        "template": [
-          "CRank.png",
-          "ARank.png"
-        ]
-      },
-      "type": "TemplateMatch"
+        "$__mpe_code": {
+            "position": {
+                "x": 6425,
+                "y": -2942
+            }
+        }
+    },
+    "副本打完返回_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "claim_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7775,
+                "y": -3319
+            }
+        }
+    },
+    "副本购买次数_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    424,
+                    1000,
+                    127,
+                    59
+                ],
+                "template": [
+                    "plustest.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "副本购买次数_step2_1",
+            "日常副本匹配_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5283,
+                "y": -3693
+            }
+        }
+    },
+    "副本购买次数_step2_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    489,
+                    566,
+                    167,
+                    123
+                ],
+                "template": [
+                    "plus_normal.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "purchase_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5283,
+                "y": -3403
+            }
+        }
+    },
+    "副本返回btn1_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "副本结算back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "副本选择_标准",
+            "副本打完返回_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7409,
+                "y": -3329
+            }
+        }
+    },
+    "副本返回btn_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "副本结算back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "弹窗确定_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6706,
+                "y": -2938
+            }
+        }
+    },
+    "副本选择_标准": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    520,
+                    147,
+                    118,
+                    970
+                ],
+                "template": [
+                    "副本蓝标_2.png",
+                    "副本蓝标_4.png",
+                    "副本蓝标_3.png",
+                    "副本蓝标_1.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -355,
+                    -25,
+                    283,
+                    202
+                ]
+            }
+        },
+        "next": [
+            "副本购买次数_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4948,
+                "y": -3486
+            }
+        }
+    },
+    "弹窗确定1_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    354,
+                    669,
+                    279,
+                    144
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "副本返回btn1_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7067,
+                "y": -3311
+            }
+        }
+    },
+    "弹窗确定_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    354,
+                    669,
+                    279,
+                    144
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "副本选择_标准"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7005,
+                "y": -2919
+            }
+        }
+    },
+    "日常副本匹配_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    506,
+                    1081,
+                    59,
+                    30
+                ],
+                "expected": [
+                    "匹配"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 300000,
+        "next": [
+            "日常副本接受_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5721,
+                "y": -3664
+            }
+        }
+    },
+    "日常副本接受_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    356,
+                    1007,
+                    330,
+                    237
+                ],
+                "expected": [
+                    "接受"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 20000,
+        "next": [
+            "日常副本匹配_1",
+            "日常副本检测_1",
+            "等待logic_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5715,
+                "y": -3358
+            }
+        }
+    },
+    "日常副本检测_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    368,
+                    1051,
+                    345,
+                    101
+                ],
+                "expected": [
+                    "取消匹配"
+                ]
+            }
+        },
+        "timeout": 300000,
+        "next": [
+            "日常副本接受_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5714,
+                "y": -3024
+            }
+        }
+    },
+    "等待logic_2": {
+        "timeout": 800000,
+        "next": [
+            "Srank识别_1",
+            "不领取_1"
+        ],
+        "on_error": [
+            "副本返回btn_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6135,
+                "y": -3315
+            }
+        }
+    },
+    "领取_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    407,
+                    1191,
+                    225,
+                    52
+                ],
+                "expected": [
+                    "领取奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "弹窗确定1_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6740,
+                "y": -3311
+            }
+        }
+    },
+    "cube_home_7": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "cube_sheet_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3740,
+                "y": -3514
+            }
+        }
+    },
+    "cube_sheet_7": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_7",
+            "task_日常副本_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4033,
+                "y": -3474
+            }
+        }
+    },
+    "task_claim_7": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 2000,
+        "next": [
+            "task_日常副本_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4328,
+                "y": -3733
+            }
+        }
+    },
+    "家园_7": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3440,
+                "y": -3476
+            }
+        }
+    },
+    "start日常副本标准": {
+        "next": [
+            "家园_7",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3122,
+                "y": -3458
+            }
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_task_日常副本标准_7": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3450,
+                "y": -3254
+            }
+        }
     }
-  },
-  "副本打完返回_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7775,
-        "y": -3319
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "claim_5"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
-        ],
-        "template": [
-          "back.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "副本购买次数_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5283,
-        "y": -3693
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "副本购买次数_step2_1",
-      "日常副本匹配_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          424,
-          1000,
-          127,
-          59
-        ],
-        "template": [
-          "plustest.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "副本购买次数_step2_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5283,
-        "y": -3403
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "purchase_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          489,
-          566,
-          167,
-          123
-        ],
-        "template": [
-          "plus_normal.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "副本返回btn_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6706,
-        "y": -2938
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "弹窗确定_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
-        ],
-        "template": [
-          "副本结算back.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "副本返回btn1_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7409,
-        "y": -3329
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "副本选择_标准",
-      "副本打完返回_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
-        ],
-        "template": [
-          "副本结算back.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "副本选择_标准": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4948,
-        "y": -3486
-      }
-    },
-    "action": {
-      "param": {
-        "target_offset": [
-          -355,
-          -25,
-          283,
-          202
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "副本购买次数_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          520,
-          147,
-          118,
-          970
-        ],
-        "template": [
-          "副本蓝标_2.png",
-          "副本蓝标_4.png",
-          "副本蓝标_3.png",
-          "副本蓝标_1.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "弹窗确定_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7005,
-        "y": -2919
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "副本选择_标准"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "确定"
-        ],
-        "roi": [
-          354,
-          669,
-          279,
-          144
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "弹窗确定1_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7067,
-        "y": -3311
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "副本返回btn1_1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "确定"
-        ],
-        "roi": [
-          354,
-          669,
-          279,
-          144
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "日常副本匹配_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5721,
-        "y": -3664
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "日常副本接受_1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "匹配"
-        ],
-        "roi": [
-          506,
-          1081,
-          59,
-          30
-        ]
-      },
-      "type": "OCR"
-    },
-    "timeout": 300000
-  },
-  "日常副本接受_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5715,
-        "y": -3358
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "日常副本匹配_1",
-      "日常副本检测_1",
-      "等待logic_2"
-    ],
-    "post_delay": 20000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "接受"
-        ],
-        "roi": [
-          356,
-          1007,
-          330,
-          237
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "日常副本检测_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5714,
-        "y": -3024
-      }
-    },
-    "next": [
-      "日常副本接受_1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "取消匹配"
-        ],
-        "roi": [
-          368,
-          1051,
-          345,
-          101
-        ]
-      },
-      "type": "OCR"
-    },
-    "timeout": 300000
-  },
-  "等待logic_2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6135,
-        "y": -3315
-      }
-    },
-    "next": [
-      "Srank识别_1",
-      "不领取_1"
-    ],
-    "on_error": [
-      "副本返回btn_1"
-    ],
-    "timeout": 800000
-  },
-  "领取_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6740,
-        "y": -3311
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "弹窗确定1_1"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取奖励"
-        ],
-        "roi": [
-          407,
-          1191,
-          225,
-          52
-        ]
-      },
-      "type": "OCR"
-    }
-  }
 }

@@ -1,302 +1,470 @@
 {
-  "$__mpe_config_task_竞技场_4": {
-    "$__mpe_code": {
-      "coordinateMode": "absolute-v1",
-      "filename": "task_竞技场_4",
-      "prefix": "",
-      "savedViewport": {
-        "x": -361,
-        "y": 3115,
-        "zoom": 0.8
-      },
-      "version": "v1.10.1"
-    }
-  },
-  "$__mpe_sticker_便签_副本1_task_竞技场_4": {
-    "$__mpe_code": {
-      "color": "yellow",
-      "content": "买2张票，repeat=1",
-      "height": 160,
-      "position": {
-        "x": 1513,
-        "y": -3636
-      },
-      "width": 200
-    }
-  },
-  "$__mpe_sticker_便签_副本2_task_竞技场_4": {
-    "$__mpe_code": {
-      "color": "yellow",
-      "content": "打3次，另外，没写票用完的情况。，可能需要补",
-      "height": 160,
-      "position": {
-        "x": 878,
-        "y": -3711
-      },
-      "width": 200
-    }
-  },
-  "claim_6": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2524,
-        "y": -3418
-      }
+    "$__mpe_config_task_竞技场_4": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1790065752771,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_竞技场_4.json",
+            "savedViewport": {
+                "x": 1323,
+                "y": 2822,
+                "zoom": 0.72
+            },
+            "filename": "task_竞技场_4",
+            "version": "v1.10.1"
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取"
+    "cube_home_4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "cube_sheet_4"
         ],
-        "roi": [
-          452,
-          110,
-          242,
-          1057
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "close": {
-    "$__mpe_code": {
-      "position": {
-        "x": 876,
-        "y": -2954
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": -953,
+                "y": -3563
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          291,
-          782,
-          -123,
-          117
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "只打最后一个",
-      "purchaseticket"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "挑战胜利"
+    "cube_sheet_4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_4",
+            "task_竞技场"
         ],
-        "roi": [
-          153,
-          76,
-          414,
-          321
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "purchaseticket": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1187,
-        "y": -3467
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": -646,
+                "y": -3471
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "买票"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          420,
-          16,
-          289,
-          72
+    "task_claim_4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 2000,
+        "next": [
+            "task_竞技场"
         ],
-        "template": [
-          "plus.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "task_竞技场": {
-    "$__mpe_code": {
-      "position": {
-        "x": 526,
-        "y": -3506
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": -257,
+                "y": -3714
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          455,
-          53,
-          -59,
-          36
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "只打最后一个"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "完成1次竞技场挑战"
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "useticket": {
-    "$__mpe_code": {
-      "position": {
-        "x": 874,
-        "y": -3180
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "close"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "挑战"
+    "家园_4": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_4"
         ],
-        "roi": [
-          150,
-          838,
-          443,
-          125
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "买": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1832,
-        "y": -3434
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": -1269,
+                "y": -3526
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "返回至tasklist"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "购买"
+    "start竞技场": {
+        "next": [
+            "家园_4",
+            "[JumpBack]位置检测与重置_1"
         ],
-        "roi": [
-          373,
-          739,
-          242,
-          141
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "买票": {
-    "$__mpe_code": {
-      "position": {
-        "x": 1500,
-        "y": -3444
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": -1576,
+                "y": -3511
+            }
+        }
     },
-    "action": {
-      "type": "Click"
+    "$__mpe_external_位置检测与重置_1_task_竞技场_4": {
+        "$__mpe_code": {
+            "position": {
+                "x": -1268,
+                "y": -3308
+            }
+        }
     },
-    "next": [
-      "买"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          411,
-          552,
-          220,
-          215
+    "$__mpe_sticker_便签_副本1_task_竞技场_4": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1513,
+                "y": -3636
+            },
+            "content": "买2张票，repeat=1",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "$__mpe_sticker_便签_副本2_task_竞技场_4": {
+        "$__mpe_code": {
+            "position": {
+                "x": 878,
+                "y": -3711
+            },
+            "content": "打3次，另外，没写票用完的情况。，可能需要补",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "claim_6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2524,
+                "y": -3418
+            }
+        }
+    },
+    "close": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    153,
+                    76,
+                    414,
+                    321
+                ],
+                "expected": [
+                    "挑战胜利"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    291,
+                    782,
+                    -123,
+                    117
+                ]
+            }
+        },
+        "next": [
+            "只打最后一个",
+            "purchaseticket"
         ],
-        "template": [
-          "plus_normal.png"
-        ]
-      },
-      "type": "TemplateMatch"
+        "$__mpe_code": {
+            "position": {
+                "x": 876,
+                "y": -2954
+            }
+        }
     },
-    "repeat": 1
-  },
-  "只打最后一个": {
-    "$__mpe_code": {
-      "position": {
-        "x": 873,
-        "y": -3517
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "max_hit": 3,
-    "next": [
-      "useticket"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          551,
-          827,
-          147,
-          141
+    "purchaseticket": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    420,
+                    16,
+                    289,
+                    72
+                ],
+                "template": [
+                    "plus.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "买票"
         ],
-        "template": [
-          "jjc_challenge_2.png",
-          "jjc_challenge.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "返回至tasklist": {
-    "$__mpe_code": {
-      "position": {
-        "x": 2208,
-        "y": -3440
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 1194,
+                "y": -3423
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "claim_6"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
+    "task_竞技场": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "完成1次竞技场挑战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    455,
+                    53,
+                    -59,
+                    36
+                ]
+            }
+        },
+        "next": [
+            "识别到防守奖励",
+            "只打最后一个"
         ],
-        "template": [
-          "back.png"
-        ]
-      },
-      "type": "TemplateMatch"
+        "$__mpe_code": {
+            "position": {
+                "x": 206,
+                "y": -3488
+            }
+        }
+    },
+    "useticket": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    150,
+                    838,
+                    443,
+                    125
+                ],
+                "expected": [
+                    "挑战",
+                    "碾压"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "close"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 874,
+                "y": -3180
+            }
+        }
+    },
+    "买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    373,
+                    739,
+                    242,
+                    141
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回至tasklist"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1832,
+                "y": -3434
+            }
+        }
+    },
+    "买票": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    411,
+                    552,
+                    220,
+                    215
+                ],
+                "template": [
+                    "plus_normal.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 1,
+        "next": [
+            "买"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1500,
+                "y": -3444
+            }
+        }
+    },
+    "只打最后一个": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    551,
+                    827,
+                    147,
+                    141
+                ],
+                "template": [
+                    "jjc_challenge_2.png",
+                    "jjc_challenge.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "useticket"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 873,
+                "y": -3517
+            }
+        }
+    },
+    "返回至tasklist": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "claim_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2208,
+                "y": -3440
+            }
+        }
+    },
+    "识别到防守奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    140,
+                    316,
+                    454,
+                    174
+                ],
+                "expected": [
+                    "防守奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -195,
+                    -217,
+                    -129,
+                    121
+                ]
+            }
+        },
+        "next": [
+            "只打最后一个"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 525,
+                "y": -3359
+            }
+        }
     }
-  }
 }

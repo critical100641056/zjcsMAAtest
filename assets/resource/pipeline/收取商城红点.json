@@ -1,989 +1,1027 @@
 {
-  "$__mpe_config_zjcs未完成": {
-    "$__mpe_code": {
-      "coordinateMode": "absolute-v1",
-      "filename": "zjcs未完成",
-      "prefix": "",
-      "savedViewport": {
-        "x": -1393,
-        "y": 2694,
-        "zoom": 0.4
-      },
-      "version": "v1.10.1"
-    }
-  },
-  "$__mpe_sticker_便签_zjcs未完成": {
-    "$__mpe_code": {
-      "color": "yellow",
-      "content": "todo自动领取月卡周卡\n\n",
-      "height": 160,
-      "position": {
-        "x": 7554,
-        "y": -5088
-      },
-      "width": 200
-    }
-  },
-  "cube_home_副本1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4067,
-        "y": -5619
-      }
+    "$__mpe_config_收取商城红点": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1790066789614,
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取商城红点.json",
+            "savedViewport": {
+                "x": -1707,
+                "y": 3720,
+                "zoom": 0.61
+            },
+            "filename": "收取商城红点",
+            "version": "v1.10.1"
+        }
     },
-    "action": {
-      "type": "Click"
+    "$__mpe_sticker_便签_收取商城红点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7554,
+                "y": -5088
+            },
+            "content": "todo自动领取月卡周卡\n\n",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
+        }
     },
-    "next": [
-      "商城红点检测"
-    ],
-    "post_delay": 213,
-    "recognition": {
-      "param": {
-        "roi": [
-          610,
-          961,
-          110,
-          86
+    "cube_home_9": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "商城红点检测"
         ],
-        "template": [
-          "cube_home.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "waitcheck": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5787,
-        "y": -5808
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4067,
+                "y": -5619
+            }
+        }
     },
-    "next": [
-      "进入地图"
-    ],
-    "recognition": {
-      "param": {
-        "template": [
-          "苹果探索.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "waittime": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4930,
-        "y": -5484
-      }
-    },
-    "next": [
-      "waittime1"
-    ]
-  },
-  "waittime1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4926,
-        "y": -5333
-      }
-    },
-    "next": [
-      "点击领取",
-      "女神祈愿",
-      "探寻命运",
-      "每周目标"
-    ]
-  },
-  "waittime2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6402,
-        "y": -5904
-      }
-    },
-    "next": [
-      "waittime3"
-    ]
-  },
-  "waittime3": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6399,
-        "y": -5751
-      }
-    },
-    "next": [
-      "收取奖励",
-      "巡礼返回"
-    ]
-  },
-  "一次性礼包": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7219,
-        "y": -5272
-      }
-    },
-    "action": {
-      "param": {
-        "target_offset": [
-          -52,
-          40,
-          26,
-          12
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "关闭弹窗_1"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          9,
-          162,
-          254,
-          1004
+    "waitcheck": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "苹果探索.png"
+                ]
+            }
+        },
+        "next": [
+            "进入地图"
         ],
-        "template": [
-          "礼包红点2.png",
-          "礼包红点1.png",
-          "礼包红点3.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "关闭弹窗_1": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7223,
-        "y": -4974
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5787,
+                "y": -5808
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          -203,
-          729,
-          -145,
-          124
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "礼包返回"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "获得奖励"
+    "waittime": {
+        "next": [
+            "waittime1"
         ],
-        "roi": [
-          109,
-          210,
-          523,
-          396
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "友情祈愿": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5230,
-        "y": -5552
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4930,
+                "y": -5484
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "祈愿2次"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "友情祈愿"
+    "waittime1": {
+        "next": [
+            "点击领取",
+            "女神祈愿",
+            "探寻命运",
+            "每周目标"
         ],
-        "roi": [
-          60,
-          1044,
-          649,
-          123
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "商城其他红点检测": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7221,
-        "y": -5682
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4926,
+                "y": -5333
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          -509,
-          -31,
-          402,
-          123
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "一次性礼包",
-      "没红点上划",
-      "检查月卡"
-    ],
-    "post_delay": 512,
-    "recognition": {
-      "param": {
-        "roi": [
-          634,
-          172,
-          64,
-          807
+    "waittime2": {
+        "next": [
+            "waittime3"
         ],
-        "template": [
-          "reddot1.png",
-          "reddot3.png",
-          "reddot2.png",
-          "reddot4.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "商城红点检测": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4343,
-        "y": -5591
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 6402,
+                "y": -5904
+            }
+        }
     },
-    "next": [
-      "点击商城"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          474,
-          488,
-          233,
-          290
+    "waittime3": {
+        "next": [
+            "收取奖励",
+            "巡礼返回"
         ],
-        "template": [
-          "商城红点.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "地图返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5757,
-        "y": -4940
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 6399,
+                "y": -5751
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "cube_home_副本1"
-    ],
-    "post_delay": 3400,
-    "recognition": {
-      "param": {
-        "roi": [
-          10,
-          1170,
-          136,
-          101
+    "一次性礼包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    9,
+                    162,
+                    254,
+                    1004
+                ],
+                "template": [
+                    "礼包红点2.png",
+                    "礼包红点1.png",
+                    "礼包红点3.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -52,
+                    40,
+                    26,
+                    12
+                ]
+            }
+        },
+        "next": [
+            "关闭弹窗_1"
         ],
-        "template": [
-          "back_middle.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "女神祈愿": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5225,
-        "y": -5968
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 7219,
+                "y": -5272
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          522,
-          75,
-          -149,
-          0
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "友情祈愿",
-      "点击领取2",
-      "探寻命运",
-      "每周目标"
-    ],
-    "post_delay": 1867,
-    "recognition": {
-      "param": {
-        "expected": [
-          "女神像祈愿2次"
+    "关闭弹窗_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    109,
+                    210,
+                    523,
+                    396
+                ],
+                "expected": [
+                    "获得奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -203,
+                    729,
+                    -145,
+                    124
+                ]
+            }
+        },
+        "next": [
+            "礼包返回"
         ],
-        "roi": [
-          19,
-          329,
-          684,
-          662
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "巡礼返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6844,
-        "y": -5613
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 7223,
+                "y": -4974
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "商城其他红点检测",
-      "没红点上划"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
+    "友情祈愿": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    60,
+                    1044,
+                    649,
+                    123
+                ],
+                "expected": [
+                    "友情祈愿"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "祈愿2次"
         ],
-        "template": [
-          "back.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "弹窗确认": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5778,
-        "y": -5230
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5230,
+                "y": -5552
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "进入地图",
-      "地图返回"
-    ],
-    "post_delay": 2000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "确定"
+    "商城其他红点检测": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    634,
+                    172,
+                    64,
+                    807
+                ],
+                "template": [
+                    "reddot1.png",
+                    "reddot3.png",
+                    "reddot2.png",
+                    "reddot4.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -509,
+                    -31,
+                    402,
+                    123
+                ]
+            }
+        },
+        "post_delay": 512,
+        "next": [
+            "一次性礼包",
+            "没红点上划",
+            "检查月卡"
         ],
-        "roi": [
-          356,
-          696,
-          273,
-          215
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "探寻命运": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5792,
-        "y": -6133
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 7221,
+                "y": -5682
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          519,
-          75,
-          -120,
-          -3
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "waitcheck",
-      "点击领取3",
-      "每周目标"
-    ],
-    "post_delay": 6000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "探寻命运3次"
+    "商城红点检测": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    474,
+                    488,
+                    233,
+                    290
+                ],
+                "template": [
+                    "商城红点.png"
+                ]
+            }
+        },
+        "next": [
+            "点击商城"
         ],
-        "roi": [
-          20,
-          324,
-          679,
-          660
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "收取商城红点": {
-    "$__mpe_code": {
-      "position": {
-        "x": 3775,
-        "y": -5577
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4347,
+                "y": -5601
+            }
+        }
     },
-    "next": [
-      "cube_home_副本1"
-    ]
-  },
-  "收取奖励": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6398,
-        "y": -5554
-      }
-    },
-    "action": {
-      "param": {
-        "target_offset": [
-          -41,
-          28,
-          23,
-          21
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "空白关闭弹窗"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          164,
-          365,
-          155,
-          688
+    "地图返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    10,
+                    1170,
+                    136,
+                    101
+                ],
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3400,
+        "next": [
+            "cube_home_9"
         ],
-        "template": [
-          "reddot巡礼等级奖励.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "收取巡礼奖励": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6404,
-        "y": -6169
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5757,
+                "y": -4940
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "waittime2"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "巡礼之证"
+    "女神祈愿": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    19,
+                    329,
+                    684,
+                    662
+                ],
+                "expected": [
+                    "女神像祈愿2次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    522,
+                    75,
+                    -149,
+                    0
+                ]
+            }
+        },
+        "post_delay": 1867,
+        "next": [
+            "友情祈愿",
+            "点击领取2",
+            "探寻命运",
+            "每周目标"
         ],
-        "roi": [
-          161,
-          1165,
-          281,
-          108
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "本期目标": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6094,
-        "y": -5106
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5225,
+                "y": -5968
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "max_hit": 1,
-    "next": [
-      "点击领取3",
-      "收取巡礼奖励"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "本期目标"
+    "巡礼返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "商城其他红点检测",
+            "没红点上划"
         ],
-        "roi": [
-          468,
-          1069,
-          228,
-          98
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "查找巡礼": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4931,
-        "y": -5927
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 6844,
+                "y": -5613
+            }
+        }
     },
-    "action": {
-      "param": {
-        "target_offset": [
-          -304,
-          -40,
-          153,
-          104
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "进入巡礼"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "巡礼之证"
+    "弹窗确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    356,
+                    696,
+                    273,
+                    215
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "进入地图",
+            "地图返回"
         ],
-        "roi": [
-          457,
-          117,
-          242,
-          1032
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "检查月卡": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7542,
-        "y": -5235
-      }
-    }
-  },
-  "每周目标": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6097,
-        "y": -5379
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5778,
+                "y": -5230
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "max_hit": 1,
-    "next": [
-      "点击领取3",
-      "收取巡礼奖励"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "每周目标"
+    "探寻命运": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    20,
+                    324,
+                    679,
+                    660
+                ],
+                "expected": [
+                    "探寻命运3次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    519,
+                    75,
+                    -120,
+                    -3
+                ]
+            }
+        },
+        "post_delay": 6000,
+        "next": [
+            "waitcheck",
+            "点击领取3",
+            "每周目标"
         ],
-        "roi": [
-          254,
-          1068,
-          216,
-          91
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "没找到祈愿任务上划": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4915,
-        "y": -4666
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 5792,
+                "y": -6133
+            }
+        }
     },
-    "action": {
-      "param": {
-        "begin": [
-          211,
-          870,
-          294,
-          32
+    "收取奖励": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    164,
+                    365,
+                    155,
+                    688
+                ],
+                "template": [
+                    "reddot巡礼等级奖励.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -41,
+                    28,
+                    23,
+                    21
+                ]
+            }
+        },
+        "next": [
+            "空白关闭弹窗"
         ],
-        "end": [
-          [
-            195,
-            611,
-            317,
-            18
-          ]
-        ]
-      },
-      "type": "Swipe"
+        "$__mpe_code": {
+            "position": {
+                "x": 6398,
+                "y": -5554
+            }
+        }
     },
-    "next": [
-      "女神祈愿"
-    ]
-  },
-  "没红点上划": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7546,
-        "y": -5596
-      }
-    },
-    "action": {
-      "param": {
-        "begin": [
-          117,
-          903,
-          510,
-          155
+    "收取巡礼奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    161,
+                    1165,
+                    281,
+                    108
+                ],
+                "expected": [
+                    "巡礼之证"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "waittime2"
         ],
-        "end": [
-          [
-            153,
-            138,
-            409,
-            123
-          ]
-        ]
-      },
-      "type": "Swipe"
+        "$__mpe_code": {
+            "position": {
+                "x": 6404,
+                "y": -6169
+            }
+        }
     },
-    "max_hit": 2,
-    "next": [
-      "商城其他红点检测",
-      "检查月卡"
-    ]
-  },
-  "点击商城": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4626,
-        "y": -5619
-      }
-    },
-    "action": {
-      "param": {
-        "target_offset": [
-          -141,
-          -48,
-          50,
-          45
-        ]
-      },
-      "type": "Click"
-    },
-    "next": [
-      "查找巡礼"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "商城"
+    "本期目标": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    468,
+                    1069,
+                    228,
+                    98
+                ],
+                "expected": [
+                    "本期目标"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击领取3",
+            "收取巡礼奖励"
         ],
-        "roi": [
-          367,
-          592,
-          316,
-          454
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "点击领取": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4908,
-        "y": -4964
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 6094,
+                "y": -5106
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "点击领取",
-      "女神祈愿",
-      "没找到祈愿任务上划"
-    ],
-    "post_delay": 1100,
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取"
+    "查找巡礼": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    457,
+                    117,
+                    242,
+                    1032
+                ],
+                "expected": [
+                    "巡礼之证"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -304,
+                    -40,
+                    153,
+                    104
+                ]
+            }
+        },
+        "next": [
+            "进入巡礼"
         ],
-        "roi": [
-          465,
-          379,
-          220,
-          626
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "点击领取2": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5506,
-        "y": -5638
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4931,
+                "y": -5927
+            }
+        }
     },
-    "action": {
-      "type": "Click"
+    "检查月卡": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7542,
+                "y": -5235
+            }
+        }
     },
-    "next": [
-      "探寻命运"
-    ],
-    "post_delay": 786,
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取"
+    "每周目标": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    254,
+                    1068,
+                    216,
+                    91
+                ],
+                "expected": [
+                    "每周目标"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击领取3",
+            "收取巡礼奖励"
         ],
-        "roi": [
-          465,
-          379,
-          220,
-          626
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "点击领取3": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6090,
-        "y": -5677
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 6097,
+                "y": -5379
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "每周目标",
-      "点击领取3",
-      "本期目标",
-      "收取巡礼奖励"
-    ],
-    "post_delay": 893,
-    "recognition": {
-      "param": {
-        "expected": [
-          "领取"
+    "没找到祈愿任务上划": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    211,
+                    870,
+                    294,
+                    32
+                ],
+                "end": [
+                    [
+                        195,
+                        611,
+                        317,
+                        18
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "女神祈愿"
         ],
-        "roi": [
-          465,
-          379,
-          220,
-          626
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "礼包返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 7224,
-        "y": -4729
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4915,
+                "y": -4666
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "商城其他红点检测",
-      "没红点上划"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
+    "没红点上划": {
+        "max_hit": 2,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    117,
+                    903,
+                    510,
+                    155
+                ],
+                "end": [
+                    [
+                        153,
+                        138,
+                        409,
+                        123
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "商城其他红点检测",
+            "检查月卡"
         ],
-        "template": [
-          "礼包返回.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "祈愿2次": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5223,
-        "y": -5333
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 7546,
+                "y": -5596
+            }
+        }
     },
-    "action": {
-      "type": "Click"
-    },
-    "max_hit": 2,
-    "next": [
-      "祈愿2次",
-      "祈愿返回"
-    ],
-    "post_delay": 2500,
-    "recognition": {
-      "param": {
-        "expected": [
-          "祈愿1次"
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "祈愿返回": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5225,
-        "y": -5041
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "祈愿返回",
-      "点击领取2"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          5,
-          1168,
-          142,
-          111
+    "点击商城": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    367,
+                    592,
+                    316,
+                    454
+                ],
+                "expected": [
+                    "商城"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -141,
+                    -48,
+                    50,
+                    45
+                ]
+            }
+        },
+        "next": [
+            "查找巡礼"
         ],
-        "template": [
-          "副本结算back.png"
-        ]
-      },
-      "type": "TemplateMatch"
+        "$__mpe_code": {
+            "position": {
+                "x": 4627,
+                "y": -5591
+            }
+        }
     },
-    "repeat": 2,
-    "repeat_delay": 1100
-  },
-  "空白关闭弹窗": {
-    "$__mpe_code": {
-      "position": {
-        "x": 6395,
-        "y": -5254
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "next": [
-      "巡礼返回"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          27,
-          1063,
-          130,
-          93
-        ]
-      },
-      "type": "DirectHit"
-    }
-  },
-  "进入地图": {
-    "$__mpe_code": {
-      "position": {
-        "x": 5781,
-        "y": -5568
-      }
-    },
-    "action": {
-      "type": "Click"
-    },
-    "max_hit": 3,
-    "next": [
-      "弹窗确认"
-    ],
-    "recognition": {
-      "param": {
-        "roi": [
-          464,
-          1153,
-          239,
-          121
+    "点击领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    465,
+                    379,
+                    220,
+                    626
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1100,
+        "next": [
+            "点击领取",
+            "女神祈愿",
+            "没找到祈愿任务上划"
         ],
-        "template": [
-          "苹果探索.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "进入巡礼": {
-    "$__mpe_code": {
-      "position": {
-        "x": 4934,
-        "y": -5671
-      }
+        "$__mpe_code": {
+            "position": {
+                "x": 4908,
+                "y": -4964
+            }
+        }
     },
-    "action": {
-      "type": "Click"
+    "点击领取2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    465,
+                    379,
+                    220,
+                    626
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 786,
+        "next": [
+            "探寻命运"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5506,
+                "y": -5638
+            }
+        }
     },
-    "next": [
-      "waittime"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "巡礼目标"
-        ]
-      },
-      "type": "OCR"
+    "点击领取3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    465,
+                    379,
+                    220,
+                    626
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 893,
+        "next": [
+            "每周目标",
+            "点击领取3",
+            "本期目标",
+            "收取巡礼奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6090,
+                "y": -5677
+            }
+        }
+    },
+    "礼包返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "礼包返回.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "商城其他红点检测",
+            "没红点上划"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7224,
+                "y": -4729
+            }
+        }
+    },
+    "祈愿2次": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "祈愿1次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2500,
+        "next": [
+            "祈愿2次",
+            "祈愿返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5223,
+                "y": -5333
+            }
+        }
+    },
+    "祈愿返回": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "副本结算back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "repeat_delay": 1100,
+        "next": [
+            "祈愿返回",
+            "点击领取2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5225,
+                "y": -5041
+            }
+        }
+    },
+    "空白关闭弹窗": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    27,
+                    1063,
+                    130,
+                    93
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "巡礼返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6395,
+                "y": -5254
+            }
+        }
+    },
+    "进入地图": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    464,
+                    1153,
+                    239,
+                    121
+                ],
+                "template": [
+                    "苹果探索.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "弹窗确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5781,
+                "y": -5568
+            }
+        }
+    },
+    "进入巡礼": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "巡礼目标"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "waittime"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4934,
+                "y": -5671
+            }
+        }
+    },
+    "家园_9": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_9"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3689,
+                "y": -5587
+            }
+        }
+    },
+    "start收取商城红点": {
+        "next": [
+            "家园_9",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3366,
+                "y": -5564
+            }
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_收取商城红点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3693,
+                "y": -5350
+            }
+        }
     }
-  }
 }

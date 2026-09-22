@@ -4,8 +4,8 @@
     // 文档：https://maafw.xyz/docs/3.3-ProjectInterfaceV2
     // 示例：https://github.com/MaaXYZ/MaaFramework/blob/main/sample/interface.json
     "interface_version": 2,
-    "name": "MaaXXX",
-    "description": "这是一个使用 MaaFramework 创建的新项目。",
+    "name": "zjcsMAAtest",
+    "description": "杖剑传说 多账号日常自动化（MaaFramework）。",
     "contact": "QQ群: 123456789",
     "license": "MIT",
     "welcome": "首次使用！欢迎使用 MAA!",
@@ -60,27 +60,52 @@
     // },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "商店购买",
+            "entry": "start商店"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "素材秘境",
+            "entry": "start秘境"
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
+            "name": "奇景委派",
+            "entry": "start奇景委派"
         },
         {
-            "name": "自定义识别与动作示例",
-            "entry": "FindSmallestNumber"
+            "name": "竞技场",
+            "entry": "start竞技场"
+        },
+        {
+            "name": "圣兽",
+            "entry": "start圣兽"
+        },
+        {
+            "name": "双影",
+            "entry": "start双影"
+        },
+        {
+            "name": "日常副本标准",
+            "entry": "start日常副本标准"
+        },
+        {
+            "name": "日常副本君临",
+            "entry": "start日常副本深渊"
+        },
+        {
+            "name": "每日委托",
+            "entry": "start每日委托"
+        },
+        {
+            "name": "收取商城红点",
+            "entry": "start收取商城红点"
+        },
+        {
+            "name": "收取精彩活动红点",
+            "entry": "start收取精彩活动红点"
+        },
+        {
+            "name": "公会讨伐收菜",
+            "entry": "start公会"
         }
     ],
     "option": {
