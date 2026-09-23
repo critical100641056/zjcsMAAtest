@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790066789614,
+            "lastSyncTime": 1790147603273,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取商城红点.json",
             "savedViewport": {
-                "x": -1707,
-                "y": 3720,
-                "zoom": 0.61
+                "x": -2670,
+                "y": 2823,
+                "zoom": 0.47
             },
             "filename": "收取商城红点",
             "version": "v1.10.1"
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_收取商城红点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3693,
+                "y": -5350
+            }
         }
     },
     "$__mpe_sticker_便签_收取商城红点": {
@@ -54,6 +62,18 @@
             "position": {
                 "x": 4067,
                 "y": -5619
+            }
+        }
+    },
+    "start收取商城红点": {
+        "next": [
+            "家园_9",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3366,
+                "y": -5564
             }
         }
     },
@@ -231,16 +251,17 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    634,
-                    172,
-                    64,
-                    807
+                    623,
+                    161,
+                    73,
+                    874
                 ],
                 "template": [
                     "reddot1.png",
                     "reddot3.png",
                     "reddot2.png",
-                    "reddot4.png"
+                    "reddot4.png",
+                    "extrareddot.png"
                 ]
             }
         },
@@ -359,6 +380,31 @@
             "position": {
                 "x": 5225,
                 "y": -5968
+            }
+        }
+    },
+    "家园_9": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_9"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3689,
+                "y": -5587
             }
         }
     },
@@ -976,51 +1022,6 @@
             "position": {
                 "x": 4934,
                 "y": -5671
-            }
-        }
-    },
-    "家园_9": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    297,
-                    1231,
-                    124,
-                    47
-                ],
-                "expected": [
-                    "家园"
-                ]
-            }
-        },
-        "next": [
-            "cube_home_9"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3689,
-                "y": -5587
-            }
-        }
-    },
-    "start收取商城红点": {
-        "next": [
-            "家园_9",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3366,
-                "y": -5564
-            }
-        }
-    },
-    "$__mpe_external_位置检测与重置_1_收取商城红点": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3693,
-                "y": -5350
             }
         }
     }

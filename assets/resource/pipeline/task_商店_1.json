@@ -3,26 +3,34 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790075213594,
+            "lastSyncTime": 1790143660082,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_商店_1.json",
             "savedViewport": {
-                "x": -541,
-                "y": 475,
-                "zoom": 0.75
+                "x": 118,
+                "y": 915,
+                "zoom": 1
             },
             "filename": "task_商店_1",
             "version": "v1.10.1"
         }
     },
+    "$__mpe_external_位置检测与重置_1_task_商店_1": {
+        "$__mpe_code": {
+            "position": {
+                "x": -126,
+                "y": -43
+            }
+        }
+    },
     "$__mpe_sticker_便签_task_商店_1": {
         "$__mpe_code": {
             "position": {
-                "x": 2074,
-                "y": -551
+                "x": -555,
+                "y": -61
             },
-            "content": "购买无折扣的狗粮和精华",
+            "content": "商店的备用入口有点难找",
             "color": "yellow",
             "width": 200,
             "height": 160
@@ -209,9 +217,6 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "claim_1"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 3561,
@@ -349,31 +354,6 @@
             }
         }
     },
-    "claim_1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3924,
-                "y": -333
-            }
-        }
-    },
     "cube_home": {
         "recognition": {
             "type": "TemplateMatch",
@@ -416,13 +396,13 @@
             "type": "Click"
         },
         "next": [
-            "task_claim",
-            "task_商店"
+            "task_商店",
+            "task_claim"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 493,
-                "y": -309
+                "x": 503,
+                "y": -296
             }
         }
     },
@@ -535,14 +515,14 @@
         "action": {
             "type": "Click"
         },
-        "post_wait_freezes": 2000,
         "next": [
+            "task_claim",
             "task_商店"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 936,
-                "y": -525
+                "x": 949,
+                "y": -572
             }
         }
     },
@@ -665,14 +645,6 @@
             "position": {
                 "x": 2062,
                 "y": 73
-            }
-        }
-    },
-    "$__mpe_external_位置检测与重置_1_task_商店_1": {
-        "$__mpe_code": {
-            "position": {
-                "x": -126,
-                "y": -43
             }
         }
     }

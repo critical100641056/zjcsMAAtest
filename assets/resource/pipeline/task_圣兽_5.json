@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790067949326,
+            "lastSyncTime": 1790148543165,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_圣兽_5.json",
             "savedViewport": {
-                "x": -1213,
-                "y": 1272,
-                "zoom": 0.55
+                "x": -2848,
+                "y": 590,
+                "zoom": 0.82
             },
             "filename": "task_圣兽_5",
             "version": "v1.10.1"
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_task_圣兽_5": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2907,
+                "y": -1493
+            }
         }
     },
     "$__mpe_sticker_便签_副本2_task_圣兽_5": {
@@ -22,7 +30,7 @@
                 "x": 4124,
                 "y": -1937
             },
-            "content": "圣兽task可能需要滑动拉取",
+            "content": "单独的圣兽task可能需要滑动拉取",
             "color": "yellow",
             "width": 200,
             "height": 160
@@ -46,38 +54,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "claim_2"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 5860,
                 "y": -1373
-            }
-        }
-    },
-    "claim_2": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 6149,
-                "y": -1344
             }
         }
     },
@@ -117,6 +97,99 @@
             }
         }
     },
+    "cube_home_5": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "cube_sheet_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3208,
+                "y": -1753
+            }
+        }
+    },
+    "cube_sheet_5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_5",
+            "task_圣兽"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3501,
+                "y": -1714
+            }
+        }
+    },
+    "start圣兽": {
+        "next": [
+            "家园_5",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2591,
+                "y": -1697
+            }
+        }
+    },
+    "task_claim_5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_5",
+            "task_圣兽"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3796,
+                "y": -1973
+            }
+        }
+    },
     "task_圣兽": {
         "recognition": {
             "type": "OCR",
@@ -138,7 +211,8 @@
             }
         },
         "next": [
-            "匹配"
+            "排行榜红点",
+            "切换到圣兽匹配界面"
         ],
         "$__mpe_code": {
             "position": {
@@ -196,6 +270,31 @@
             "position": {
                 "x": 4524,
                 "y": -1738
+            }
+        }
+    },
+    "家园_5": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2908,
+                "y": -1716
             }
         }
     },
@@ -304,41 +403,54 @@
             }
         }
     },
-    "cube_home_5": {
+    "排行榜红点": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    610,
-                    961,
-                    110,
+                    362,
+                    1172,
+                    162,
                     86
                 ],
                 "template": [
-                    "cube_home.png"
+                    "圣兽排行榜reddot.png"
                 ]
             }
         },
         "action": {
-            "type": "Click"
-        },
-        "post_delay": 213,
-        "next": [
-            "cube_sheet_5"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3208,
-                "y": -1753
-            }
-        }
-    },
-    "cube_sheet_5": {
-        "recognition": {
-            "type": "OCR",
+            "type": "Click",
             "param": {
-                "expected": [
-                    "任务"
+                "target_offset": [
+                    -105,
+                    17,
+                    52,
+                    10
+                ]
+            }
+        },
+        "next": [
+            "新建节点649"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4110,
+                "y": -1466
+            }
+        }
+    },
+    "新建节点649": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    386,
+                    20,
+                    327,
+                    197
+                ],
+                "template": [
+                    "击破记录.png"
                 ]
             }
         },
@@ -346,87 +458,178 @@
             "type": "Click"
         },
         "next": [
-            "task_claim_5",
-            "task_圣兽"
+            "圣兽击破记录红点"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3501,
-                "y": -1714
+                "x": 4104,
+                "y": -1169
             }
         }
     },
-    "task_claim_5": {
+    "圣兽击破记录红点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "圣兽击破记录reddot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -214,
+                    143,
+                    146,
+                    129
+                ]
+            }
+        },
+        "next": [
+            "通关奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4106,
+                "y": -910
+            }
+        }
+    },
+    "通关奖励": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
+                    76,
+                    835,
+                    539,
+                    336
                 ],
                 "expected": [
-                    "领取"
+                    "通关奖励"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_wait_freezes": 2000,
         "next": [
-            "task_圣兽"
+            "关闭弹窗_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3796,
-                "y": -1973
+                "x": 4105,
+                "y": -646
             }
         }
     },
-    "家园_5": {
+    "backBTN_2_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "副本结算back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "圣兽击破记录红点",
+            "backBTN_2_副本2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4109,
+                "y": -210
+            }
+        }
+    },
+    "关闭弹窗_副本1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    559,
+                    964,
+                    143,
+                    119
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "backBTN_2_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4106,
+                "y": -457
+            }
+        }
+    },
+    "backBTN_2_副本2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "切换到圣兽匹配界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4110,
+                "y": 82
+            }
+        }
+    },
+    "切换到圣兽匹配界面": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    297,
-                    1231,
-                    124,
-                    47
+                    130,
+                    1149,
+                    402,
+                    125
                 ],
                 "expected": [
-                    "家园"
+                    "试炼"
                 ]
             }
         },
+        "action": {
+            "type": "Click"
+        },
         "next": [
-            "cube_home_5"
+            "匹配"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2908,
-                "y": -1716
-            }
-        }
-    },
-    "start圣兽": {
-        "next": [
-            "家园_5",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2591,
-                "y": -1697
-            }
-        }
-    },
-    "$__mpe_external_位置检测与重置_1_task_圣兽_5": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2907,
-                "y": -1493
+                "x": 4527,
+                "y": -1961
             }
         }
     }

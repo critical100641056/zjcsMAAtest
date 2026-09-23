@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790067371710,
+            "lastSyncTime": 1790144906434,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取精彩活动红点.json",
             "savedViewport": {
-                "x": 1427,
-                "y": 6654,
-                "zoom": 0.92
+                "x": 236,
+                "y": 2973,
+                "zoom": 0.41
             },
             "filename": "收取精彩活动红点",
             "version": "v1.10.1"
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_收取精彩活动红点": {
+        "$__mpe_code": {
+            "position": {
+                "x": -750,
+                "y": -6703
+            }
         }
     },
     "$__mpe_sticker_tips2_收取精彩活动红点": {
@@ -77,6 +85,18 @@
             "position": {
                 "x": 1383,
                 "y": -6085
+            }
+        }
+    },
+    "start收取精彩活动红点": {
+        "next": [
+            "家园_10",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1109,
+                "y": -6902
             }
         }
     },
@@ -176,8 +196,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 958,
-                "y": -5659
+                "x": 943,
+                "y": -5406
             }
         }
     },
@@ -224,8 +244,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 824,
-                "y": -6271
+                "x": 688,
+                "y": -6182
             }
         }
     },
@@ -294,6 +314,7 @@
             "type": "Click"
         },
         "next": [
+            "是否全部完成",
             "获得抽奖券"
         ],
         "$__mpe_code": {
@@ -363,10 +384,11 @@
     },
     "新建节点": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
-                "template": [
-                    "签到reddot.png"
+                "expected": [
+                    "领取",
+                    "补签"
                 ]
             }
         },
@@ -374,10 +396,10 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    -78,
-                    37,
-                    55,
-                    59
+                    -28,
+                    44,
+                    18,
+                    38
                 ]
             }
         },
@@ -386,8 +408,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 953,
-                "y": -5935
+                "x": 948,
+                "y": -5682
             }
         }
     },
@@ -464,8 +486,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 691,
-                "y": -5607
+                "x": 682,
+                "y": -5389
             }
         }
     },
@@ -600,8 +622,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 689,
-                "y": -5933
+                "x": 681,
+                "y": -5726
             }
         }
     },
@@ -706,8 +728,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1014,
-                "y": -6571
+                "x": 1007,
+                "y": -6397
             }
         }
     },
@@ -754,23 +776,28 @@
             }
         }
     },
-    "start收取精彩活动红点": {
+    "是否全部完成": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    104,
+                    984,
+                    429,
+                    203
+                ],
+                "expected": [
+                    "已完成本期全部轮次"
+                ]
+            }
+        },
         "next": [
-            "家园_10",
-            "[JumpBack]位置检测与重置_1"
+            "返回活动汇总"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1109,
-                "y": -6902
-            }
-        }
-    },
-    "$__mpe_external_位置检测与重置_1_收取精彩活动红点": {
-        "$__mpe_code": {
-            "position": {
-                "x": -750,
-                "y": -6703
+                "x": 1009,
+                "y": -6618
             }
         }
     }

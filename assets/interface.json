@@ -69,7 +69,10 @@
     },
     {
       "name": "素材秘境",
-      "entry": "start秘境"
+      "entry": "start秘境",
+      "default_check": false,
+      "description": "挖矿，默认精确挖10次金矿，慢一些。嫌慢可以直接开快速，会超一点，超的不多",
+      "option": [ "矿洞选择", "挖矿次数选择" ]
     },
     {
       "name": "奇景委派",
@@ -89,12 +92,11 @@
     },
     {
       "name": "日常副本标准",
-      "entry": "start日常副本标准"
-    },
-    {
-      "name": "日常副本君临",
-      "entry": "start日常副本深渊"
-    },
+      "entry": "start日常副本标准",
+      "default_check": false,
+      "description": "日常副本按需求选择，不想打最新的可以选择打老版本深渊刷片，默认每天买2次打4次，S评分领取",
+      "option": [ "副本选择" ]//可能还需要添加是否领取奖励，用于攒副本次数。
+    },   
     {
       "name": "每日委托",
       "entry": "start每日委托"
@@ -140,7 +142,115 @@
           }
         }
       ]
+    },
+
+
+    "副本选择": {
+      "type": "select",
+      "label": "副本选择",
+      "default_case": "副本选择_标准",
+      "cases": [
+        {
+          "name": "当前最新副本",
+          "label": "当前最新副本",
+          "pipeline_override": {
+            "副本选择": {
+              "next": [ "副本选择_标准", "副本打完返回_1" ]
+            }
+          }
+        },
+        {
+          "name": "君临之巢深渊",
+          "label": "君临之巢深渊",
+          "pipeline_override": {
+            "副本选择": {
+              "next": [ "副本选择君临", "副本打完返回_1" ]
+            }
+          }
+        }
+      ]
+    },
+
+
+    "矿洞选择": {
+      "type": "select",
+      "label": "矿洞选择",
+      "default_case": "黄金矿洞",
+      "cases": [
+        {
+          "name": "黄金矿洞",
+          "label": "黄金矿洞",
+          "pipeline_override": {
+            "矿洞选择": {
+              "next": [ "黄金矿洞" ]
+            }
+          }
+        },
+        {
+          "name": "铁石矿洞",
+          "label": "铁石矿洞",
+          "pipeline_override": {
+            "矿洞选择": {
+              "next": [ "铁石矿洞" ]
+            }
+          }
+        },
+        {
+          "name": "怪物洞窟",
+          "label": "怪物洞窟",
+          "pipeline_override": {
+            "矿洞选择": {
+              "next": [ "怪物洞窟" ]
+            }
+          }
+        },
+        {
+          "name": "砂石矿洞",
+          "label": "砂石矿洞",
+          "pipeline_override": {
+            "矿洞选择": {
+              "next": [ "砂石矿洞" ]
+            }
+          }
+        }
+      ]
+    },
+
+
+
+
+    "挖矿次数选择": {
+      "type": "select",
+      "label": "挖矿次数选择",
+      "default_case": "精确10次做日常",
+      "cases": [
+        {
+          "name": "精确10次做日常",
+          "label": "精确10次",
+          "pipeline_override": {
+            "挖矿次数选择": {
+              "next": [ "精确10次做日常" ]
+            }
+          }
+        },
+        {
+          "name": "快速完成略多于10次",
+          "label": "快速完成",
+          "pipeline_override": {
+            "挖矿次数选择": {
+              "next": [ "快速完成略多于10次" ]
+            }
+          }
+        }
+      ]
     }
+
+
+
+
+
+
+
   }
 }
     

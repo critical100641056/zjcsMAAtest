@@ -3,17 +3,94 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790067953077,
+            "lastSyncTime": 1790143812840,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
             "savedViewport": {
-                "x": 313,
-                "y": 2527,
-                "zoom": 0.92
+                "x": 112,
+                "y": 5735,
+                "zoom": 2.18
             },
             "filename": "task_奇景委派_3",
             "version": "v1.10.1"
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_task_奇景委派_3": {
+        "$__mpe_code": {
+            "position": {
+                "x": -871,
+                "y": -2070
+            },
+            "extra_positions": [
+                {
+                    "x": -860,
+                    "y": -1583
+                }
+            ]
+        }
+    },
+    "backBTN_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "pre_wait_freezes": 0,
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2698,
+                "y": -2319
+            }
+        }
+    },
+    "bluedot": {
+        "max_hit": 4,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    12,
+                    99,
+                    696,
+                    792
+                ],
+                "template": [
+                    "bluedot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -61,
+                    32,
+                    39,
+                    39
+                ]
+            }
+        },
+        "next": [
+            "step1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2230,
+                "y": -2519
+            }
         }
     },
     "cube_home_3": {
@@ -68,172 +145,9 @@
             }
         }
     },
-    "task_claim_3": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_wait_freezes": 2000,
-        "next": [
-            "task_奇景委派"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 173,
-                "y": -2536
-            }
-        }
-    },
-    "家园_奇景": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    297,
-                    1231,
-                    124,
-                    47
-                ],
-                "expected": [
-                    "家园"
-                ]
-            }
-        },
-        "next": [
-            "cube_home_3"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -869,
-                "y": -2291
-            }
-        }
-    },
-    "start奇景委派": {
-        "next": [
-            "家园_奇景",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1167,
-                "y": -2294
-            }
-        }
-    },
-    "$__mpe_external_位置检测与重置_1_task_奇景委派_3": {
-        "$__mpe_code": {
-            "position": {
-                "x": -871,
-                "y": -2070
-            }
-        }
-    },
-    "backBTN_3": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    5,
-                    1168,
-                    142,
-                    111
-                ],
-                "template": [
-                    "back.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "claim_3"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2698,
-                "y": -2319
-            }
-        }
-    },
-    "bluedot": {
-        "max_hit": 4,
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    12,
-                    99,
-                    696,
-                    792
-                ],
-                "template": [
-                    "bluedot.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -61,
-                    32,
-                    39,
-                    39
-                ]
-            }
-        },
-        "next": [
-            "step1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2230,
-                "y": -2519
-            }
-        }
-    },
-    "claim_3": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3158,
-                "y": -2300
-            }
-        }
-    },
     "emptylogic2": {
-        "post_delay": 1000,
+        "post_wait_freezes": 0,
+        "post_delay": 988,
         "next": [
             "reddot",
             "emptylogic3"
@@ -246,6 +160,7 @@
         }
     },
     "emptylogic3": {
+        "post_wait_freezes": 0,
         "next": [
             "bluedot",
             "backBTN_3"
@@ -291,6 +206,18 @@
             "position": {
                 "x": 1473,
                 "y": -2540
+            }
+        }
+    },
+    "start奇景委派": {
+        "next": [
+            "家园_奇景",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1167,
+                "y": -2294
             }
         }
     },
@@ -350,6 +277,35 @@
             }
         }
     },
+    "task_claim_3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_3",
+            "task_奇景委派"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 173,
+                "y": -2536
+            }
+        }
+    },
     "task_奇景委派": {
         "recognition": {
             "type": "OCR",
@@ -380,6 +336,31 @@
             }
         }
     },
+    "家园_奇景": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -869,
+                "y": -2291
+            }
+        }
+    },
     "弹窗关闭": {
         "recognition": {
             "type": "OCR",
@@ -395,6 +376,7 @@
                 ]
             }
         },
+        "pre_wait_freezes": 0,
         "action": {
             "type": "Click",
             "param": {
@@ -443,6 +425,7 @@
                 ]
             }
         },
+        "post_wait_freezes": 0,
         "next": [
             "bluedot",
             "emptylogic3"
@@ -451,6 +434,82 @@
             "position": {
                 "x": 2230,
                 "y": -1704
+            }
+        }
+    },
+    "羁绊冒险标准入口": {
+        "next": [
+            "进入笔记界面_3",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1171,
+                "y": -1860
+            }
+        }
+    },
+    "进入笔记界面_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    150,
+                    1155,
+                    147,
+                    124
+                ],
+                "template": [
+                    "笔记未选中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入羁绊冒险界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -872,
+                "y": -1885
+            }
+        }
+    },
+    "进入羁绊冒险界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    422,
+                    138,
+                    179,
+                    52
+                ],
+                "expected": [
+                    "羁绊冒险"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    43,
+                    89,
+                    16,
+                    112
+                ]
+            }
+        },
+        "next": [
+            "emptylogic2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 549,
+                "y": -1849
             }
         }
     }

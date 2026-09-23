@@ -3,29 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790066761396,
+            "lastSyncTime": 1790128895169,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\每日委托4个.json",
             "savedViewport": {
-                "x": 2178,
-                "y": 4503,
-                "zoom": 0.86
+                "x": 441,
+                "y": 3569,
+                "zoom": 0.66
             },
             "filename": "每日委托4个",
             "version": "v1.10.1"
-        }
-    },
-    "start每日委托": {
-        "next": [
-            "家园_8",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -2208,
-                "y": -4830
-            }
         }
     },
     "$__mpe_external_位置检测与重置_1_每日委托4个": {
@@ -99,6 +87,18 @@
             }
         }
     },
+    "start每日委托": {
+        "next": [
+            "家园_8",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -2208,
+                "y": -4830
+            }
+        }
+    },
     "一键提交合成": {
         "recognition": {
             "type": "OCR",
@@ -123,8 +123,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 132,
-                "y": -4952
+                "x": 108,
+                "y": -5201
             }
         }
     },
@@ -208,8 +208,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 99,
-                "y": -4721
+                "x": 103,
+                "y": -4719
             }
         }
     },
@@ -371,6 +371,7 @@
         "post_delay": 654,
         "next": [
             "一键提交合成",
+            "购买",
             "去往地图确认",
             "直接提交"
         ],
@@ -405,13 +406,14 @@
         "post_delay": 560,
         "next": [
             "一键提交合成",
+            "购买",
             "去往地图确认",
             "直接提交"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -265,
-                "y": -4975
+                "x": -261,
+                "y": -5006
             }
         }
     },
@@ -422,8 +424,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 95,
-                "y": -4433
+                "x": 99,
+                "y": -4430
             }
         }
     },
@@ -441,8 +443,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -681,
-                "y": -4603
+                "x": -696,
+                "y": -4621
             }
         }
     },
@@ -573,6 +575,60 @@
             "position": {
                 "x": -692,
                 "y": -4846
+            }
+        }
+    },
+    "购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    107,
+                    679,
+                    507,
+                    121
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭获得奖励弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 104,
+                "y": -4953
+            }
+        }
+    },
+    "关闭获得奖励弹窗": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    10,
+                    1171,
+                    134,
+                    101
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "好感度提升",
+            "逻辑节点2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 386,
+                "y": -4942
             }
         }
     }

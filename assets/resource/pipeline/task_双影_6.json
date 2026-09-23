@@ -3,17 +3,25 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790067946759,
+            "lastSyncTime": 1790149108754,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_双影_6.json",
             "savedViewport": {
-                "x": -4470,
-                "y": 3947,
-                "zoom": 1.25
+                "x": -299,
+                "y": 1100,
+                "zoom": 0.31
             },
             "filename": "task_双影_6",
             "version": "v1.10.1"
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_task_双影_6": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2824,
+                "y": -2799
+            }
         }
     },
     "backBTN": {
@@ -34,38 +42,10 @@
         "action": {
             "type": "Click"
         },
-        "next": [
-            "claim"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 5742,
                 "y": -2693
-            }
-        }
-    },
-    "claim": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 6038,
-                "y": -2662
             }
         }
     },
@@ -105,6 +85,99 @@
             }
         }
     },
+    "cube_home_6": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "cube_sheet_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3125,
+                "y": -3059
+            }
+        }
+    },
+    "cube_sheet_6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_6",
+            "task_双影"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3418,
+                "y": -3020
+            }
+        }
+    },
+    "start双影": {
+        "next": [
+            "家园_6",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2507,
+                "y": -3004
+            }
+        }
+    },
+    "task_claim_6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    110,
+                    242,
+                    1057
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "task_claim_6",
+            "task_双影"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3691,
+                "y": -3269
+            }
+        }
+    },
     "task_双影": {
         "recognition": {
             "type": "OCR",
@@ -126,12 +199,13 @@
             }
         },
         "next": [
-            "匹配2"
+            "排行榜红点_6",
+            "宝石本匹配界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3963,
-                "y": -3038
+                "x": 3970,
+                "y": -3044
             }
         }
     },
@@ -161,6 +235,31 @@
             "position": {
                 "x": 4378,
                 "y": -3050
+            }
+        }
+    },
+    "家园_6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2825,
+                "y": -3022
             }
         }
     },
@@ -292,41 +391,54 @@
             }
         }
     },
-    "cube_home_6": {
+    "排行榜红点_6": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    610,
-                    961,
-                    110,
+                    362,
+                    1172,
+                    162,
                     86
                 ],
                 "template": [
-                    "cube_home.png"
+                    "圣兽排行榜reddot.png"
                 ]
             }
         },
         "action": {
-            "type": "Click"
-        },
-        "post_delay": 213,
-        "next": [
-            "cube_sheet_6"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3125,
-                "y": -3059
-            }
-        }
-    },
-    "cube_sheet_6": {
-        "recognition": {
-            "type": "OCR",
+            "type": "Click",
             "param": {
-                "expected": [
-                    "任务"
+                "target_offset": [
+                    -105,
+                    17,
+                    52,
+                    10
+                ]
+            }
+        },
+        "next": [
+            "历战记录"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3969,
+                "y": -2810
+            }
+        }
+    },
+    "历战记录": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    386,
+                    20,
+                    327,
+                    197
+                ],
+                "template": [
+                    "历战记录.png"
                 ]
             }
         },
@@ -334,87 +446,188 @@
             "type": "Click"
         },
         "next": [
-            "task_claim_6",
-            "task_双影"
+            "宝石本记录红点"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3418,
-                "y": -3020
+                "x": 3967,
+                "y": -2513
             }
         }
     },
-    "task_claim_6": {
+    "宝石本记录红点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "宝石本记录reddot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -180,
+                    83,
+                    103,
+                    66
+                ]
+            }
+        },
+        "next": [
+            "通关奖励_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3965,
+                "y": -2254
+            }
+        }
+    },
+    "通关奖励_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    429,
+                    121,
+                    192,
+                    936
+                ],
+                "template": [
+                    "宝石盒子.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭弹窗_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3964,
+                "y": -1990
+            }
+        }
+    },
+    "关闭弹窗_6": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    452,
-                    110,
-                    242,
-                    1057
+                    155,
+                    324,
+                    460,
+                    158
                 ],
                 "expected": [
-                    "领取"
+                    "获得奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    184,
+                    1189,
+                    309,
+                    76
+                ]
+            }
+        },
+        "next": [
+            "backBTN_2_副本2_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3964,
+                "y": -1721
+            }
+        }
+    },
+    "backBTN_2_副本2_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_wait_freezes": 2000,
         "next": [
-            "task_双影"
+            "宝石本记录红点",
+            "backBTN_2_副本2_副本1_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3695,
-                "y": -3256
+                "x": 3963,
+                "y": -1478
             }
         }
     },
-    "家园_6": {
+    "backBTN_2_副本2_副本1_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "宝石本匹配界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3971,
+                "y": -1169
+            }
+        }
+    },
+    "宝石本匹配界面": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    297,
-                    1231,
-                    124,
-                    47
+                    159,
+                    1147,
+                    178,
+                    131
                 ],
                 "expected": [
-                    "家园"
+                    "幻境"
                 ]
             }
         },
         "next": [
-            "cube_home_6"
+            "匹配2"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2825,
-                "y": -3022
-            }
-        }
-    },
-    "start双影": {
-        "next": [
-            "家园_6",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2507,
-                "y": -3004
-            }
-        }
-    },
-    "$__mpe_external_位置检测与重置_1_task_双影_6": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2824,
-                "y": -2799
+                "x": 4379,
+                "y": -3273
             }
         }
     }
