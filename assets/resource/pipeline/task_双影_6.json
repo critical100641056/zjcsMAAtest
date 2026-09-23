@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790149108754,
+            "lastSyncTime": 1790169083361,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_双影_6.json",
             "savedViewport": {
-                "x": -299,
-                "y": 1100,
-                "zoom": 0.31
+                "x": -2712,
+                "y": 2932,
+                "zoom": 0.83
             },
             "filename": "task_双影_6",
             "version": "v1.10.1"
@@ -46,6 +46,63 @@
             "position": {
                 "x": 5742,
                 "y": -2693
+            }
+        }
+    },
+    "backBTN_2_副本2_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "宝石本记录红点",
+            "backBTN_2_副本2_副本1_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3963,
+                "y": -1478
+            }
+        }
+    },
+    "backBTN_2_副本2_副本1_副本1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "back.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "宝石本匹配界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3971,
+                "y": -1169
             }
         }
     },
@@ -199,13 +256,50 @@
             }
         },
         "next": [
+            "识别task对应入口是否已完成_6",
             "排行榜红点_6",
             "宝石本匹配界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3970,
-                "y": -3044
+                "x": 3972,
+                "y": -3090
+            }
+        }
+    },
+    "关闭弹窗_6": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    155,
+                    324,
+                    460,
+                    158
+                ],
+                "expected": [
+                    "获得奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    184,
+                    1189,
+                    309,
+                    76
+                ]
+            }
+        },
+        "next": [
+            "backBTN_2_副本2_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3964,
+                "y": -1721
             }
         }
     },
@@ -238,6 +332,89 @@
             }
         }
     },
+    "历战记录": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    386,
+                    20,
+                    327,
+                    197
+                ],
+                "template": [
+                    "历战记录.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "宝石本记录红点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3967,
+                "y": -2513
+            }
+        }
+    },
+    "宝石本匹配界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    159,
+                    1147,
+                    178,
+                    131
+                ],
+                "expected": [
+                    "幻境"
+                ]
+            }
+        },
+        "next": [
+            "匹配2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4379,
+                "y": -3273
+            }
+        }
+    },
+    "宝石本记录红点": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "宝石本记录reddot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -180,
+                    83,
+                    103,
+                    66
+                ]
+            }
+        },
+        "next": [
+            "通关奖励_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3965,
+                "y": -2254
+            }
+        }
+    },
     "家园_6": {
         "recognition": {
             "type": "OCR",
@@ -260,6 +437,42 @@
             "position": {
                 "x": 2825,
                 "y": -3022
+            }
+        }
+    },
+    "排行榜红点_6": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    362,
+                    1172,
+                    162,
+                    86
+                ],
+                "template": [
+                    "圣兽排行榜reddot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -105,
+                    17,
+                    52,
+                    10
+                ]
+            }
+        },
+        "next": [
+            "历战记录"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3969,
+                "y": -2810
             }
         }
     },
@@ -391,100 +604,6 @@
             }
         }
     },
-    "排行榜红点_6": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    362,
-                    1172,
-                    162,
-                    86
-                ],
-                "template": [
-                    "圣兽排行榜reddot.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -105,
-                    17,
-                    52,
-                    10
-                ]
-            }
-        },
-        "next": [
-            "历战记录"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3969,
-                "y": -2810
-            }
-        }
-    },
-    "历战记录": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    386,
-                    20,
-                    327,
-                    197
-                ],
-                "template": [
-                    "历战记录.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "宝石本记录红点"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3967,
-                "y": -2513
-            }
-        }
-    },
-    "宝石本记录红点": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "宝石本记录reddot.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -180,
-                    83,
-                    103,
-                    66
-                ]
-            }
-        },
-        "next": [
-            "通关奖励_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3965,
-                "y": -2254
-            }
-        }
-    },
     "通关奖励_副本1": {
         "recognition": {
             "type": "TemplateMatch",
@@ -513,121 +632,58 @@
             }
         }
     },
-    "关闭弹窗_6": {
+    "识别task对应入口是否已完成_6": {
         "recognition": {
-            "type": "OCR",
+            "type": "And",
             "param": {
-                "roi": [
-                    155,
-                    324,
-                    460,
-                    158
-                ],
-                "expected": [
-                    "获得奖励"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    184,
-                    1189,
-                    309,
-                    76
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "双影幻境击破第3波"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
                 ]
             }
         },
         "next": [
-            "backBTN_2_副本2_副本1"
+            "已完成_6"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3964,
-                "y": -1721
+                "x": 4376,
+                "y": -3604
             }
         }
     },
-    "backBTN_2_副本2_副本1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    5,
-                    1168,
-                    142,
-                    111
-                ],
-                "template": [
-                    "back.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "宝石本记录红点",
-            "backBTN_2_副本2_副本1_副本1"
-        ],
+    "已完成_6": {
         "$__mpe_code": {
             "position": {
-                "x": 3963,
-                "y": -1478
-            }
-        }
-    },
-    "backBTN_2_副本2_副本1_副本1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    5,
-                    1168,
-                    142,
-                    111
-                ],
-                "template": [
-                    "back.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "宝石本匹配界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3971,
-                "y": -1169
-            }
-        }
-    },
-    "宝石本匹配界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    159,
-                    1147,
-                    178,
-                    131
-                ],
-                "expected": [
-                    "幻境"
-                ]
-            }
-        },
-        "next": [
-            "匹配2"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4379,
-                "y": -3273
+                "x": 4377,
+                "y": -3408
             }
         }
     }

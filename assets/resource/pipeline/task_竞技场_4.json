@@ -3,17 +3,72 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790143491233,
+            "lastSyncTime": 1790168916093,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_竞技场_4.json",
             "savedViewport": {
-                "x": 1220,
-                "y": 8310,
-                "zoom": 2.18
+                "x": 165,
+                "y": 5002,
+                "zoom": 1.25
             },
             "filename": "task_竞技场_4",
             "version": "v1.10.1"
+        }
+    },
+    "识别task对应入口是否已完成_4": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "完成1次竞技场挑战"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 330,
+                "y": -3849
+            }
+        }
+    },
+    "已完成_4": {
+        "$__mpe_code": {
+            "position": {
+                "x": 331,
+                "y": -3650
+            }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_竞技场_4": {
@@ -233,6 +288,7 @@
             }
         },
         "next": [
+            "识别task对应入口是否已完成_4",
             "汇合节点_3"
         ],
         "$__mpe_code": {

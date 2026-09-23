@@ -3,17 +3,72 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790143660082,
+            "lastSyncTime": 1790156994204,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_商店_1.json",
             "savedViewport": {
-                "x": 118,
-                "y": 915,
-                "zoom": 1
+                "x": -806,
+                "y": 622,
+                "zoom": 1.09
             },
             "filename": "task_商店_1",
             "version": "v1.10.1"
+        }
+    },
+    "识别task对应入口是否已完成_副本1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "家园商店购买2次"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1330,
+                "y": -82
+            }
+        }
+    },
+    "已完成": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1328,
+                "y": 117
+            }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_商店_1": {
@@ -531,7 +586,7 @@
             "type": "OCR",
             "param": {
                 "expected": [
-                    "家园商店购买"
+                    "家园商店购买2次"
                 ]
             }
         },
@@ -539,20 +594,21 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    520,
+                    519,
                     76,
-                    -128,
-                    -2
+                    -170,
+                    -3
                 ]
             }
         },
         "next": [
+            "识别task对应入口是否已完成_副本1",
             "firstitem1-1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1375,
-                "y": -308
+                "x": 1326,
+                "y": -313
             }
         }
     },

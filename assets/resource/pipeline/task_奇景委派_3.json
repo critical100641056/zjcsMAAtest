@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790143812840,
+            "lastSyncTime": 1790168768867,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
             "savedViewport": {
-                "x": 112,
-                "y": 5735,
-                "zoom": 2.18
+                "x": -536,
+                "y": 3529,
+                "zoom": 1.25
             },
             "filename": "task_奇景委派_3",
             "version": "v1.10.1"
@@ -327,6 +327,7 @@
             }
         },
         "next": [
+            "识别task对应入口是否已完成_2_副本1",
             "emptylogic2"
         ],
         "$__mpe_code": {
@@ -510,6 +511,61 @@
             "position": {
                 "x": 549,
                 "y": -1849
+            }
+        }
+    },
+    "识别task对应入口是否已完成_2_副本1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "完成1次奇景委派"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_2_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 942,
+                "y": -2676
+            }
+        }
+    },
+    "已完成_2_副本1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 943,
+                "y": -2478
             }
         }
     }

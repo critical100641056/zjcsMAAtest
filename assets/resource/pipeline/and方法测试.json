@@ -1,0 +1,113 @@
+{
+    "$__mpe_config_and方法测试": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\and方法测试.json",
+            "lastSyncTime": 1790168678680,
+            "savedViewport": {
+                "x": 464,
+                "y": 208,
+                "zoom": 1.14
+            },
+            "filename": "and方法测试",
+            "version": "v1.10.1"
+        }
+    },
+    "action": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    42,
+                    1197,
+                    65,
+                    49
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 281,
+                "y": -4
+            }
+        }
+    },
+    "弹窗礼包检测并关闭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "适度娱乐，理性消费。"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -19,
+                    76,
+                    69,
+                    82
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -13,
+                "y": 232
+            }
+        }
+    },
+    "识别task对应入口是否已完成": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "家园商店购买2次"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "action"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -10,
+                "y": -19
+            }
+        }
+    }
+}

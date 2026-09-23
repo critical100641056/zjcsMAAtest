@@ -61,6 +61,7 @@
   "task": [
     {
       "name": "商店购买",
+      "label": "task1_商店购买",
       "entry": "start商店",
       "default_check": false,
       "description": "杂货+宝库，按折扣规则购买",
@@ -103,11 +104,13 @@
     },
     {
       "name": "收取商城红点",
-      "entry": "start收取商城红点"
+      "entry": "start收取商城红点",
+      "description":"在执行该任务前，请尽量保证任务列表中的日常任务均已完成，否则可能会有部分任务无法正常完成。"
     },
     {
       "name": "收取精彩活动红点",
-      "entry": "start收取精彩活动红点"
+      "entry": "start收取精彩活动红点",
+      "description":"在执行该任务前，请尽量保证任务列表中的日常任务，以及收取商城红点均已完成，否则跳转可能会卡住。"
     },
     {
       "name": "公会讨伐收菜",

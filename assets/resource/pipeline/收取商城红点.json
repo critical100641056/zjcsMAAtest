@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790147603273,
+            "lastSyncTime": 1790155882743,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取商城红点.json",
             "savedViewport": {
-                "x": -2670,
-                "y": 2823,
-                "zoom": 0.47
+                "x": -1288,
+                "y": 2706,
+                "zoom": 0.41
             },
             "filename": "收取商城红点",
             "version": "v1.10.1"
@@ -371,15 +371,15 @@
         },
         "post_delay": 1867,
         "next": [
-            "友情祈愿",
+            "滑动找到友情祈愿",
             "点击领取2",
             "探寻命运",
             "每周目标"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5225,
-                "y": -5968
+                "x": 5231,
+                "y": -6166
             }
         }
     },
@@ -1022,6 +1022,39 @@
             "position": {
                 "x": 4934,
                 "y": -5671
+            }
+        }
+    },
+    "滑动找到友情祈愿": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    447,
+                    1114,
+                    111,
+                    31
+                ],
+                "end": [
+                    [
+                        103,
+                        1112,
+                        123,
+                        35
+                    ]
+                ],
+                "end_hold": [
+                    543
+                ]
+            }
+        },
+        "next": [
+            "友情祈愿"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5237,
+                "y": -5805
             }
         }
     }

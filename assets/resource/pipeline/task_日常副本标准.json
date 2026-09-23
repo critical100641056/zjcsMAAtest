@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790143527534,
+            "lastSyncTime": 1790169089265,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_日常副本标准.json",
             "savedViewport": {
-                "x": -2915,
-                "y": 3542,
-                "zoom": 0.86
+                "x": -4254,
+                "y": 4332,
+                "zoom": 1.09
             },
             "filename": "task_日常副本标准",
             "version": "v1.10.1"
@@ -230,6 +230,7 @@
             }
         },
         "next": [
+            "识别task对应入口是否已完成_7",
             "副本选择"
         ],
         "$__mpe_code": {
@@ -662,6 +663,18 @@
             }
         }
     },
+    "日常副本标准入口": {
+        "next": [
+            "进入笔记界面_7",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2604,
+                "y": -3010
+            }
+        }
+    },
     "日常副本检测_1": {
         "recognition": {
             "type": "OCR",
@@ -734,74 +747,6 @@
             }
         }
     },
-    "领取_1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    407,
-                    1191,
-                    225,
-                    52
-                ],
-                "expected": [
-                    "领取奖励"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "弹窗确定1_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6740,
-                "y": -3311
-            }
-        }
-    },
-    "日常副本标准入口": {
-        "next": [
-            "进入笔记界面_7",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2604,
-                "y": -3010
-            }
-        }
-    },
-    "进入笔记界面_7": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    150,
-                    1155,
-                    147,
-                    124
-                ],
-                "template": [
-                    "笔记未选中.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "进入日常副本"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2918,
-                "y": -3041
-            }
-        }
-    },
     "进入日常副本": {
         "recognition": {
             "type": "OCR",
@@ -835,6 +780,117 @@
             "position": {
                 "x": 4162,
                 "y": -3023
+            }
+        }
+    },
+    "进入笔记界面_7": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    150,
+                    1155,
+                    147,
+                    124
+                ],
+                "template": [
+                    "笔记未选中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入日常副本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2918,
+                "y": -3041
+            }
+        }
+    },
+    "领取_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    407,
+                    1191,
+                    225,
+                    52
+                ],
+                "expected": [
+                    "领取奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "弹窗确定1_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6740,
+                "y": -3311
+            }
+        }
+    },
+    "识别task对应入口是否已完成_7": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "完成1次日常副本"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4525,
+                "y": -3774
+            }
+        }
+    },
+    "已完成_7": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4526,
+                "y": -3580
             }
         }
     }
