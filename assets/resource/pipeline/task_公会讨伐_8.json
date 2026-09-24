@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790147332505,
+            "lastSyncTime": 1790232767065,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_公会讨伐_8.json",
             "savedViewport": {
-                "x": -3756,
-                "y": 5568,
-                "zoom": 0.75
+                "x": -3391,
+                "y": 5232,
+                "zoom": 0.7
             },
             "filename": "task_公会讨伐_8",
             "version": "v1.10.1"
@@ -36,34 +36,6 @@
             "height": 160
         }
     },
-    "只捐赠和收菜": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    5,
-                    1168,
-                    142,
-                    111
-                ],
-                "template": [
-                    "公会back2.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "大厅"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4852,
-                "y": -7470
-            }
-        }
-    },
     "backBTN公会2": {
         "recognition": {
             "type": "TemplateMatch",
@@ -87,7 +59,7 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5949,
+                "x": 5958,
                 "y": -6502
             }
         }
@@ -251,6 +223,34 @@
             }
         }
     },
+    "只捐赠和收菜": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "公会back2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "大厅"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4852,
+                "y": -7470
+            }
+        }
+    },
     "大厅": {
         "recognition": {
             "type": "OCR",
@@ -386,6 +386,7 @@
             }
         },
         "next": [
+            "检测今天是否已捐赠",
             "捐赠"
         ],
         "$__mpe_code": {
@@ -491,6 +492,34 @@
             "position": {
                 "x": 4858,
                 "y": -6769
+            }
+        }
+    },
+    "检测今天是否已捐赠": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    216,
+                    866,
+                    288,
+                    44
+                ],
+                "expected": [
+                    "每日捐赠次数：2/5",
+                    "每日捐赠次数：3/5",
+                    "每日捐赠次数：4/5",
+                    "每日捐赠次数：5/5"
+                ]
+            }
+        },
+        "next": [
+            "空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5665,
+                "y": -6961
             }
         }
     }

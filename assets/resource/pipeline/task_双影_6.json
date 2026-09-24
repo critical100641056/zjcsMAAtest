@@ -3,24 +3,58 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790169083361,
+            "lastSyncTime": 1790231907432,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_双影_6.json",
             "savedViewport": {
-                "x": -2712,
-                "y": 2932,
-                "zoom": 0.83
+                "x": -3374,
+                "y": 3585,
+                "zoom": 1.21
             },
             "filename": "task_双影_6",
             "version": "v1.10.1"
         }
     },
+    "下滑_6": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_双影"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3504,
+                "y": -2416
+            }
+        }
+    },
     "$__mpe_external_位置检测与重置_1_task_双影_6": {
         "$__mpe_code": {
             "position": {
-                "x": 2824,
-                "y": -2799
+                "x": 2537,
+                "y": -2809
             }
         }
     },
@@ -166,8 +200,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3125,
-                "y": -3059
+                "x": 2824,
+                "y": -3064
             }
         }
     },
@@ -185,12 +219,13 @@
         },
         "next": [
             "task_claim_6",
-            "task_双影"
+            "task_双影",
+            "上划_6"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3418,
-                "y": -3020
+                "x": 3105,
+                "y": -3021
             }
         }
     },
@@ -201,8 +236,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2507,
-                "y": -3004
+                "x": 2264,
+                "y": -3011
             }
         }
     },
@@ -224,14 +259,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2111,
         "next": [
             "task_claim_6",
-            "task_双影"
+            "task_双影",
+            "上划_6"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3691,
-                "y": -3269
+                "x": 3107,
+                "y": -2809
             }
         }
     },
@@ -255,6 +292,7 @@
                 ]
             }
         },
+        "post_delay": 500,
         "next": [
             "识别task对应入口是否已完成_6",
             "排行榜红点_6",
@@ -376,6 +414,7 @@
             }
         },
         "next": [
+            "claim宝石",
             "匹配2"
         ],
         "$__mpe_code": {
@@ -435,8 +474,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2825,
-                "y": -3022
+                "x": 2538,
+                "y": -3032
             }
         }
     },
@@ -684,6 +723,41 @@
             "position": {
                 "x": 4377,
                 "y": -3408
+            }
+        }
+    },
+    "上划_6": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    1073,
+                    407,
+                    44
+                ],
+                "end": [
+                    [
+                        178,
+                        195,
+                        352,
+                        59
+                    ]
+                ],
+                "end_hold": [
+                    978
+                ]
+            }
+        },
+        "post_delay": 577,
+        "next": [
+            "task_双影",
+            "下滑_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3506,
+                "y": -2732
             }
         }
     }

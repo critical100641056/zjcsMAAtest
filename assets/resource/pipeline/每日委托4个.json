@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790128895169,
+            "lastSyncTime": 1790244055684,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\每日委托4个.json",
             "savedViewport": {
-                "x": 441,
-                "y": 3569,
-                "zoom": 0.66
+                "x": 619,
+                "y": 3161,
+                "zoom": 0.63
             },
             "filename": "每日委托4个",
             "version": "v1.10.1"
@@ -151,8 +151,34 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 388,
-                "y": -3899
+                "x": 386,
+                "y": -3867
+            }
+        }
+    },
+    "关闭获得奖励弹窗": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    10,
+                    1171,
+                    134,
+                    101
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "好感度提升",
+            "逻辑节点2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 386,
+                "y": -4942
             }
         }
     },
@@ -490,18 +516,47 @@
                 "expected": [
                     "1/1",
                     "3/3",
-                    "4/4"
+                    "4/4",
+                    "2/2"
                 ]
             }
         },
         "next": [
-            "从地图返回",
-            "识别是否完成"
+            "史莱姆识别",
+            "从地图返回"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 386,
                 "y": -4125
+            }
+        }
+    },
+    "购买": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    107,
+                    679,
+                    507,
+                    121
+                ],
+                "expected": [
+                    "购买"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭获得奖励弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 104,
+                "y": -4953
             }
         }
     },
@@ -578,57 +633,101 @@
             }
         }
     },
-    "购买": {
+    "$__mpe_sticker_便签_每日委托4个": {
+        "$__mpe_code": {
+            "position": {
+                "x": 734,
+                "y": -3752
+            },
+            "content": "砍怪可能出现史莱姆，屏幕里会出现 突发事件 4个大字 点史莱姆，点开始战斗，等待，点击空白处关闭，检测，战斗结束四个字",
+            "color": "purple",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "史莱姆识别": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "史莱姆1.png",
+                    "史莱姆2.png",
+                    "史莱姆绿遮罩.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 50000,
+        "next": [
+            "开始战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 728,
+                "y": -4092
+            }
+        }
+    },
+    "关闭战斗结算界面": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    107,
-                    679,
-                    507,
-                    121
+                    146,
+                    255,
+                    424,
+                    89
                 ],
                 "expected": [
-                    "购买"
+                    "战斗结束"
                 ]
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    218,
+                    184,
+                    50,
+                    162
+                ]
+            }
         },
         "next": [
-            "关闭获得奖励弹窗"
+            "史莱姆识别",
+            "从地图返回"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 104,
-                "y": -4953
+                "x": 1330,
+                "y": -4078
             }
         }
     },
-    "关闭获得奖励弹窗": {
+    "开始战斗": {
         "recognition": {
-            "type": "DirectHit",
+            "type": "OCR",
             "param": {
-                "roi": [
-                    10,
-                    1171,
-                    134,
-                    101
+                "expected": [
+                    "开始战斗"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "timeout": 100000,
         "next": [
-            "好感度提升",
-            "逻辑节点2"
+            "关闭战斗结算界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 386,
-                "y": -4942
+                "x": 1010,
+                "y": -4082
             }
         }
     }

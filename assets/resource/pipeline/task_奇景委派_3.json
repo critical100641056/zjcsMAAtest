@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790168768867,
+            "lastSyncTime": 1790239210723,
             "isModifiedExternally": false,
-            "isDeleted": false,
+            "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
             "savedViewport": {
-                "x": -536,
-                "y": 3529,
-                "zoom": 1.25
+                "x": 500,
+                "y": 1727,
+                "zoom": 0.62
             },
             "filename": "task_奇景委派_3",
             "version": "v1.10.1"
@@ -136,7 +136,8 @@
         },
         "next": [
             "task_claim_3",
-            "task_奇景委派"
+            "task_奇景委派",
+            "上划_3"
         ],
         "$__mpe_code": {
             "position": {
@@ -295,14 +296,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2253,
         "next": [
             "task_claim_3",
-            "task_奇景委派"
+            "task_奇景委派",
+            "上划_3"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 173,
-                "y": -2536
+                "x": -210,
+                "y": -2074
             }
         }
     },
@@ -319,15 +322,15 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    528,
-                    73,
-                    -160,
-                    -7
+                    497,
+                    78,
+                    -118,
+                    -6
                 ]
             }
         },
         "next": [
-            "识别task对应入口是否已完成_2_副本1",
+            "识别task对应入口是否已完成_3",
             "emptylogic2"
         ],
         "$__mpe_code": {
@@ -514,7 +517,7 @@
             }
         }
     },
-    "识别task对应入口是否已完成_2_副本1": {
+    "识别task对应入口是否已完成_3": {
         "recognition": {
             "type": "And",
             "param": {
@@ -552,7 +555,7 @@
             }
         },
         "next": [
-            "已完成_2_副本1"
+            "已完成_3"
         ],
         "$__mpe_code": {
             "position": {
@@ -561,11 +564,80 @@
             }
         }
     },
-    "已完成_2_副本1": {
+    "已完成_3": {
         "$__mpe_code": {
             "position": {
                 "x": 943,
                 "y": -2478
+            }
+        }
+    },
+    "上划_3": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    1073,
+                    407,
+                    44
+                ],
+                "end": [
+                    [
+                        178,
+                        195,
+                        352,
+                        59
+                    ]
+                ],
+                "end_hold": [
+                    978
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_奇景委派",
+            "下滑_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 178,
+                "y": -2163
+            }
+        }
+    },
+    "下滑_3": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_奇景委派"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 179,
+                "y": -1837
             }
         }
     }

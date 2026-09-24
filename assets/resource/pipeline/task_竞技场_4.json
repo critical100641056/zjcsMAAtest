@@ -3,71 +3,50 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790168916093,
+            "lastSyncTime": 1790230458447,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_竞技场_4.json",
             "savedViewport": {
-                "x": 165,
-                "y": 5002,
+                "x": 1518,
+                "y": 4490,
                 "zoom": 1.25
             },
             "filename": "task_竞技场_4",
             "version": "v1.10.1"
         }
     },
-    "识别task对应入口是否已完成_4": {
-        "recognition": {
-            "type": "And",
+    "下滑_4": {
+        "action": {
+            "type": "Swipe",
             "param": {
-                "all_of": [
-                    {
-                        "sub_name": "ocr_node",
-                        "recognition": {
-                            "type": "OCR",
-                            "param": {
-                                "expected": [
-                                    "完成1次竞技场挑战"
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "recognition": {
-                            "type": "TemplateMatch",
-                            "param": {
-                                "template": [
-                                    "日常任务task已完成.png"
-                                ],
-                                "roi": "ocr_node",
-                                "roi_offset": [
-                                    482,
-                                    46,
-                                    -95,
-                                    53
-                                ],
-                                "threshold": 0.7
-                            }
-                        }
-                    }
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
                 ]
             }
         },
+        "post_delay": 500,
         "next": [
-            "已完成_4"
+            "task_竞技场"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 330,
-                "y": -3849
-            }
-        }
-    },
-    "已完成_4": {
-        "$__mpe_code": {
-            "position": {
-                "x": 331,
-                "y": -3650
+                "x": -322,
+                "y": -2966
             }
         }
     },
@@ -189,12 +168,13 @@
         },
         "next": [
             "task_claim_4",
-            "task_竞技场"
+            "task_竞技场",
+            "上划_4"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -646,
-                "y": -3471
+                "x": -642,
+                "y": -3472
             }
         }
     },
@@ -256,14 +236,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2154,
         "next": [
             "task_claim_4",
-            "task_竞技场"
+            "task_竞技场",
+            "上划_4"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -310,
-                "y": -3714
+                "x": -642,
+                "y": -3248
             }
         }
     },
@@ -621,6 +603,96 @@
             "position": {
                 "x": 334,
                 "y": -3469
+            }
+        }
+    },
+    "识别task对应入口是否已完成_4": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "完成1次竞技场挑战"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 330,
+                "y": -3849
+            }
+        }
+    },
+    "已完成_4": {
+        "$__mpe_code": {
+            "position": {
+                "x": 331,
+                "y": -3650
+            }
+        }
+    },
+    "上划_4": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    1073,
+                    407,
+                    44
+                ],
+                "end": [
+                    [
+                        178,
+                        195,
+                        352,
+                        59
+                    ]
+                ],
+                "end_hold": [
+                    978
+                ]
+            }
+        },
+        "post_delay": 478,
+        "next": [
+            "task_竞技场",
+            "下滑_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -324,
+                "y": -3274
             }
         }
     }

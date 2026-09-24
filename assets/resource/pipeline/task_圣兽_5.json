@@ -3,17 +3,51 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790168919952,
+            "lastSyncTime": 1790231861612,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_圣兽_5.json",
             "savedViewport": {
-                "x": -4873,
-                "y": 3077,
-                "zoom": 1.25
+                "x": -3230,
+                "y": 2108,
+                "zoom": 1.14
             },
             "filename": "task_圣兽_5",
             "version": "v1.10.1"
+        }
+    },
+    "下滑_5": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_圣兽"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3810,
+                "y": -1297
+            }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_圣兽_5": {
@@ -197,7 +231,8 @@
         },
         "next": [
             "task_claim_5",
-            "task_圣兽"
+            "task_圣兽",
+            "上划_5"
         ],
         "$__mpe_code": {
             "position": {
@@ -236,14 +271,16 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2098,
         "next": [
             "task_claim_5",
-            "task_圣兽"
+            "task_圣兽",
+            "上划_5"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3796,
-                "y": -1973
+                "x": 3500,
+                "y": -1492
             }
         }
     },
@@ -267,6 +304,7 @@
                 ]
             }
         },
+        "post_delay": 500,
         "next": [
             "识别task对应入口是否已完成_5",
             "排行榜红点",
@@ -274,8 +312,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4109,
-                "y": -1726
+                "x": 4111,
+                "y": -1728
             }
         }
     },
@@ -330,10 +368,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    130,
-                    1149,
-                    402,
-                    125
+                    135,
+                    1147,
+                    229,
+                    133
                 ],
                 "expected": [
                     "试炼"
@@ -344,6 +382,7 @@
             "type": "Click"
         },
         "next": [
+            "claim圣兽",
             "匹配"
         ],
         "$__mpe_code": {
@@ -686,6 +725,41 @@
             "position": {
                 "x": 4545,
                 "y": -2113
+            }
+        }
+    },
+    "上划_5": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    1073,
+                    407,
+                    44
+                ],
+                "end": [
+                    [
+                        178,
+                        195,
+                        352,
+                        59
+                    ]
+                ],
+                "end_hold": [
+                    978
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_圣兽",
+            "下滑_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3801,
+                "y": -1618
             }
         }
     }
