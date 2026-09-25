@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790144906434,
+            "lastSyncTime": 1790303329952,
             "isModifiedExternally": false,
-            "isDeleted": false,
+            "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取精彩活动红点.json",
             "savedViewport": {
-                "x": 236,
-                "y": 2973,
-                "zoom": 0.41
+                "x": -1292,
+                "y": 8425,
+                "zoom": 1.11
             },
             "filename": "收取精彩活动红点",
             "version": "v1.10.1"
@@ -39,11 +39,11 @@
     "$__mpe_sticker_tips_收取精彩活动红点": {
         "$__mpe_code": {
             "position": {
-                "x": 710,
-                "y": -7085
+                "x": 396,
+                "y": -7209
             },
             "content": "已完成\n这里会识别蓝点，没红就也会直接进\n检测分数分别为0.92和0.98\n分数调到0.95\n 签到也存在同样问题！0.84和0.95 分数调到0.9",
-            "color": "pink",
+            "color": "green",
             "width": 200,
             "height": 160
         }
@@ -356,7 +356,7 @@
             }
         }
     },
-    "搜秘宝大作战": {
+    "秘宝大作战": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -482,7 +482,7 @@
             }
         },
         "next": [
-            "逻辑节点"
+            "精彩活动逻辑节点"
         ],
         "$__mpe_code": {
             "position": {
@@ -511,8 +511,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2469,
-                "y": -6130
+                "x": 2749,
+                "y": -6250
             }
         }
     },
@@ -648,7 +648,7 @@
             }
         },
         "next": [
-            "逻辑节点"
+            "精彩活动逻辑节点"
         ],
         "$__mpe_code": {
             "position": {
@@ -752,19 +752,20 @@
             "type": "Click"
         },
         "next": [
-            "逻辑节点"
+            "精彩活动逻辑节点"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2484,
-                "y": -6525
+                "x": 2743,
+                "y": -6563
             }
         }
     },
-    "逻辑节点": {
+    "精彩活动逻辑节点": {
         "next": [
-            "搜秘宝大作战",
+            "S6赛季活动",
             "宾果抽抽乐",
+            "秘宝大作战",
             "签到",
             "活动汇总上划",
             "活动汇总返回家园"
@@ -798,6 +799,312 @@
             "position": {
                 "x": 1009,
                 "y": -6618
+            }
+        }
+    },
+    "S6赛季活动": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "赛季活动红点.png"
+                ],
+                "threshold": [
+                    0.95
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "游戏之星"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 700,
+                "y": -7245
+            }
+        }
+    },
+    "游戏之星": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    21,
+                    747,
+                    694,
+                    429
+                ],
+                "expected": [
+                    "游戏之星"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击领取4_1",
+            "赛季养成tag"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1003,
+                "y": -7506
+            }
+        }
+    },
+    "点击领取4_1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    489,
+                    505,
+                    217,
+                    702
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "点击领取4_1",
+            "赛季养成tag"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1006,
+                "y": -7279
+            }
+        }
+    },
+    "赛季养成tag": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    247,
+                    431,
+                    233,
+                    81
+                ],
+                "expected": [
+                    "赛季养成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击领取4_2",
+            "赛季玩法tag"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1302,
+                "y": -7508
+            }
+        }
+    },
+    "点击领取4_2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    489,
+                    505,
+                    217,
+                    702
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "点击领取4_2",
+            "赛季玩法tag"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1302,
+                "y": -7270
+            }
+        }
+    },
+    "赛季玩法tag": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    477,
+                    430,
+                    221,
+                    92
+                ],
+                "expected": [
+                    "赛季玩法"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击领取4_3",
+            "返回赛季活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1566,
+                "y": -7511
+            }
+        }
+    },
+    "点击领取4_3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    489,
+                    505,
+                    217,
+                    702
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "点击领取4_3",
+            "返回赛季活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1564,
+                "y": -7279
+            }
+        }
+    },
+    "返回赛季活动": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    5,
+                    1168,
+                    142,
+                    111
+                ],
+                "template": [
+                    "礼包返回.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "发条之旅",
+            "返回活动汇总"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2358,
+                "y": -7388
+            }
+        }
+    },
+    "发条之旅领晨星": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "发条之旅晨星.png"
+                ],
+                "threshold": [
+                    0.95
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "空白关闭弹窗_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1875,
+                "y": -7336
+            }
+        }
+    },
+    "发条之旅": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "发条奇旅"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "发条之旅领晨星",
+            "返回赛季活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1875,
+                "y": -7600
+            }
+        }
+    },
+    "空白关闭弹窗_2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    26,
+                    1188,
+                    94,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回赛季活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1869,
+                "y": -7067
             }
         }
     }

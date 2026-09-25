@@ -1,0 +1,954 @@
+{
+    "$__mpe_config_杂项清理": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\杂项清理.json",
+            "lastSyncTime": 1790323136212,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -3750,
+                "y": 5365,
+                "zoom": 0.75
+            },
+            "filename": "杂项清理",
+            "version": "v1.10.1"
+        }
+    },
+    "跳转经验球": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "经验球.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取经验球"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5898,
+                "y": -6577
+            }
+        }
+    },
+    "跳转斐乐": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "斐乐.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领斐乐"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5895,
+                "y": -5950
+            }
+        }
+    },
+    "点床": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    296,
+                    596,
+                    134,
+                    57
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "使用今日免费加速",
+            "关闭床界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6504,
+                "y": -6563
+            }
+        }
+    },
+    "小号可能产生确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    364,
+                    667,
+                    264,
+                    154
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "next": [
+            "wait节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7083,
+                "y": -6682
+            }
+        }
+    },
+    "领取果子": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    601,
+                    676,
+                    108,
+                    100
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "识别到进入结缘界面",
+            "结束3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6200,
+                "y": -5323
+            }
+        }
+    },
+    "点击好友列表": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    40,
+                    755,
+                    150,
+                    154
+                ],
+                "expected": [
+                    "好友"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点771",
+            "关闭列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6234,
+                "y": -4999
+            }
+        }
+    },
+    "点击馈赠": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    383,
+                    872,
+                    230,
+                    173
+                ],
+                "expected": [
+                    "馈赠"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取馈赠",
+            "关闭列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6235,
+                "y": -4721
+            }
+        }
+    },
+    "送礼物": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4638,
+                "y": -6307
+            }
+        }
+    },
+    "领邮件": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    55,
+                    533,
+                    52,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取全部",
+            "关闭邮件界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5898,
+                "y": -6271
+            }
+        }
+    },
+    "领小推车": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    11,
+                    725,
+                    707,
+                    216
+                ],
+                "template": [
+                    "小推车.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭小推车弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6204,
+                "y": -5634
+            }
+        }
+    },
+    "右滑": {
+        "max_hit": 5,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    24,
+                    385,
+                    56,
+                    575
+                ],
+                "end": [
+                    [
+                        613,
+                        390,
+                        82,
+                        510
+                    ]
+                ],
+                "end_hold": [
+                    897
+                ]
+            }
+        },
+        "next": [
+            "清理鸟老鼠垃圾",
+            "没识别到算了"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5905,
+                "y": -6919
+            }
+        }
+    },
+    "领取经验球": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "经验球2.png",
+                    "经验球2_1.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点床",
+            "结束1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6188,
+                "y": -6566
+            }
+        }
+    },
+    "使用今日免费加速": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "今日免费加速"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "小号可能产生确认",
+            "wait节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6797,
+                "y": -6646
+            }
+        }
+    },
+    "关闭床界面": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    25,
+                    1157,
+                    162,
+                    47
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "结束1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6795,
+                "y": -6428
+            }
+        }
+    },
+    "wait节点": {
+        "pre_delay": 2500,
+        "next": [
+            "领取经验球"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7080,
+                "y": -6454
+            }
+        }
+    },
+    "结束1": {
+        "next": [
+            "领邮件"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7396,
+                "y": -6491
+            }
+        }
+    },
+    "家园检测": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "跳转经验球",
+            "[JumpBack]右滑",
+            "跳转斐乐",
+            "跳转小推车",
+            "cube_home_12"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5449,
+                "y": -6573
+            }
+        }
+    },
+    "start杂项": {
+        "next": [
+            "杂项逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4639,
+                "y": -6546
+            }
+        }
+    },
+    "领取全部": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    356,
+                    993,
+                    293,
+                    86
+                ],
+                "expected": [
+                    "全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭邮件弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6213,
+                "y": -6263
+            }
+        }
+    },
+    "关闭邮件弹窗": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    25,
+                    1157,
+                    162,
+                    47
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭邮件界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6510,
+                "y": -6278
+            }
+        }
+    },
+    "结束2": {
+        "next": [
+            "杂项逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7104,
+                "y": -6162
+            }
+        }
+    },
+    "领斐乐": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    344,
+                    843,
+                    41,
+                    88
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "一键找回",
+            "关闭斐乐"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6197,
+                "y": -5910
+            }
+        }
+    },
+    "一键找回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    167,
+                    951,
+                    426,
+                    251
+                ],
+                "expected": [
+                    "一键找回"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭斐乐弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6492,
+                "y": -6039
+            }
+        }
+    },
+    "关闭斐乐弹窗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击空白处关闭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭斐乐"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6761,
+                "y": -5982
+            }
+        }
+    },
+    "关闭斐乐": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领小推车",
+            "领取果子"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7033,
+                "y": -5935
+            }
+        }
+    },
+    "跳转小推车": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "小推车球.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领小推车"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5891,
+                "y": -5640
+            }
+        }
+    },
+    "关闭小推车弹窗": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    197,
+                    154,
+                    308,
+                    114
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取果子"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6505,
+                "y": -5604
+            }
+        }
+    },
+    "结束3": {
+        "next": [
+            "杂项逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7161,
+                "y": -5279
+            }
+        }
+    },
+    "识别到进入结缘界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    10,
+                    12,
+                    202,
+                    82
+                ],
+                "expected": [
+                    "幻兽结缘"
+                ]
+            }
+        },
+        "next": [
+            "关闭结缘界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6500,
+                "y": -5361
+            }
+        }
+    },
+    "关闭结缘界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "结束3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6822,
+                "y": -5356
+            }
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_杂项清理": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5456,
+                "y": -6297
+            }
+        }
+    },
+    "关闭邮件界面": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    25,
+                    1157,
+                    162,
+                    47
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "结束2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6793,
+                "y": -6181
+            }
+        }
+    },
+    "杂项逻辑节点": {
+        "next": [
+            "家园检测",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5022,
+                "y": -6544
+            }
+        }
+    },
+    "清理鸟老鼠垃圾": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "鸟1.png",
+                    "鸟2.png",
+                    "鸟3.png",
+                    "老鼠1.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6207,
+                "y": -7052
+            }
+        }
+    },
+    "cube_home_12": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    610,
+                    961,
+                    110,
+                    86
+                ],
+                "template": [
+                    "cube_home.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 213,
+        "next": [
+            "点击好友列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5880,
+                "y": -4987
+            }
+        }
+    },
+    "新建节点771": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "友情点.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "领取友情点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6530,
+                "y": -5129
+            }
+        }
+    },
+    "领取友情点": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    161,
+                    935,
+                    399,
+                    85
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭弹窗奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6808,
+                "y": -5116
+            }
+        }
+    },
+    "关闭弹窗奖励": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    46,
+                    1192,
+                    62,
+                    57
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7111,
+                "y": -5018
+            }
+        }
+    },
+    "关闭列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击馈赠",
+            "关闭魔方"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7386,
+                "y": -4916
+            }
+        }
+    },
+    "领取馈赠": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    410,
+                    111,
+                    293,
+                    1012
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭弹窗奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6586,
+                "y": -4640
+            }
+        }
+    },
+    "关闭魔方": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7382,
+                "y": -4664
+            }
+        }
+    },
+    "没识别到算了": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6210,
+                "y": -6788
+            }
+        }
+    }
+}

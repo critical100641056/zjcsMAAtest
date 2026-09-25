@@ -3,280 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790238987479,
+            "lastSyncTime": 1790315221000,
             "isModifiedExternally": false,
-            "isDeleted": false,
+            "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取商城红点.json",
             "savedViewport": {
-                "x": -1946,
-                "y": 4003,
-                "zoom": 0.61
+                "x": -2767,
+                "y": 6177,
+                "zoom": 1.06
             },
             "filename": "收取商城红点",
             "version": "v1.10.1"
-        }
-    },
-    "识别祈愿对应入口是否已完成": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    {
-                        "sub_name": "ocr_node",
-                        "recognition": {
-                            "type": "OCR",
-                            "param": {
-                                "expected": [
-                                    "女神像祈愿2次"
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "recognition": {
-                            "type": "TemplateMatch",
-                            "param": {
-                                "template": [
-                                    "巡礼任务已完成.png"
-                                ],
-                                "roi": "ocr_node",
-                                "roi_offset": [
-                                    496,
-                                    73,
-                                    -96,
-                                    1
-                                ],
-                                "threshold": 0.7
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3961,
-                "y": -6718
-            }
-        }
-    },
-    "新建节点697": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "巡礼任务已完成.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    496,
-                    73,
-                    -96,
-                    1
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 4226,
-                "y": -6731
-            }
-        }
-    },
-    "没找到探寻命运下滑": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    195,
-                    611,
-                    317,
-                    18
-                ],
-                "end": [
-                    [
-                        211,
-                        870,
-                        294,
-                        32
-                    ]
-                ],
-                "end_hold": [
-                    347
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3445,
-                "y": -6752
-            }
-        }
-    },
-    "$__mpe_sticker_便签_收取商城红点": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4000,
-                "y": -5822
-            },
-            "content": "一旦女神祈愿或者探寻任务做完，就会出现在下面，常规情况按序列执行即可，但是非常规情况如何判断？比如已经做完了其中一个或者两个，一定会有一个被藏在下面。\n\n找到办法了，直接点击，然后检测是否有前往，有就前往，没有就直接返回，当做完成了。",
-            "color": "yellow",
-            "width": 203,
-            "height": 202
-        }
-    },
-    "检测前往": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    161,
-                    837,
-                    401,
-                    95
-                ],
-                "expected": [
-                    "前往"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "滑动找到友情祈愿"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4718,
-                "y": -6202
-            }
-        }
-    },
-    "检测前往_2": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    161,
-                    837,
-                    401,
-                    95
-                ],
-                "expected": [
-                    "前往"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 10000,
-        "next": [
-            "waitcheck"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4723,
-                "y": -5705
-            }
-        }
-    },
-    "没有前往，说明完成": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    8,
-                    1175,
-                    140,
-                    88
-                ]
-            }
-        },
-        "next": [
-            "巡礼逻辑节点"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4728,
-                "y": -5919
-            }
-        }
-    },
-    "领取月卡": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    402,
-                    426,
-                    292,
-                    671
-                ],
-                "expected": [
-                    "领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "关闭奖励弹窗_月卡"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6886,
-                "y": -5300
-            }
-        }
-    },
-    "关闭奖励弹窗_月卡": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    35,
-                    1088,
-                    150,
-                    70
-                ]
-            }
-        },
-        "next": [
-            "领取月卡",
-            "结束返回"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6884,
-                "y": -5067
-            }
-        }
-    },
-    "结束返回": {
-        "$__mpe_code": {
-            "position": {
-                "x": 7289,
-                "y": -5418
-            }
-        }
-    },
-    "未检测到商城红点": {
-        "next": [
-            "结束返回"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3341,
-                "y": -5324
-            }
         }
     },
     "$__mpe_external_位置检测与重置_1_收取商城红点": {
@@ -971,12 +708,13 @@
         },
         "next": [
             "商城其他红点检测",
-            "结束返回"
+            "没红点上划",
+            "检查月卡"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6514,
-                "y": -5795
+                "x": 6138,
+                "y": -5117
             }
         }
     },
@@ -1237,6 +975,269 @@
             "position": {
                 "x": 4978,
                 "y": -6196
+            }
+        }
+    },
+    "识别祈愿对应入口是否已完成": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "sub_name": "ocr_node",
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "expected": [
+                                    "女神像祈愿2次"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "template": [
+                                    "巡礼任务已完成.png"
+                                ],
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    496,
+                                    73,
+                                    -96,
+                                    1
+                                ],
+                                "threshold": 0.7
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3961,
+                "y": -6718
+            }
+        }
+    },
+    "新建节点697": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "巡礼任务已完成.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    496,
+                    73,
+                    -96,
+                    1
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4226,
+                "y": -6731
+            }
+        }
+    },
+    "没找到探寻命运下滑": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    195,
+                    611,
+                    317,
+                    18
+                ],
+                "end": [
+                    [
+                        211,
+                        870,
+                        294,
+                        32
+                    ]
+                ],
+                "end_hold": [
+                    347
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3445,
+                "y": -6752
+            }
+        }
+    },
+    "$__mpe_sticker_便签_收取商城红点": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4000,
+                "y": -5822
+            },
+            "content": "一旦女神祈愿或者探寻任务做完，就会出现在下面，常规情况按序列执行即可，但是非常规情况如何判断？比如已经做完了其中一个或者两个，一定会有一个被藏在下面。\n\n找到办法了，直接点击，然后检测是否有前往，有就前往，没有就直接返回，当做完成了。",
+            "color": "yellow",
+            "width": 203,
+            "height": 202
+        }
+    },
+    "检测前往": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    161,
+                    837,
+                    401,
+                    95
+                ],
+                "expected": [
+                    "前往"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "滑动找到友情祈愿"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4718,
+                "y": -6202
+            }
+        }
+    },
+    "检测前往_2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    161,
+                    837,
+                    401,
+                    95
+                ],
+                "expected": [
+                    "前往"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 10000,
+        "next": [
+            "waitcheck"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4723,
+                "y": -5705
+            }
+        }
+    },
+    "没有前往，说明完成": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    8,
+                    1175,
+                    140,
+                    88
+                ]
+            }
+        },
+        "next": [
+            "巡礼逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4728,
+                "y": -5919
+            }
+        }
+    },
+    "领取月卡": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    402,
+                    426,
+                    292,
+                    671
+                ],
+                "expected": [
+                    "领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭奖励弹窗_月卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6886,
+                "y": -5300
+            }
+        }
+    },
+    "关闭奖励弹窗_月卡": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    35,
+                    1088,
+                    150,
+                    70
+                ]
+            }
+        },
+        "next": [
+            "领取月卡",
+            "结束返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6884,
+                "y": -5067
+            }
+        }
+    },
+    "结束返回": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7289,
+                "y": -5418
+            }
+        }
+    },
+    "未检测到商城红点": {
+        "next": [
+            "结束返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3341,
+                "y": -5324
             }
         }
     }

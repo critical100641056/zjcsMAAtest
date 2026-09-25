@@ -3,31 +3,51 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790244281047,
+            "lastSyncTime": 1790304780880,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_素材秘境_2.json",
             "savedViewport": {
-                "x": -747,
-                "y": 1473,
-                "zoom": 1
+                "x": 1347,
+                "y": 1428,
+                "zoom": 0.76
             },
             "filename": "task_素材秘境_2",
             "version": "v1.10.1"
         }
     },
+    "检测是否处于任务列表界面_2": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1079,
+                "y": -1718
+            }
+        }
+    },
     "$__mpe_external_位置检测与重置_1_task_素材秘境_2": {
         "$__mpe_code": {
             "position": {
-                "x": -492,
-                "y": -1160
-            },
-            "extra_positions": [
-                {
-                    "x": -489,
-                    "y": -799
-                }
-            ]
+                "x": -1076,
+                "y": -1183
+            }
         }
     },
     "backBTN2": {
@@ -160,8 +180,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -175,
-                "y": -1439
+                "x": -736,
+                "y": -1460
             }
         }
     },
@@ -184,8 +204,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 124,
-                "y": -1400
+                "x": -395,
+                "y": -1428
             }
         }
     },
@@ -393,13 +413,14 @@
     },
     "start秘境": {
         "next": [
+            "检测是否处于任务列表界面_2",
             "家园_秘境",
             "[JumpBack]位置检测与重置_1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -898,
-                "y": -1388
+                "x": -1434,
+                "y": -1407
             }
         }
     },
@@ -535,8 +556,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 130,
-                "y": -1184
+                "x": -387,
+                "y": -1187
             }
         }
     },
@@ -549,25 +570,14 @@
                 ]
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    498,
-                    78,
-                    -124,
-                    -7
-                ]
-            }
-        },
         "next": [
             "识别task对应入口是否已完成_2",
-            "汇合节点"
+            "task_素材秘境_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 792,
-                "y": -1403
+                "x": 431,
+                "y": -1639
             }
         }
     },
@@ -591,8 +601,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -504,
-                "y": -1400
+                "x": -1085,
+                "y": -1423
             }
         }
     },
@@ -706,8 +716,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -895,
-                "y": -1059
+                "x": -1414,
+                "y": -1045
             }
         }
     },
@@ -747,8 +757,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -496,
-                "y": -1086
+                "x": -1081,
+                "y": -1075
             }
         }
     },
@@ -783,8 +793,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 795,
-                "y": -1115
+                "x": 351,
+                "y": -1051
             }
         }
     },
@@ -886,16 +896,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1070,
-                "y": -1749
+                "x": 747,
+                "y": -1865
             }
         }
     },
     "已完成_2": {
         "$__mpe_code": {
             "position": {
-                "x": 1071,
-                "y": -1550
+                "x": 747,
+                "y": -1670
             }
         }
     },
@@ -929,8 +939,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 447,
-                "y": -1180
+                "x": -51,
+                "y": -1482
             }
         }
     },
@@ -963,8 +973,38 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 446,
-                "y": -868
+                "x": -58,
+                "y": -1172
+            }
+        }
+    },
+    "task_素材秘境_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "探索5次素材秘境"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    498,
+                    78,
+                    -124,
+                    -7
+                ]
+            }
+        },
+        "next": [
+            "汇合节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 744,
+                "y": -1548
             }
         }
     }

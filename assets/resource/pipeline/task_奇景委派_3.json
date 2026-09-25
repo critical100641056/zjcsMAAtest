@@ -3,17 +3,43 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790239210723,
+            "lastSyncTime": 1790306302970,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
             "savedViewport": {
-                "x": 500,
-                "y": 1727,
-                "zoom": 0.62
+                "x": 1179,
+                "y": 2214,
+                "zoom": 0.82
             },
             "filename": "task_奇景委派_3",
             "version": "v1.10.1"
+        }
+    },
+    "检测是否处于任务列表界面_3": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -853,
+                "y": -2600
+            }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_奇景委派_3": {
@@ -155,8 +181,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 952,
-                "y": -2315
+                "x": 1035,
+                "y": -2321
             }
         }
     },
@@ -212,6 +238,7 @@
     },
     "start奇景委派": {
         "next": [
+            "检测是否处于任务列表界面_3",
             "家园_奇景",
             "[JumpBack]位置检测与重置_1"
         ],
@@ -318,25 +345,14 @@
                 ]
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    497,
-                    78,
-                    -118,
-                    -6
-                ]
-            }
-        },
         "next": [
             "识别task对应入口是否已完成_3",
-            "emptylogic2"
+            "task_奇景委派_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 553,
-                "y": -2318
+                "x": 438,
+                "y": -2526
             }
         }
     },
@@ -559,16 +575,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 942,
-                "y": -2676
+                "x": 727,
+                "y": -2838
             }
         }
     },
     "已完成_3": {
         "$__mpe_code": {
             "position": {
-                "x": 943,
-                "y": -2478
+                "x": 733,
+                "y": -2641
             }
         }
     },
@@ -638,6 +654,36 @@
             "position": {
                 "x": 179,
                 "y": -1837
+            }
+        }
+    },
+    "task_奇景委派_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "完成1次奇景委派"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    497,
+                    78,
+                    -118,
+                    -6
+                ]
+            }
+        },
+        "next": [
+            "emptylogic2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 731,
+                "y": -2517
             }
         }
     }

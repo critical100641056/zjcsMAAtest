@@ -3,66 +3,58 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790231861612,
+            "lastSyncTime": 1790314580992,
             "isModifiedExternally": false,
-            "isDeleted": false,
+            "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_圣兽_5.json",
             "savedViewport": {
-                "x": -3230,
-                "y": 2108,
+                "x": -2170,
+                "y": 2354,
                 "zoom": 1.14
             },
             "filename": "task_圣兽_5",
             "version": "v1.10.1"
         }
     },
-    "下滑_5": {
-        "action": {
-            "type": "Swipe",
+    "检测是否处于任务列表界面_5": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
             "param": {
-                "begin": [
-                    141,
-                    201,
-                    457,
-                    51
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
                 ],
-                "end": [
-                    [
-                        133,
-                        1075,
-                        448,
-                        39
-                    ]
-                ],
-                "end_hold": [
-                    490
+                "expected": [
+                    "日常任务"
                 ]
             }
         },
-        "post_delay": 500,
         "next": [
-            "task_圣兽"
+            "task_claim_5"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3810,
-                "y": -1297
+                "x": 2348,
+                "y": -2018
             }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_圣兽_5": {
         "$__mpe_code": {
             "position": {
-                "x": 2907,
-                "y": -1493
+                "x": 2347,
+                "y": -1501
             }
         }
     },
     "$__mpe_sticker_便签_副本2_task_圣兽_5": {
         "$__mpe_code": {
             "position": {
-                "x": 4124,
-                "y": -1937
+                "x": 3704,
+                "y": -2260
             },
             "content": "单独的圣兽task可能需要滑动拉取",
             "color": "yellow",
@@ -212,8 +204,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3208,
-                "y": -1753
+                "x": 2652,
+                "y": -1757
             }
         }
     },
@@ -236,20 +228,21 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3501,
-                "y": -1714
+                "x": 2937,
+                "y": -1738
             }
         }
     },
     "start圣兽": {
         "next": [
+            "检测是否处于任务列表界面_5",
             "家园_5",
             "[JumpBack]位置检测与重置_1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2591,
-                "y": -1697
+                "x": 1982,
+                "y": -1717
             }
         }
     },
@@ -279,8 +272,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3500,
-                "y": -1492
+                "x": 2949,
+                "y": -1522
             }
         }
     },
@@ -293,27 +286,14 @@
                 ]
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    517,
-                    75,
-                    -158,
-                    -2
-                ]
-            }
-        },
-        "post_delay": 500,
         "next": [
             "识别task对应入口是否已完成_5",
-            "排行榜红点",
-            "切换到圣兽匹配界面"
+            "task_圣兽_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4111,
-                "y": -1728
+                "x": 3723,
+                "y": -1931
             }
         }
     },
@@ -471,8 +451,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2908,
-                "y": -1716
+                "x": 2348,
+                "y": -1728
             }
         }
     },
@@ -715,16 +695,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4544,
-                "y": -2308
+                "x": 4115,
+                "y": -2303
             }
         }
     },
     "已完成_5": {
         "$__mpe_code": {
             "position": {
-                "x": 4545,
-                "y": -2113
+                "x": 4111,
+                "y": -2096
             }
         }
     },
@@ -758,8 +738,74 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3801,
-                "y": -1618
+                "x": 3302,
+                "y": -1630
+            }
+        }
+    },
+    "下滑_5": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_圣兽"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3304,
+                "y": -1320
+            }
+        }
+    },
+    "task_圣兽_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "圣兽试炼领取1次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    517,
+                    75,
+                    -158,
+                    -2
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "排行榜红点",
+            "切换到圣兽匹配界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4110,
+                "y": -1962
             }
         }
     }

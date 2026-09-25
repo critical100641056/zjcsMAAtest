@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790244055684,
+            "lastSyncTime": 1790255602824,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\每日委托4个.json",
             "savedViewport": {
-                "x": 619,
-                "y": 3161,
-                "zoom": 0.63
+                "x": 677,
+                "y": 3938,
+                "zoom": 0.83
             },
             "filename": "每日委托4个",
             "version": "v1.10.1"
@@ -517,7 +517,15 @@
                     "1/1",
                     "3/3",
                     "4/4",
-                    "2/2"
+                    "2/2",
+                    "2/1",
+                    "3/2",
+                    "4/3",
+                    "5/4",
+                    "3/1",
+                    "4/2",
+                    "5/3",
+                    "6/4"
                 ]
             }
         },

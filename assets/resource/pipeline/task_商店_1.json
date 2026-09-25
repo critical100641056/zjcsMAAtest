@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790239844870,
+            "lastSyncTime": 1790307459049,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_商店_1.json",
             "savedViewport": {
-                "x": -1111,
-                "y": 686,
-                "zoom": 0.75
+                "x": 554,
+                "y": 246,
+                "zoom": 0.47
             },
             "filename": "task_商店_1",
             "version": "v1.10.1"
@@ -27,10 +27,10 @@
     "$__mpe_sticker_便签_task_商店_1": {
         "$__mpe_code": {
             "position": {
-                "x": -555,
-                "y": -61
+                "x": 1453,
+                "y": -88
             },
-            "content": "商店的备用入口有点难找",
+            "content": "重构方式:\n复制原task节点\n原把click改成donothing\n增加两路判定\n新节点连接原节点的next",
             "color": "yellow",
             "width": 200,
             "height": 160
@@ -378,8 +378,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 236,
-                "y": -308
+                "x": 192,
+                "y": -321
             }
         }
     },
@@ -402,8 +402,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 503,
-                "y": -296
+                "x": 494,
+                "y": -280
             }
         }
     },
@@ -488,6 +488,7 @@
     },
     "start商店": {
         "next": [
+            "检测是否处于任务列表界面",
             "家园",
             "[JumpBack]位置检测与重置_1"
         ],
@@ -524,8 +525,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 498,
-                "y": -81
+                "x": 499,
+                "y": -28
             }
         }
     },
@@ -538,25 +539,14 @@
                 ]
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    519,
-                    76,
-                    -170,
-                    -3
-                ]
-            }
-        },
         "next": [
             "识别task对应入口是否已完成_副本1",
-            "firstitem1-1"
+            "task_商店_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1326,
-                "y": -313
+                "x": 1121,
+                "y": -375
             }
         }
     },
@@ -694,16 +684,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1330,
-                "y": -82
+                "x": 1443,
+                "y": -602
             }
         }
     },
     "已完成": {
         "$__mpe_code": {
             "position": {
-                "x": 1328,
-                "y": 117
+                "x": 1730,
+                "y": -575
             }
         }
     },
@@ -737,8 +727,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 941,
-                "y": -53
+                "x": 829,
+                "y": -72
             }
         }
     },
@@ -771,8 +761,65 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 945,
-                "y": 256
+                "x": 837,
+                "y": 230
+            }
+        }
+    },
+    "task_商店_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "家园商店购买2次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    519,
+                    76,
+                    -170,
+                    -3
+                ]
+            }
+        },
+        "post_delay": 600,
+        "next": [
+            "firstitem1-1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1445,
+                "y": -385
+            }
+        }
+    },
+    "检测是否处于任务列表界面": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -129,
+                "y": -561
             }
         }
     }

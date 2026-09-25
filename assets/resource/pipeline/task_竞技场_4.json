@@ -3,65 +3,51 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790230458447,
+            "lastSyncTime": 1790306372071,
             "isModifiedExternally": false,
-            "isDeleted": false,
+            "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_竞技场_4.json",
             "savedViewport": {
-                "x": 1518,
-                "y": 4490,
-                "zoom": 1.25
+                "x": 2656,
+                "y": 4861,
+                "zoom": 1.26
             },
             "filename": "task_竞技场_4",
             "version": "v1.10.1"
         }
     },
-    "下滑_4": {
-        "action": {
-            "type": "Swipe",
+    "检测是否处于任务列表界面_副本1": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
             "param": {
-                "begin": [
-                    141,
-                    201,
-                    457,
-                    51
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
                 ],
-                "end": [
-                    [
-                        133,
-                        1075,
-                        448,
-                        39
-                    ]
-                ],
-                "end_hold": [
-                    490
+                "expected": [
+                    "日常任务"
                 ]
             }
         },
-        "post_delay": 500,
         "next": [
-            "task_竞技场"
+            "task_claim_4"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -322,
-                "y": -2966
+                "x": -1653,
+                "y": -3814
             }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_竞技场_4": {
         "$__mpe_code": {
             "position": {
-                "x": -1268,
-                "y": -3308
-            },
-            "extra_positions": [
-                {
-                    "x": -1257,
-                    "y": -2912
-                }
-            ]
+                "x": -1655,
+                "y": -3291
+            }
         }
     },
     "$__mpe_sticker_便签_副本1_task_竞技场_4": {
@@ -149,8 +135,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -953,
-                "y": -3563
+                "x": -1327,
+                "y": -3576
             }
         }
     },
@@ -173,8 +159,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -642,
-                "y": -3472
+                "x": -1048,
+                "y": -3512
             }
         }
     },
@@ -208,13 +194,14 @@
     },
     "start竞技场": {
         "next": [
+            "检测是否处于任务列表界面_副本1",
             "家园_4",
             "[JumpBack]位置检测与重置_1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1576,
-                "y": -3511
+                "x": -1946,
+                "y": -3518
             }
         }
     },
@@ -244,8 +231,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -642,
-                "y": -3248
+                "x": -1038,
+                "y": -3280
             }
         }
     },
@@ -258,25 +245,14 @@
                 ]
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    519,
-                    77,
-                    -188,
-                    -3
-                ]
-            }
-        },
         "next": [
             "识别task对应入口是否已完成_4",
-            "汇合节点_3"
+            "task_竞技场_副本1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 22,
-                "y": -3493
+                "x": -364,
+                "y": -3656
             }
         }
     },
@@ -416,8 +392,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1269,
-                "y": -3526
+                "x": -1656,
+                "y": -3542
             }
         }
     },
@@ -489,8 +465,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1567,
-                "y": -3131
+                "x": -1947,
+                "y": -3137
             }
         }
     },
@@ -517,8 +493,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1266,
-                "y": -3164
+                "x": -1657,
+                "y": -3183
             }
         }
     },
@@ -553,8 +529,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -945,
-                "y": -3147
+                "x": -1325,
+                "y": -3169
             }
         }
     },
@@ -589,8 +565,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 15,
-                "y": -3133
+                "x": 8,
+                "y": -3126
             }
         }
     },
@@ -648,16 +624,16 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 330,
-                "y": -3849
+                "x": 20,
+                "y": -3878
             }
         }
     },
     "已完成_4": {
         "$__mpe_code": {
             "position": {
-                "x": 331,
-                "y": -3650
+                "x": 21,
+                "y": -3672
             }
         }
     },
@@ -691,8 +667,72 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -324,
-                "y": -3274
+                "x": -714,
+                "y": -3280
+            }
+        }
+    },
+    "下滑_4": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_竞技场"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -701,
+                "y": -2964
+            }
+        }
+    },
+    "task_竞技场_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "完成1次竞技场挑战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    519,
+                    77,
+                    -188,
+                    -3
+                ]
+            }
+        },
+        "next": [
+            "汇合节点_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 14,
+                "y": -3487
             }
         }
     }
