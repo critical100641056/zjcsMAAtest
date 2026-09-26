@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790315221000,
+            "lastSyncTime": 1790315590251,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取商城红点.json",
             "savedViewport": {
-                "x": -2767,
-                "y": 6177,
-                "zoom": 1.06
+                "x": -4632,
+                "y": 4554,
+                "zoom": 0.8
             },
             "filename": "收取商城红点",
             "version": "v1.10.1"
@@ -19,7 +19,7 @@
     "$__mpe_external_位置检测与重置_1_收取商城红点": {
         "$__mpe_code": {
             "position": {
-                "x": 2697,
+                "x": 2682,
                 "y": -5383
             }
         }
@@ -260,7 +260,7 @@
         "next": [
             "一次性礼包",
             "没红点上划",
-            "检查月卡",
+            "检查月卡和周卡",
             "结束返回"
         ],
         "$__mpe_code": {
@@ -597,7 +597,7 @@
             }
         }
     },
-    "检查月卡": {
+    "检查月卡和周卡": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -616,7 +616,8 @@
             "type": "Click"
         },
         "next": [
-            "领取月卡"
+            "领取月卡可周卡",
+            "结束返回"
         ],
         "$__mpe_code": {
             "position": {
@@ -709,7 +710,7 @@
         "next": [
             "商城其他红点检测",
             "没红点上划",
-            "检查月卡"
+            "检查月卡和周卡"
         ],
         "$__mpe_code": {
             "position": {
@@ -1171,7 +1172,7 @@
             }
         }
     },
-    "领取月卡": {
+    "领取月卡可周卡": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1212,7 +1213,7 @@
             }
         },
         "next": [
-            "领取月卡",
+            "领取月卡可周卡",
             "结束返回"
         ],
         "$__mpe_code": {

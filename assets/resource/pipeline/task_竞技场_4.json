@@ -3,42 +3,66 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790306372071,
+            "lastSyncTime": 1790329351779,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_竞技场_4.json",
             "savedViewport": {
-                "x": 2656,
-                "y": 4861,
-                "zoom": 1.26
+                "x": -533,
+                "y": 3099,
+                "zoom": 0.83
             },
             "filename": "task_竞技场_4",
             "version": "v1.10.1"
         }
     },
-    "检测是否处于任务列表界面_副本1": {
-        "max_hit": 1,
+    "检测是否买过票": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    11,
-                    9,
-                    224,
-                    106
+                    481,
+                    751,
+                    98,
+                    50
                 ],
                 "expected": [
-                    "日常任务"
+                    "0/8"
                 ]
             }
         },
         "next": [
-            "task_claim_4"
+            "买票"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -1653,
-                "y": -3814
+                "x": 1492,
+                "y": -3431
+            }
+        }
+    },
+    "空白关闭弹窗_4": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    26,
+                    1188,
+                    94,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回至tasklist"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1491,
+                "y": -3188
             }
         }
     },
@@ -53,8 +77,8 @@
     "$__mpe_sticker_便签_副本1_task_竞技场_4": {
         "$__mpe_code": {
             "position": {
-                "x": 1513,
-                "y": -3636
+                "x": 1818,
+                "y": -3660
             },
             "content": "买2张票，repeat=1",
             "color": "yellow",
@@ -183,7 +207,8 @@
             "type": "Click"
         },
         "next": [
-            "买票"
+            "检测是否买过票",
+            "空白关闭弹窗_4"
         ],
         "$__mpe_code": {
             "position": {
@@ -308,8 +333,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1832,
-                "y": -3434
+                "x": 2083,
+                "y": -3427
             }
         }
     },
@@ -337,8 +362,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1500,
-                "y": -3444
+                "x": 1805,
+                "y": -3464
             }
         }
     },
@@ -453,8 +478,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2208,
-                "y": -3440
+                "x": 2358,
+                "y": -3208
             }
         }
     },
@@ -667,8 +692,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -714,
-                "y": -3280
+                "x": -694,
+                "y": -3301
             }
         }
     },
@@ -701,8 +726,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": -701,
-                "y": -2964
+                "x": -697,
+                "y": -2986
             }
         }
     },
@@ -733,6 +758,34 @@
             "position": {
                 "x": 14,
                 "y": -3487
+            }
+        }
+    },
+    "检测是否处于任务列表界面_副本1": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_4",
+            "task_竞技场",
+            "上划_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1653,
+                "y": -3814
             }
         }
     }

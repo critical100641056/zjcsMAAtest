@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790232767065,
+            "lastSyncTime": 1790326956880,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_公会讨伐_8.json",
             "savedViewport": {
-                "x": -3391,
-                "y": 5232,
-                "zoom": 0.7
+                "x": -700,
+                "y": 3304,
+                "zoom": 0.4
             },
             "filename": "task_公会讨伐_8",
             "version": "v1.10.1"
@@ -55,7 +55,8 @@
             "type": "Click"
         },
         "next": [
-            "claim挂机资源"
+            "claim挂机资源",
+            "家园未切换_1_副本1"
         ],
         "$__mpe_code": {
             "position": {
@@ -331,7 +332,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 6321,
-                "y": -6706
+                "y": -6456
             }
         }
     },
@@ -393,6 +394,34 @@
             "position": {
                 "x": 5664,
                 "y": -7183
+            }
+        }
+    },
+    "检测今天是否已捐赠": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    216,
+                    866,
+                    288,
+                    44
+                ],
+                "expected": [
+                    "每日捐赠次数：2/5",
+                    "每日捐赠次数：3/5",
+                    "每日捐赠次数：4/5",
+                    "每日捐赠次数：5/5"
+                ]
+            }
+        },
+        "next": [
+            "空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5665,
+                "y": -6961
             }
         }
     },
@@ -492,34 +521,6 @@
             "position": {
                 "x": 4858,
                 "y": -6769
-            }
-        }
-    },
-    "检测今天是否已捐赠": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    216,
-                    866,
-                    288,
-                    44
-                ],
-                "expected": [
-                    "每日捐赠次数：2/5",
-                    "每日捐赠次数：3/5",
-                    "每日捐赠次数：4/5",
-                    "每日捐赠次数：5/5"
-                ]
-            }
-        },
-        "next": [
-            "空白关闭"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5665,
-                "y": -6961
             }
         }
     }

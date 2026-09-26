@@ -3,43 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790306902432,
+            "lastSyncTime": 1790326928551,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_日常副本标准.json",
             "savedViewport": {
-                "x": -1443,
-                "y": 3451,
-                "zoom": 0.87
+                "x": -1116,
+                "y": 2604,
+                "zoom": 0.66
             },
             "filename": "task_日常副本标准",
             "version": "v1.10.1"
-        }
-    },
-    "检测是否处于任务列表界面_7": {
-        "max_hit": 1,
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    11,
-                    9,
-                    224,
-                    106
-                ],
-                "expected": [
-                    "日常任务"
-                ]
-            }
-        },
-        "next": [
-            "task_claim_7"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2308,
-                "y": -3793
-            }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_日常副本标准": {
@@ -248,8 +222,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3816,
-                "y": -3437
+                "x": 3827,
+                "y": -3486
             }
         }
     },
@@ -959,8 +933,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3416,
-                "y": -3062
+                "x": 3435,
+                "y": -3065
             }
         }
     },
@@ -991,6 +965,34 @@
             "position": {
                 "x": 4167,
                 "y": -3441
+            }
+        }
+    },
+    "检测是否处于任务列表界面_7": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_7",
+            "task_日常副本_1",
+            "上划_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2308,
+                "y": -3793
             }
         }
     }

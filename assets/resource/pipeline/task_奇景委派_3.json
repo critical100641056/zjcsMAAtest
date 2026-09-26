@@ -3,43 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790306302970,
+            "lastSyncTime": 1790326890240,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
             "savedViewport": {
-                "x": 1179,
-                "y": 2214,
+                "x": 871,
+                "y": 2332,
                 "zoom": 0.82
             },
             "filename": "task_奇景委派_3",
             "version": "v1.10.1"
-        }
-    },
-    "检测是否处于任务列表界面_3": {
-        "max_hit": 1,
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    11,
-                    9,
-                    224,
-                    106
-                ],
-                "expected": [
-                    "日常任务"
-                ]
-            }
-        },
-        "next": [
-            "task_claim_3"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -853,
-                "y": -2600
-            }
         }
     },
     "$__mpe_external_位置检测与重置_1_task_奇景委派_3": {
@@ -684,6 +658,34 @@
             "position": {
                 "x": 731,
                 "y": -2517
+            }
+        }
+    },
+    "检测是否处于任务列表界面_3": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_3",
+            "task_奇景委派",
+            "上划_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -853,
+                "y": -2600
             }
         }
     }

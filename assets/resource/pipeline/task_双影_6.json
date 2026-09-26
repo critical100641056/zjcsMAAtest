@@ -3,43 +3,29 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790313684188,
+            "lastSyncTime": 1790329361300,
             "isModifiedExternally": false,
             "isDeleted": true,
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_双影_6.json",
             "savedViewport": {
-                "x": -1675,
-                "y": 3530,
-                "zoom": 1.06
+                "x": -837,
+                "y": 1476,
+                "zoom": 0.46
             },
             "filename": "task_双影_6",
             "version": "v1.10.1"
         }
     },
-    "检测是否处于任务列表界面_6": {
-        "max_hit": 1,
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    11,
-                    9,
-                    224,
-                    106
-                ],
-                "expected": [
-                    "日常任务"
-                ]
-            }
-        },
-        "next": [
-            "task_claim_6"
-        ],
+    "$__mpe_sticker_便签_task_双影_6": {
         "$__mpe_code": {
             "position": {
-                "x": 2138,
-                "y": -3320
-            }
+                "x": 3031,
+                "y": -3271
+            },
+            "content": "直接进到task里不会滑动检索",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
         }
     },
     "$__mpe_external_位置检测与重置_1_task_双影_6": {
@@ -368,6 +354,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 500,
         "next": [
             "宝石本记录红点"
         ],
@@ -427,6 +414,7 @@
                 ]
             }
         },
+        "post_delay": 800,
         "next": [
             "通关奖励_副本1"
         ],
@@ -807,6 +795,34 @@
             "position": {
                 "x": 3980,
                 "y": -3276
+            }
+        }
+    },
+    "检测是否处于任务列表界面_6": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_6",
+            "task_双影",
+            "上划_6"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2138,
+                "y": -3320
             }
         }
     }

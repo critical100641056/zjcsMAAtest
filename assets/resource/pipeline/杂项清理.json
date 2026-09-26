@@ -3,15 +3,196 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\杂项清理.json",
-            "lastSyncTime": 1790323136212,
+            "lastSyncTime": 1790350225200,
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3750,
-                "y": 5365,
-                "zoom": 0.75
+                "x": -679,
+                "y": 2156,
+                "zoom": 0.28
             },
             "filename": "杂项清理",
             "version": "v1.10.1"
+        }
+    },
+    "多次上划": {
+        "next": [
+            "找到自己大号并前往"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7445,
+                "y": -5966
+            }
+        }
+    },
+    "找到自己大号并前往": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "KuiperNova"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    377,
+                    71,
+                    -94,
+                    -4
+                ]
+            }
+        },
+        "next": [
+            "送礼物逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7448,
+                "y": -5806
+            }
+        }
+    },
+    "$__mpe_sticker_送礼物_杂项清理": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7454,
+                "y": -6336
+            },
+            "content": "最好同时检测是否已经去过，还有就是今日访客数量。 最好还检测一下自己和卡数量避免送不了。还要添加收礼物",
+            "color": "purple",
+            "width": 200,
+            "height": 160
+        }
+    },
+    "点击贺卡": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "家园贺卡.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8098,
+                "y": -5475
+            }
+        }
+    },
+    "送礼物逻辑节点": {
+        "next": [
+            "检查目标礼物",
+            "[JumpBack]点击空白"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7448,
+                "y": -5580
+            }
+        }
+    },
+    "检查目标礼物": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    149,
+                    610,
+                    404,
+                    251
+                ],
+                "template": [
+                    "晨星礼物.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "点击发送礼物"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7777,
+                "y": -5765
+            }
+        }
+    },
+    "点击发送礼物": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    155,
+                    1068,
+                    383,
+                    137
+                ],
+                "expected": [
+                    "发送"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回好友拜访页面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8098,
+                "y": -5738
+            }
+        }
+    },
+    "返回好友拜访页面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "返回家园页面_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8443,
+                "y": -5728
+            }
+        }
+    },
+    "返回家园页面_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8782,
+                "y": -5723
+            }
         }
     },
     "跳转经验球": {
@@ -102,6 +283,9 @@
                 ]
             }
         },
+        "action": {
+            "type": "Click"
+        },
         "next": [
             "wait节点"
         ],
@@ -187,6 +371,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 800,
         "next": [
             "领取馈赠",
             "关闭列表"
@@ -199,10 +384,27 @@
         }
     },
     "送礼物": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    3,
+                    785,
+                    24,
+                    117
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "多次上划"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 4638,
-                "y": -6307
+                "x": 7447,
+                "y": -6163
             }
         }
     },
@@ -309,6 +511,7 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 3500,
         "next": [
             "点床",
             "结束1"
@@ -500,10 +703,10 @@
             "type": "DirectHit",
             "param": {
                 "roi": [
-                    344,
-                    843,
+                    345,
+                    853,
                     41,
-                    88
+                    45
                 ]
             }
         },
@@ -753,7 +956,12 @@
                     "鸟1.png",
                     "鸟2.png",
                     "鸟3.png",
-                    "老鼠1.png"
+                    "老鼠1.png",
+                    "鸟4.png",
+                    "鸟5.png",
+                    "鼠2.png",
+                    "鸟6.png",
+                    "鸟7.png"
                 ],
                 "green_mask": true
             }
@@ -948,6 +1156,28 @@
             "position": {
                 "x": 6210,
                 "y": -6788
+            }
+        }
+    },
+    "点击空白": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    589,
+                    1133,
+                    93,
+                    66
+                ]
+            }
+        },
+        "next": [
+            "点击贺卡"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7779,
+                "y": -5467
             }
         }
     }

@@ -3,17 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790307459049,
+            "lastSyncTime": 1790403424442,
             "isModifiedExternally": false,
-            "isDeleted": true,
-            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_商店_1.json",
+            "isDeleted": false,
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_商店_1.json",
             "savedViewport": {
-                "x": 554,
-                "y": 246,
-                "zoom": 0.47
+                "x": 444,
+                "y": 738,
+                "zoom": 1.21
             },
             "filename": "task_商店_1",
-            "version": "v1.10.1"
+            "version": "v2.0.1"
         }
     },
     "$__mpe_external_位置检测与重置_1_task_商店_1": {
@@ -199,7 +199,7 @@
             }
         }
     },
-    "backBTN_1": {
+    "backBTN_1_副本1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -219,7 +219,7 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 3561,
+                "x": 4113,
                 "y": -365
             }
         }
@@ -267,7 +267,7 @@
         "next": [
             "baoku3-1",
             "baoku3-2",
-            "backBTN_1"
+            "特卖逻辑节点"
         ],
         "$__mpe_code": {
             "position": {
@@ -309,7 +309,7 @@
         },
         "next": [
             "baoku3-2",
-            "backBTN_1"
+            "特卖逻辑节点"
         ],
         "$__mpe_code": {
             "position": {
@@ -345,7 +345,7 @@
             }
         },
         "next": [
-            "backBTN_1"
+            "特卖逻辑节点"
         ],
         "$__mpe_code": {
             "position": {
@@ -396,8 +396,8 @@
             "type": "Click"
         },
         "next": [
-            "task_商店",
             "task_claim",
+            "task_商店",
             "上划_11"
         ],
         "$__mpe_code": {
@@ -550,72 +550,12 @@
             }
         }
     },
-    "切换到宝库": {
+    "task_商店_副本1": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "roi": [
-                    276,
-                    1183,
-                    317,
-                    71
-                ],
                 "expected": [
-                    "宝库"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "firstitem1-1宝库"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2413,
-                "y": -77
-            }
-        }
-    },
-    "家园": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    297,
-                    1231,
-                    124,
-                    47
-                ],
-                "expected": [
-                    "家园"
-                ]
-            }
-        },
-        "next": [
-            "cube_home"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -128,
-                "y": -271
-            }
-        }
-    },
-    "补充购买狗粮精华": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    6,
-                    443,
-                    696,
-                    581
-                ],
-                "template": [
-                    "狗粮.png",
-                    "精华.png"
+                    "家园商店购买2次"
                 ]
             }
         },
@@ -623,77 +563,21 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    -8,
-                    153,
-                    19,
-                    -82
+                    519,
+                    76,
+                    -170,
+                    -3
                 ]
             }
         },
+        "post_delay": 600,
         "next": [
-            "补充购买狗粮精华",
-            "refresh",
-            "切换到宝库"
+            "firstitem1-1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2062,
-                "y": 73
-            }
-        }
-    },
-    "识别task对应入口是否已完成_副本1": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    {
-                        "sub_name": "ocr_node",
-                        "recognition": {
-                            "type": "OCR",
-                            "param": {
-                                "expected": [
-                                    "家园商店购买2次"
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "recognition": {
-                            "type": "TemplateMatch",
-                            "param": {
-                                "template": [
-                                    "日常任务task已完成.png"
-                                ],
-                                "roi": "ocr_node",
-                                "roi_offset": [
-                                    482,
-                                    46,
-                                    -95,
-                                    53
-                                ],
-                                "threshold": 0.7
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "next": [
-            "已完成"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1443,
-                "y": -602
-            }
-        }
-    },
-    "已完成": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1730,
-                "y": -575
+                "x": 1445,
+                "y": -385
             }
         }
     },
@@ -766,34 +650,92 @@
             }
         }
     },
-    "task_商店_副本1": {
+    "切换到宝库": {
         "recognition": {
             "type": "OCR",
             "param": {
+                "roi": [
+                    276,
+                    1183,
+                    317,
+                    71
+                ],
                 "expected": [
-                    "家园商店购买2次"
+                    "宝库"
                 ]
             }
         },
         "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    519,
-                    76,
-                    -170,
-                    -3
-                ]
-            }
+            "type": "Click"
         },
-        "post_delay": 600,
         "next": [
-            "firstitem1-1"
+            "firstitem1-1宝库"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1445,
-                "y": -385
+                "x": 2413,
+                "y": -77
+            }
+        }
+    },
+    "切换到特卖": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    276,
+                    1183,
+                    317,
+                    71
+                ],
+                "expected": [
+                    "特卖"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "购买特卖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3672,
+                "y": -171
+            }
+        }
+    },
+    "家园": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "cube_home"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -128,
+                "y": -271
+            }
+        }
+    },
+    "已完成": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1730,
+                "y": -575
             }
         }
     },
@@ -814,12 +756,159 @@
             }
         },
         "next": [
-            "task_claim"
+            "task_claim",
+            "task_商店",
+            "上划_11"
         ],
         "$__mpe_code": {
             "position": {
-                "x": -129,
-                "y": -561
+                "x": -124,
+                "y": -592
+            }
+        }
+    },
+    "特卖": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "特卖"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": -560,
+                "y": 188
+            }
+        }
+    },
+    "特卖逻辑节点": {
+        "next": [
+            "切换到特卖",
+            "backBTN_1_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3673,
+                "y": -344
+            }
+        }
+    },
+    "补充购买狗粮精华": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    6,
+                    443,
+                    696,
+                    581
+                ],
+                "template": [
+                    "狗粮.png",
+                    "精华.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -8,
+                    153,
+                    19,
+                    -82
+                ]
+            }
+        },
+        "next": [
+            "补充购买狗粮精华",
+            "refresh",
+            "切换到宝库"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2062,
+                "y": 73
+            }
+        }
+    },
+    "识别task对应入口是否已完成_副本1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "param": {
+                                "expected": [
+                                    "家园商店购买2次"
+                                ]
+                            },
+                            "type": "OCR"
+                        },
+                        "sub_name": "ocr_node"
+                    },
+                    {
+                        "recognition": {
+                            "param": {
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "threshold": 0.7
+                            },
+                            "type": "TemplateMatch"
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1443,
+                "y": -602
+            }
+        }
+    },
+    "购买特卖": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    179,
+                    850,
+                    330,
+                    87
+                ],
+                "template": [
+                    "晨星购买图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "backBTN_1_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3669,
+                "y": 46
             }
         }
     }
