@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790428155846,
+            "lastSyncTime": 1790570702520,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\收取精彩活动红点.json",
             "savedViewport": {
-                "x": 620,
-                "y": 3518,
-                "zoom": 0.47
+                "x": 231,
+                "y": 2421,
+                "zoom": 0.36
             },
             "filename": "收取精彩活动红点",
             "version": "v2.0.1"
@@ -22,18 +22,6 @@
                 "x": -750,
                 "y": -6703
             }
-        }
-    },
-    "$__mpe_sticker_tips2_收取精彩活动红点": {
-        "$__mpe_code": {
-            "position": {
-                "x": 304,
-                "y": -6511
-            },
-            "content": "奇怪，直连刮刮乐会做，调试会做，就是在MFAA里不做\n找到原因了，所有带option的task一定要注意，加了新的连接一定要在interface里补上！！！！",
-            "color": "pink",
-            "width": 200,
-            "height": 160
         }
     },
     "$__mpe_sticker_tips_收取精彩活动红点": {
@@ -122,6 +110,35 @@
             }
         }
     },
+    "backbtn返回到获取卡牌弹窗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    11,
+                    1171,
+                    147,
+                    94
+                ],
+                "template": [
+                    "back_middle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "backbtn返回到获取卡牌弹窗",
+            "做完点全部领取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1541,
+                "y": -5807
+            }
+        }
+    },
     "start收取精彩活动红点": {
         "next": [
             "家园_10",
@@ -167,6 +184,34 @@
             "position": {
                 "x": 1638,
                 "y": -6843
+            }
+        }
+    },
+    "做完点全部领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    222,
+                    953,
+                    286,
+                    70
+                ],
+                "expected": [
+                    "全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击空白关闭获得卡牌界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1817,
+                "y": -6081
             }
         }
     },
@@ -271,6 +316,36 @@
             }
         }
     },
+    "刮": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    50,
+                    376,
+                    616,
+                    609
+                ],
+                "expected": [
+                    "幸运"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "获得奖励弹窗",
+            "刮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2370,
+                "y": -6249
+            }
+        }
+    },
     "刮刮乐": {
         "max_hit": 1,
         "recognition": {
@@ -302,6 +377,43 @@
             "position": {
                 "x": 681,
                 "y": -6111
+            }
+        }
+    },
+    "刮奖逻辑节点": {
+        "next": [
+            "刮完",
+            "[JumpBack]刮"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2078,
+                "y": -6050
+            }
+        }
+    },
+    "刮完": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    101,
+                    1040,
+                    270,
+                    107
+                ],
+                "expected": [
+                    "暂无卡牌"
+                ]
+            }
+        },
+        "next": [
+            "返回活动汇总"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2705,
+                "y": -6069
             }
         }
     },
@@ -351,6 +463,14 @@
             "position": {
                 "x": 1875,
                 "y": -7336
+            }
+        }
+    },
+    "可能出现礼包不过已经结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3857,
+                "y": -6510
             }
         }
     },
@@ -461,6 +581,30 @@
             }
         }
     },
+    "抽扭蛋": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "扭蛋1次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "repeat_delay": 5800,
+        "next": [
+            "backbtn返回到获取卡牌弹窗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1542,
+                "y": -6095
+            }
+        }
+    },
     "新建节点": {
         "recognition": {
             "type": "OCR",
@@ -517,6 +661,35 @@
             }
         }
     },
+    "检测前往1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    161,
+                    837,
+                    401,
+                    95
+                ],
+                "expected": [
+                    "前往"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "抽扭蛋"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1270,
+                "y": -5898
+            }
+        }
+    },
     "每周礼包红点": {
         "recognition": {
             "type": "TemplateMatch",
@@ -550,6 +723,29 @@
             "position": {
                 "x": 1368,
                 "y": -6841
+            }
+        }
+    },
+    "没有前往，点击空白关闭": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    8,
+                    1175,
+                    140,
+                    88
+                ]
+            }
+        },
+        "next": [
+            "做完点全部领取",
+            "点击空白关闭获得卡牌界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1273,
+                "y": -5622
             }
         }
     },
@@ -623,6 +819,29 @@
             }
         }
     },
+    "测试点击": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "转动扭蛋机2次只有一半.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测前往1",
+            "没有前往，点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 966,
+                "y": -5850
+            }
+        }
+    },
     "游戏之星": {
         "recognition": {
             "type": "OCR",
@@ -649,6 +868,28 @@
             "position": {
                 "x": 1003,
                 "y": -7506
+            }
+        }
+    },
+    "点击空白关闭获得卡牌界面": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    8,
+                    1175,
+                    140,
+                    88
+                ]
+            }
+        },
+        "next": [
+            "刮奖逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1813,
+                "y": -5859
             }
         }
     },
@@ -1012,6 +1253,71 @@
             }
         }
     },
+    "获得卡牌": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    552,
+                    1031,
+                    150,
+                    140
+                ],
+                "expected": [
+                    "获得卡牌"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    45,
+                    -52,
+                    -85,
+                    9
+                ]
+            }
+        },
+        "next": [
+            "转动扭蛋",
+            "测试点击",
+            "上划_刮刮乐"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 961,
+                "y": -6111
+            }
+        }
+    },
+    "获得奖励弹窗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "获得奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    491,
+                    823,
+                    226,
+                    21
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2371,
+                "y": -5974
+            }
+        }
+    },
     "获得抽奖券": {
         "recognition": {
             "type": "OCR",
@@ -1093,6 +1399,29 @@
             }
         }
     },
+    "转动扭蛋": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "转动扭蛋机2次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "检测前往1",
+            "没有前往，点击空白关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1266,
+                "y": -6115
+            }
+        }
+    },
     "返回活动汇总": {
         "recognition": {
             "type": "TemplateMatch",
@@ -1150,345 +1479,37 @@
             }
         }
     },
-    "先点全部领取": {
-        "recognition": {
-            "type": "OCR",
+    "上划_刮刮乐": {
+        "max_hit": 1,
+        "action": {
+            "type": "Swipe",
             "param": {
-                "roi": [
-                    222,
-                    953,
-                    286,
-                    70
+                "begin": [
+                    248,
+                    884,
+                    243,
+                    37
                 ],
-                "expected": [
-                    "全部领取"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "转动扭蛋",
-            "点击空白关闭1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 959,
-                "y": -5849
-            }
-        }
-    },
-    "获得卡牌": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    552,
-                    1031,
-                    150,
-                    140
+                "end": [
+                    [
+                        251,
+                        451,
+                        242,
+                        45
+                    ]
                 ],
-                "expected": [
-                    "获得卡牌"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    45,
-                    -52,
-                    -85,
-                    9
+                "end_hold": [
+                    709
                 ]
             }
         },
         "next": [
-            "先点全部领取",
-            "转动扭蛋",
-            "测试点击"
+            "转动扭蛋"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 961,
-                "y": -6111
-            }
-        }
-    },
-    "转动扭蛋": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "转动扭蛋两次"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "检测前往1",
-            "没有前往，点击空白关闭"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1266,
-                "y": -6115
-            }
-        }
-    },
-    "检测前往1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    161,
-                    837,
-                    401,
-                    95
-                ],
-                "expected": [
-                    "前往"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "next": [
-            "抽扭蛋"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1270,
-                "y": -5898
-            }
-        }
-    },
-    "没有前往，点击空白关闭": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    8,
-                    1175,
-                    140,
-                    88
-                ]
-            }
-        },
-        "next": [
-            "点击空白关闭1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1273,
-                "y": -5622
-            }
-        }
-    },
-    "抽扭蛋": {
-        "max_hit": 2,
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "扭蛋1次"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "抽扭蛋",
-            "backbtn返回到获取卡牌弹窗"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1542,
-                "y": -6095
-            }
-        }
-    },
-    "backbtn返回到获取卡牌弹窗": {
-        "max_hit": 2,
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    11,
-                    1171,
-                    147,
-                    94
-                ],
-                "template": [
-                    "back_middle.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "backbtn返回到获取卡牌弹窗",
-            "先点全部领取"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1541,
-                "y": -5807
-            }
-        }
-    },
-    "点击空白关闭1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    8,
-                    1175,
-                    140,
-                    88
-                ]
-            }
-        },
-        "next": [
-            "刮奖逻辑节点"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1835,
-                "y": -6081
-            }
-        }
-    },
-    "刮奖逻辑节点": {
-        "next": [
-            "刮完",
-            "[JumpBack]刮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2078,
-                "y": -6050
-            }
-        }
-    },
-    "刮": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    50,
-                    376,
-                    616,
-                    609
-                ],
-                "expected": [
-                    "幸运"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 500,
-        "next": [
-            "获得奖励弹窗",
-            "刮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2370,
-                "y": -6249
-            }
-        }
-    },
-    "获得奖励弹窗": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "获得奖励"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    491,
-                    823,
-                    226,
-                    21
-                ]
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 2371,
-                "y": -5974
-            }
-        }
-    },
-    "刮完": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    101,
-                    1040,
-                    270,
-                    107
-                ],
-                "expected": [
-                    "暂无卡牌"
-                ]
-            }
-        },
-        "next": [
-            "返回活动汇总"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2705,
-                "y": -6069
-            }
-        }
-    },
-    "测试点击": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "转动扭蛋机2次只有一半.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "检测前往1",
-            "没有前往，点击空白关闭"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 959,
-                "y": -5631
-            }
-        }
-    },
-    "可能出现礼包不过已经结束": {
-        "$__mpe_code": {
-            "position": {
-                "x": 3857,
-                "y": -6510
+                "x": 963,
+                "y": -5591
             }
         }
     }

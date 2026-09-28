@@ -1,0 +1,258 @@
+{
+    "$__mpe_config_模拟器桌面进游戏": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\模拟器桌面进游戏.json",
+            "lastSyncTime": 1790514682754,
+            "coordinateMode": "absolute-v1",
+            "isModifiedExternally": false,
+            "isDeleted": false,
+            "savedViewport": {
+                "x": -2409,
+                "y": 2717,
+                "zoom": 0.44
+            },
+            "filename": "模拟器桌面进游戏",
+            "version": "v2.0.1"
+        }
+    },
+    "任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 7422,
+                "y": -5082
+            }
+        }
+    },
+    "公告弹出逻辑节点": {
+        "post_delay": 20000,
+        "timeout": 100000,
+        "next": [
+            "弹出公告",
+            "选择服务器",
+            "[JumpBack]换服务器"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5996,
+                "y": -5307
+            }
+        }
+    },
+    "开始游戏": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    193,
+                    980,
+                    343,
+                    110
+                ]
+            }
+        },
+        "timeout": 40000,
+        "next": [
+            "确认进入家园"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7049,
+                "y": -5314
+            }
+        }
+    },
+    "弹出公告": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    111,
+                    1,
+                    494,
+                    137
+                ],
+                "expected": [
+                    "公告"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    224,
+                    1122,
+                    10,
+                    -10
+                ]
+            }
+        },
+        "next": [
+            "选择服务器",
+            "[JumpBack]换服务器"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6303,
+                "y": -5634
+            }
+        }
+    },
+    "换服务器": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "服务器icon.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "选择服务器1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6698,
+                "y": -5630
+            }
+        }
+    },
+    "检测是否在桌面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "游戏中心"
+                ]
+            }
+        },
+        "next": [
+            "检测账号角色名"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5348,
+                "y": -5284
+            }
+        }
+    },
+    "检测账号角色名": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    42,
+                    389,
+                    637,
+                    178
+                ],
+                "expected": [
+                    "KuiperNova",
+                    "桃",
+                    "6哥",
+                    "老李",
+                    "杖剑传说"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    0,
+                    -73,
+                    0,
+                    16
+                ]
+            }
+        },
+        "next": [
+            "公告弹出逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5644,
+                "y": -5304
+            }
+        }
+    },
+    "模拟器桌面还未进游戏": {
+        "next": [
+            "检测是否在桌面",
+            "任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5052,
+                "y": -5257
+            }
+        }
+    },
+    "确认进入家园": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7419,
+                "y": -5303
+            }
+        }
+    },
+    "选择服务器": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "缠结钱袋"
+                ]
+            }
+        },
+        "next": [
+            "开始游戏"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6710,
+                "y": -5308
+            }
+        }
+    },
+    "选择服务器1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "缠结钱袋"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7036,
+                "y": -5597
+            }
+        }
+    }
+}

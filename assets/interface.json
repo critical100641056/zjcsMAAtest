@@ -58,7 +58,23 @@
   //         "./agent/main.py"
   //     ]
   // },
+
+
+
+
   "task": [
+
+    {
+      "name": "桌面进游戏",
+      "label": "桌面进游戏",
+      "entry": "模拟器桌面还未进游戏",
+      "default_check": false,
+      "description": "如果还没进游戏，可以直接勾选该任务，脚本会自动进入游戏，不过需要设置对详细信息",
+      "option": [ "桌面app名称", "服务器名称" ]
+
+    },
+
+
     {
       "name": "商店购买",
       "label": "1_商店购买",
@@ -121,11 +137,163 @@
     {
       "name": "家园杂项清理",
       "entry": "start杂项",
-      "description": "领取经验，领取每日免费2小时加速，领取邮件，领取斐乐，领取小推车，领取果子，领取友情点，领取馈赠。"
+      "description": "领取经验，领取每日免费2小时加速，领取邮件，领取斐乐，领取小推车，领取果子，领取友情点，领取馈赠，送礼物。",
+      "option": [ "送礼物大号设置" ]
+    },
+    {
+      "name": "公会讨伐定时",
+      "entry": "start自动讨伐",
+      "description": "自动讨伐，配合定时设置"      
     }
 
   ],
   "option": {
+
+    "桌面app名称": {
+      "type": "input",
+      "label": "桌面app名称",
+      "description": "模拟器桌面进游戏流程里「检测账号角色名」节点要识别的游戏 app 名称，即模拟器桌面上该 app 显示的名字。可填单个名称；要同时兼容多个名称时用 | 分隔（OCR 的 expected 支持正则，多个名称等价于或匹配）。",
+      "inputs": [
+        {
+          "name": "桌面app名称",
+          "label": "桌面app名称",
+          "description": "模拟器桌面上游戏 app 的显示名称。多个名称用 | 分隔，例如：A|B|C。",
+          "default": "KuiperNova|桃|6哥|老李|杖剑传说",
+          "pipeline_type": "string",
+          "verify": "^.{1,60}$"
+        }
+      ],
+      "pipeline_override": {
+        "检测账号角色名": {
+          "recognition": {
+            "type": "OCR",
+            "param": {
+              "roi": [ 42, 389, 637, 178 ],
+              "expected": [ "{桌面app名称}" ]
+            }
+          }
+        }
+      }
+    },
+
+    "服务器名称": {
+      "type": "input",
+      "label": "服务器名称",
+      "description": "模拟器桌面进游戏流程里「选择服务器」「选择服务器1」两个节点要识别并点击的服务器名称。",
+      "inputs": [
+        {
+          "name": "服务器名称",
+          "label": "服务器名称",
+          "description": "要进入的服务器名字，例如：缠结钱袋。",
+          "default": "缠结钱袋",
+          "pipeline_type": "string",
+          "verify": "^.{1,20}$"
+        }
+      ],
+      "pipeline_override": {
+        "选择服务器": {
+          "recognition": {
+            "type": "OCR",
+            "param": {
+              "expected": [ "{服务器名称}" ]
+            }
+          }
+        },
+        "选择服务器1": {
+          "recognition": {
+            "type": "OCR",
+            "param": {
+              "expected": [ "{服务器名称}" ]
+            }
+          }
+        }
+      }
+    },
+
+
+
+    "送礼物大号设置": {
+      "type": "input",
+      "label": "送礼物大号设置",
+      "inputs": [
+        {
+          "name": "大号1昵称",
+          "label": "大号1昵称",
+          "description": "送礼物逻辑节点里的大号1检测节点，会前往该昵称的好友主页。",
+          "default": "KuiperNova",
+          "pipeline_type": "string",
+          "verify": "^.{1,20}$"
+        },
+        {
+          "name": "大号2昵称",
+          "label": "大号2昵称",
+          "description": "送礼物逻辑节点里的大号2检测节点，会前往该昵称的好友主页。",
+          "default": "酥脆酥脆可颂",
+          "pipeline_type": "string",
+          "verify": "^.{1,20}$"
+        }
+      ],
+      "pipeline_override": {
+        "大号1检测并前往": {
+          "recognition": {
+            "type": "And",
+            "param": {
+              "all_of": [
+                {
+                  "sub_name": "ocr_node",
+                  "recognition": {
+                    "type": "OCR",
+                    "param": {
+                      "expected": [ "{大号1昵称}" ]
+                    }
+                  }
+                },
+                {
+                  "recognition": {
+                    "type": "OCR",
+                    "param": {
+                      "roi": "ocr_node",
+                      "roi_offset": [ -4, 63, 21, -1 ],
+                      "expected": [ "今日访客：4", "今日访客：3", "今日访客：2", "今日访客：1", "今日访客：0" ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "大号2检测并前往": {
+          "recognition": {
+            "type": "And",
+            "param": {
+              "all_of": [
+                {
+                  "sub_name": "ocr_node",
+                  "recognition": {
+                    "type": "OCR",
+                    "param": {
+                      "expected": [ "{大号2昵称}" ]
+                    }
+                  }
+                },
+                {
+                  "recognition": {
+                    "type": "OCR",
+                    "param": {
+                      "roi": "ocr_node",
+                      "roi_offset": [ -4, 63, 21, -1 ],
+                      "expected": [ "今日访客：4", "今日访客：3", "今日访客：2", "今日访客：1", "今日访客：0" ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+
+
     "商店刷新次数": {
       "type": "select",
       "label": "商店刷新次数",
@@ -159,7 +327,7 @@
     "副本选择": {
       "type": "select",
       "label": "副本选择",
-      "default_case": "副本选择_标准",
+      "default_case": "当前最新副本",
       "cases": [
         {
           "name": "当前最新副本",
@@ -263,10 +431,10 @@
       "default_case": "yes",
       "cases": [
         {
-          "name": "yes",          
+          "name": "yes",
           "pipeline_override": {
             "精彩活动逻辑节点": {
-              "next": [ "S6赛季活动","宾果抽抽乐","刮刮乐","秘宝大作战","签到","活动汇总上划","活动汇总返回家园" ]
+              "next": [ "S6赛季活动", "宾果抽抽乐", "刮刮乐", "秘宝大作战", "签到", "活动汇总上划", "活动汇总返回家园" ]
             }
           }
         },

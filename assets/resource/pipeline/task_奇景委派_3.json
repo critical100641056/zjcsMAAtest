@@ -3,17 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790326890240,
+            "lastSyncTime": 1790558372286,
             "isModifiedExternally": false,
-            "isDeleted": true,
-            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
+            "isDeleted": false,
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_奇景委派_3.json",
             "savedViewport": {
-                "x": 871,
-                "y": 2332,
-                "zoom": 0.82
+                "x": -857,
+                "y": 1962,
+                "zoom": 0.76
             },
             "filename": "task_奇景委派_3",
-            "version": "v1.10.1"
+            "version": "v2.0.1"
         }
     },
     "$__mpe_external_位置检测与重置_1_task_奇景委派_3": {
@@ -147,6 +147,7 @@
         }
     },
     "emptylogic2": {
+        "pre_wait_freezes": 0,
         "post_wait_freezes": 0,
         "post_delay": 988,
         "next": [
@@ -161,7 +162,9 @@
         }
     },
     "emptylogic3": {
-        "post_wait_freezes": 0,
+        "pre_wait_freezes": 0,
+        "post_wait_freezes": 908,
+        "post_delay": 0,
         "next": [
             "bluedot",
             "backBTN_3"
@@ -330,81 +333,12 @@
             }
         }
     },
-    "家园_奇景": {
+    "task_奇景委派_副本1": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "roi": [
-                    297,
-                    1231,
-                    124,
-                    47
-                ],
                 "expected": [
-                    "家园"
-                ]
-            }
-        },
-        "next": [
-            "cube_home_3"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -869,
-                "y": -2291
-            }
-        }
-    },
-    "弹窗关闭": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    91,
-                    199,
-                    539,
-                    191
-                ],
-                "expected": [
-                    "委派结束"
-                ]
-            }
-        },
-        "pre_wait_freezes": 0,
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -102,
-                    670,
-                    215,
-                    194
-                ]
-            }
-        },
-        "next": [
-            "reddot",
-            "emptylogic2"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1472,
-                "y": -2139
-            }
-        }
-    },
-    "弹窗关闭2": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    152,
-                    320,
-                    413,
-                    136
-                ],
-                "expected": [
-                    "委派开始"
+                    "完成1次奇景委派"
                 ]
             }
         },
@@ -412,88 +346,10 @@
             "type": "Click",
             "param": {
                 "target_offset": [
-                    -69,
-                    603,
-                    184,
-                    196
-                ]
-            }
-        },
-        "post_wait_freezes": 0,
-        "next": [
-            "bluedot",
-            "emptylogic3"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2230,
-                "y": -1704
-            }
-        }
-    },
-    "羁绊冒险标准入口": {
-        "next": [
-            "进入笔记界面_3",
-            "[JumpBack]位置检测与重置_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -1171,
-                "y": -1860
-            }
-        }
-    },
-    "进入笔记界面_3": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    150,
-                    1155,
-                    147,
-                    124
-                ],
-                "template": [
-                    "笔记未选中.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "进入羁绊冒险界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": -872,
-                "y": -1885
-            }
-        }
-    },
-    "进入羁绊冒险界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    422,
-                    138,
-                    179,
-                    52
-                ],
-                "expected": [
-                    "羁绊冒险"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    43,
-                    89,
-                    16,
-                    112
+                    497,
+                    78,
+                    -118,
+                    -6
                 ]
             }
         },
@@ -502,63 +358,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 549,
-                "y": -1849
-            }
-        }
-    },
-    "识别task对应入口是否已完成_3": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    {
-                        "sub_name": "ocr_node",
-                        "recognition": {
-                            "type": "OCR",
-                            "param": {
-                                "expected": [
-                                    "完成1次奇景委派"
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "recognition": {
-                            "type": "TemplateMatch",
-                            "param": {
-                                "template": [
-                                    "日常任务task已完成.png"
-                                ],
-                                "roi": "ocr_node",
-                                "roi_offset": [
-                                    482,
-                                    46,
-                                    -95,
-                                    53
-                                ],
-                                "threshold": 0.7
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "next": [
-            "已完成_3"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 727,
-                "y": -2838
-            }
-        }
-    },
-    "已完成_3": {
-        "$__mpe_code": {
-            "position": {
-                "x": 733,
-                "y": -2641
+                "x": 731,
+                "y": -2517
             }
         }
     },
@@ -631,33 +432,114 @@
             }
         }
     },
-    "task_奇景委派_副本1": {
+    "家园_奇景": {
         "recognition": {
             "type": "OCR",
             "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
                 "expected": [
-                    "完成1次奇景委派"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    497,
-                    78,
-                    -118,
-                    -6
+                    "家园"
                 ]
             }
         },
         "next": [
+            "cube_home_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -869,
+                "y": -2291
+            }
+        }
+    },
+    "已完成_3": {
+        "$__mpe_code": {
+            "position": {
+                "x": 733,
+                "y": -2641
+            }
+        }
+    },
+    "弹窗关闭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    91,
+                    199,
+                    539,
+                    191
+                ],
+                "expected": [
+                    "委派结束"
+                ]
+            }
+        },
+        "pre_wait_freezes": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -102,
+                    670,
+                    215,
+                    194
+                ]
+            }
+        },
+        "post_wait_freezes": 0,
+        "next": [
+            "reddot",
             "emptylogic2"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 731,
-                "y": -2517
+                "x": 1472,
+                "y": -2139
+            }
+        }
+    },
+    "弹窗关闭2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    152,
+                    320,
+                    413,
+                    136
+                ],
+                "expected": [
+                    "委派开始"
+                ]
+            }
+        },
+        "pre_wait_freezes": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -69,
+                    603,
+                    184,
+                    196
+                ]
+            }
+        },
+        "post_wait_freezes": 0,
+        "next": [
+            "bluedot",
+            "emptylogic3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2230,
+                "y": -1704
             }
         }
     },
@@ -686,6 +568,129 @@
             "position": {
                 "x": -853,
                 "y": -2600
+            }
+        }
+    },
+    "羁绊冒险标准入口": {
+        "next": [
+            "进入笔记界面_3",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -1171,
+                "y": -1860
+            }
+        }
+    },
+    "识别task对应入口是否已完成_3": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "param": {
+                                "expected": [
+                                    "完成1次奇景委派"
+                                ]
+                            },
+                            "type": "OCR"
+                        },
+                        "sub_name": "ocr_node"
+                    },
+                    {
+                        "recognition": {
+                            "param": {
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "threshold": 0.7
+                            },
+                            "type": "TemplateMatch"
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_3"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 727,
+                "y": -2838
+            }
+        }
+    },
+    "进入笔记界面_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    150,
+                    1155,
+                    147,
+                    124
+                ],
+                "template": [
+                    "笔记未选中.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入羁绊冒险界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": -872,
+                "y": -1885
+            }
+        }
+    },
+    "进入羁绊冒险界面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    422,
+                    138,
+                    179,
+                    52
+                ],
+                "expected": [
+                    "羁绊冒险"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    43,
+                    89,
+                    16,
+                    112
+                ]
+            }
+        },
+        "next": [
+            "emptylogic2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 549,
+                "y": -1849
             }
         }
     }

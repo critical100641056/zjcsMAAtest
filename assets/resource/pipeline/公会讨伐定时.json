@@ -1,0 +1,368 @@
+{
+    "$__mpe_config_公会讨伐定时": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\公会讨伐定时.json",
+            "lastSyncTime": 1790514577471,
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -3193,
+                "y": 3372,
+                "zoom": 0.57
+            },
+            "filename": "公会讨伐定时",
+            "version": "v2.0.1"
+        }
+    },
+    "进入公会": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    432,
+                    1173,
+                    136,
+                    103
+                ],
+                "template": [
+                    "公会.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1500,
+        "next": [
+            "先左划"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5740,
+                "y": -5461
+            }
+        }
+    },
+    "start自动讨伐": {
+        "next": [
+            "进入公会",
+            "[JumpBack]位置检测与重置_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5334,
+                "y": -5414
+            }
+        }
+    },
+    "$__mpe_external_位置检测与重置_1_公会讨伐定时": {
+        "$__mpe_code": {
+            "position": {
+                "x": 5740,
+                "y": -5118
+            }
+        }
+    },
+    "新建节点88": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "远征之门"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    23,
+                    -108,
+                    -49,
+                    52
+                ]
+            }
+        },
+        "next": [
+            "公会讨伐卡片"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6756,
+                "y": -5427
+            }
+        }
+    },
+    "右滑_副本1": {
+        "max_hit": 5,
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    399,
+                    48,
+                    555
+                ],
+                "end": [
+                    [
+                        482,
+                        465,
+                        57,
+                        444
+                    ]
+                ],
+                "end_hold": [
+                    897
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6764,
+                "y": -5725
+            }
+        }
+    },
+    "先左划": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    546,
+                    732,
+                    43,
+                    166
+                ],
+                "end": [
+                    [
+                        286,
+                        728,
+                        45,
+                        172
+                    ]
+                ],
+                "end_hold": [
+                    800
+                ]
+            }
+        },
+        "repeat": 3,
+        "next": [
+            "检测远征之门节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6080,
+                "y": -5450
+            }
+        }
+    },
+    "检测远征之门节点": {
+        "next": [
+            "新建节点88",
+            "[JumpBack]右滑_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6388,
+                "y": -5412
+            }
+        }
+    },
+    "公会讨伐卡片": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "公会讨伐"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    205,
+                    -153,
+                    29,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "是否击败逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7104,
+                "y": -5435
+            }
+        }
+    },
+    "点击挑战": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    196,
+                    938,
+                    338,
+                    91
+                ],
+                "expected": [
+                    "挑战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 20000,
+        "next": [
+            "讨伐开始战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7718,
+                "y": -5460
+            }
+        }
+    },
+    "已击败": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    216,
+                    948,
+                    291,
+                    82
+                ],
+                "expected": [
+                    "已击败"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    454,
+                    867,
+                    61,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "已击败",
+            "点击挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7718,
+                "y": -5182
+            }
+        }
+    },
+    "是否击败逻辑节点": {
+        "next": [
+            "点击挑战",
+            "已击败",
+            "未解锁"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7399,
+                "y": -5415
+            }
+        }
+    },
+    "未解锁": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    214,
+                    946,
+                    319,
+                    83
+                ],
+                "expected": [
+                    "未解锁"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    216,
+                    875,
+                    48,
+                    39
+                ]
+            }
+        },
+        "next": [
+            "未解锁",
+            "点击挑战"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7725,
+                "y": -4923
+            }
+        }
+    },
+    "讨伐开始战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    162,
+                    876,
+                    383,
+                    145
+                ],
+                "expected": [
+                    "开始战斗",
+                    "加入战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 4000,
+        "next": [
+            "左下角返回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8103,
+                "y": -5452
+            }
+        }
+    },
+    "左下角返回": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    48,
+                    1195,
+                    55,
+                    50
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 8479,
+                "y": -5411
+            }
+        }
+    }
+}
