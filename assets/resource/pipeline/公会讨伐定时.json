@@ -3,12 +3,12 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\公会讨伐定时.json",
-            "lastSyncTime": 1790514577471,
+            "lastSyncTime": 1790687910532,
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -3193,
-                "y": 3372,
-                "zoom": 0.57
+                "x": -7380,
+                "y": 5001,
+                "zoom": 0.88
             },
             "filename": "公会讨伐定时",
             "version": "v2.0.1"
@@ -45,21 +45,21 @@
     },
     "start自动讨伐": {
         "next": [
-            "进入公会",
+            "家园场景检测12",
             "[JumpBack]位置检测与重置_1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5334,
-                "y": -5414
+                "x": 5097,
+                "y": -5411
             }
         }
     },
     "$__mpe_external_位置检测与重置_1_公会讨伐定时": {
         "$__mpe_code": {
             "position": {
-                "x": 5740,
-                "y": -5118
+                "x": 5456,
+                "y": -5196
             }
         }
     },
@@ -201,6 +201,7 @@
         }
     },
     "点击挑战": {
+        "max_hit": 2,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -224,8 +225,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7718,
-                "y": -5460
+                "x": 7717,
+                "y": -5502
             }
         }
     },
@@ -358,10 +359,179 @@
                 ]
             }
         },
+        "next": [
+            "执行是否继续讨伐检测",
+            "说明已经是第二次了"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 8479,
-                "y": -5411
+                "x": 8113,
+                "y": -5163
+            }
+        }
+    },
+    "家园场景检测12": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    297,
+                    1231,
+                    124,
+                    47
+                ],
+                "expected": [
+                    "家园"
+                ]
+            }
+        },
+        "next": [
+            "进入公会"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5449,
+                "y": -5425
+            }
+        }
+    },
+    "执行是否继续讨伐检测": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    210,
+                    15,
+                    278,
+                    72
+                ],
+                "expected": [
+                    "今日剩余讨伐次数：2/2"
+                ]
+            }
+        },
+        "next": [
+            "识别到切回"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8437,
+                "y": -5483
+            }
+        }
+    },
+    "识别到切回": {
+        "max_hit": 100,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    196,
+                    938,
+                    338,
+                    91
+                ],
+                "expected": [
+                    "切回"
+                ]
+            }
+        },
+        "post_delay": 30000,
+        "next": [
+            "识别到切回",
+            "识别到已击败结束本次，等待8点",
+            "识别到挑战则直接挑战第2次",
+            "本次讨伐任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8761,
+                "y": -5489
+            }
+        }
+    },
+    "本次讨伐任务结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 9365,
+                "y": -5140
+            }
+        }
+    },
+    "识别到已击败结束本次，等待8点": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    196,
+                    938,
+                    338,
+                    91
+                ],
+                "expected": [
+                    "已击败"
+                ]
+            }
+        },
+        "post_delay": 30000,
+        "next": [
+            "本次讨伐任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9065,
+                "y": -5757
+            }
+        }
+    },
+    "说明已经是第二次了": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    210,
+                    15,
+                    278,
+                    72
+                ],
+                "expected": [
+                    "今日剩余讨伐次数：1/2"
+                ]
+            }
+        },
+        "next": [
+            "本次讨伐任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8440,
+                "y": -5172
+            }
+        }
+    },
+    "识别到挑战则直接挑战第2次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    196,
+                    938,
+                    338,
+                    91
+                ],
+                "expected": [
+                    "挑战"
+                ]
+            }
+        },
+        "next": [
+            "是否击败逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9070,
+                "y": -5463
             }
         }
     }

@@ -3,13 +3,13 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\模拟器桌面进游戏.json",
-            "lastSyncTime": 1790514682754,
+            "lastSyncTime": 1790687938418,
             "coordinateMode": "absolute-v1",
             "isModifiedExternally": false,
             "isDeleted": false,
             "savedViewport": {
-                "x": -2409,
-                "y": 2717,
+                "x": -1837,
+                "y": 2685,
                 "zoom": 0.44
             },
             "filename": "模拟器桌面进游戏",
@@ -19,8 +19,8 @@
     "任务结束": {
         "$__mpe_code": {
             "position": {
-                "x": 7422,
-                "y": -5082
+                "x": 7419,
+                "y": -5033
             }
         }
     },
@@ -187,8 +187,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5052,
-                "y": -5257
+                "x": 5013,
+                "y": -5280
             }
         }
     },

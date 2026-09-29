@@ -3,17 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790329356829,
+            "lastSyncTime": 1790660863465,
             "isModifiedExternally": false,
-            "isDeleted": true,
-            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_圣兽_5.json",
+            "isDeleted": false,
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_圣兽_5.json",
             "savedViewport": {
-                "x": -3236,
-                "y": 855,
-                "zoom": 0.99
+                "x": -1935,
+                "y": 1212,
+                "zoom": 0.61
             },
             "filename": "task_圣兽_5",
-            "version": "v1.10.1"
+            "version": "v2.0.1"
         }
     },
     "$__mpe_external_位置检测与重置_1_task_圣兽_5": {
@@ -22,6 +22,18 @@
                 "x": 2347,
                 "y": -1501
             }
+        }
+    },
+    "$__mpe_sticker_便签_task_圣兽_5": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3871,
+                "y": -1507
+            },
+            "content": "理论上进入这个界面不可能没有击破记录的红点，但是之前两次都没有检查到，所以额外补充了一个直接切回试炼的链路。",
+            "color": "yellow",
+            "width": 200,
+            "height": 160
         }
     },
     "$__mpe_sticker_便签_副本2_task_圣兽_5": {
@@ -271,6 +283,107 @@
             }
         }
     },
+    "task_圣兽_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "圣兽试炼领取1次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    517,
+                    75,
+                    -158,
+                    -2
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "排行榜红点",
+            "切换到圣兽匹配界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4110,
+                "y": -1962
+            }
+        }
+    },
+    "上划_5": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    1073,
+                    407,
+                    44
+                ],
+                "end": [
+                    [
+                        178,
+                        195,
+                        352,
+                        59
+                    ]
+                ],
+                "end_hold": [
+                    978
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_圣兽",
+            "下滑_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3302,
+                "y": -1630
+            }
+        }
+    },
+    "下滑_5": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_圣兽"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3304,
+                "y": -1320
+            }
+        }
+    },
     "关闭弹窗": {
         "action": {
             "type": "Click",
@@ -400,8 +513,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4104,
-                "y": -855
+                "x": 4102,
+                "y": -896
             }
         }
     },
@@ -427,6 +540,14 @@
             "position": {
                 "x": 2348,
                 "y": -1728
+            }
+        }
+    },
+    "已完成_5": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4111,
+                "y": -2096
             }
         }
     },
@@ -456,13 +577,15 @@
                 ]
             }
         },
+        "post_delay": 1500,
         "next": [
-            "新建节点649"
+            "检测击败记录",
+            "切换到圣兽匹配界面"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 4110,
-                "y": -1466
+                "x": 4108,
+                "y": -1649
             }
         }
     },
@@ -497,35 +620,6 @@
             }
         }
     },
-    "新建节点649": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    386,
-                    20,
-                    327,
-                    197
-                ],
-                "template": [
-                    "击破记录.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 800,
-        "next": [
-            "圣兽击破记录红点"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4104,
-                "y": -1169
-            }
-        }
-    },
     "检测_1": {
         "recognition": {
             "type": "OCR",
@@ -549,6 +643,64 @@
             "position": {
                 "x": 4519,
                 "y": -1148
+            }
+        }
+    },
+    "检测击败记录": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    554,
+                    13,
+                    159,
+                    120
+                ],
+                "template": [
+                    "击破记录.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 800,
+        "next": [
+            "圣兽击破记录红点",
+            "backBTN_2_副本2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4107,
+                "y": -1265
+            }
+        }
+    },
+    "检测是否处于任务列表界面_5": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_5",
+            "task_圣兽",
+            "上划_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2348,
+                "y": -2018
             }
         }
     },
@@ -600,6 +752,53 @@
             }
         }
     },
+    "识别task对应入口是否已完成_5": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "param": {
+                                "expected": [
+                                    "圣兽试炼领取1次"
+                                ]
+                            },
+                            "type": "OCR"
+                        },
+                        "sub_name": "ocr_node"
+                    },
+                    {
+                        "recognition": {
+                            "param": {
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "threshold": 0.7
+                            },
+                            "type": "TemplateMatch"
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_5"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4115,
+                "y": -2303
+            }
+        }
+    },
     "通关奖励": {
         "recognition": {
             "type": "OCR",
@@ -625,190 +824,6 @@
             "position": {
                 "x": 4099,
                 "y": -589
-            }
-        }
-    },
-    "识别task对应入口是否已完成_5": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    {
-                        "sub_name": "ocr_node",
-                        "recognition": {
-                            "type": "OCR",
-                            "param": {
-                                "expected": [
-                                    "圣兽试炼领取1次"
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "recognition": {
-                            "type": "TemplateMatch",
-                            "param": {
-                                "template": [
-                                    "日常任务task已完成.png"
-                                ],
-                                "roi": "ocr_node",
-                                "roi_offset": [
-                                    482,
-                                    46,
-                                    -95,
-                                    53
-                                ],
-                                "threshold": 0.7
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "next": [
-            "已完成_5"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4115,
-                "y": -2303
-            }
-        }
-    },
-    "已完成_5": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4111,
-                "y": -2096
-            }
-        }
-    },
-    "上划_5": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    156,
-                    1073,
-                    407,
-                    44
-                ],
-                "end": [
-                    [
-                        178,
-                        195,
-                        352,
-                        59
-                    ]
-                ],
-                "end_hold": [
-                    978
-                ]
-            }
-        },
-        "post_delay": 500,
-        "next": [
-            "task_圣兽",
-            "下滑_5"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3302,
-                "y": -1630
-            }
-        }
-    },
-    "下滑_5": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    141,
-                    201,
-                    457,
-                    51
-                ],
-                "end": [
-                    [
-                        133,
-                        1075,
-                        448,
-                        39
-                    ]
-                ],
-                "end_hold": [
-                    490
-                ]
-            }
-        },
-        "post_delay": 500,
-        "next": [
-            "task_圣兽"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3304,
-                "y": -1320
-            }
-        }
-    },
-    "task_圣兽_副本1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "圣兽试炼领取1次"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    517,
-                    75,
-                    -158,
-                    -2
-                ]
-            }
-        },
-        "post_delay": 500,
-        "next": [
-            "排行榜红点",
-            "切换到圣兽匹配界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4110,
-                "y": -1962
-            }
-        }
-    },
-    "检测是否处于任务列表界面_5": {
-        "max_hit": 1,
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    11,
-                    9,
-                    224,
-                    106
-                ],
-                "expected": [
-                    "日常任务"
-                ]
-            }
-        },
-        "next": [
-            "task_claim_5",
-            "task_圣兽",
-            "上划_5"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2348,
-                "y": -2018
             }
         }
     }

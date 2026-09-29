@@ -3,17 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790326928551,
+            "lastSyncTime": 1790660027453,
             "isModifiedExternally": false,
-            "isDeleted": true,
-            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_日常副本标准.json",
+            "isDeleted": false,
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_日常副本标准.json",
             "savedViewport": {
-                "x": -1116,
-                "y": 2604,
-                "zoom": 0.66
+                "x": -4100,
+                "y": 2513,
+                "zoom": 0.62
             },
             "filename": "task_日常副本标准",
-            "version": "v1.10.1"
+            "version": "v2.0.1"
         }
     },
     "$__mpe_external_位置检测与重置_1_task_日常副本标准": {
@@ -65,20 +65,22 @@
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "Srank.png"
+                    "Srank.png",
+                    "Srank箱子.png"
                 ],
                 "threshold": [
                     0.9
                 ]
             }
         },
+        "post_delay": 1500,
         "next": [
             "领取_1"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6413,
-                "y": -3327
+                "x": 6411,
+                "y": -3351
             }
         }
     },
@@ -227,6 +229,36 @@
             }
         }
     },
+    "task_日常副本_1_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "完成1次日常副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    431,
+                    50,
+                    -3,
+                    42
+                ]
+            }
+        },
+        "next": [
+            "副本选择"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4167,
+                "y": -3441
+            }
+        }
+    },
     "上划_1": {
         "max_hit": 10,
         "action": {
@@ -259,6 +291,74 @@
             "position": {
                 "x": 4968,
                 "y": -2735
+            }
+        }
+    },
+    "上划_7": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    156,
+                    1073,
+                    407,
+                    44
+                ],
+                "end": [
+                    [
+                        178,
+                        195,
+                        352,
+                        59
+                    ]
+                ],
+                "end_hold": [
+                    978
+                ]
+            }
+        },
+        "next": [
+            "task_日常副本_1",
+            "下滑_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3433,
+                "y": -3313
+            }
+        }
+    },
+    "下滑_7": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    141,
+                    201,
+                    457,
+                    51
+                ],
+                "end": [
+                    [
+                        133,
+                        1075,
+                        448,
+                        39
+                    ]
+                ],
+                "end_hold": [
+                    490
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "task_日常副本_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3435,
+                "y": -3065
             }
         }
     },
@@ -370,31 +470,39 @@
             }
         }
     },
-    "副本返回btn1_1": {
+    "检测到已领取点返回btn": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    5,
-                    1168,
-                    142,
-                    111
+                    343,
+                    1156,
+                    341,
+                    107
                 ],
-                "template": [
-                    "副本结算back.png"
+                "expected": [
+                    "已领取"
                 ]
             }
         },
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -437,
+                    5,
+                    -28,
+                    0
+                ]
+            }
         },
         "next": [
             "副本选择"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7409,
-                "y": -3329
+                "x": 7592,
+                "y": -3321
             }
         }
     },
@@ -531,6 +639,14 @@
             }
         }
     },
+    "已完成_7": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4170,
+                "y": -3564
+            }
+        }
+    },
     "弹窗确定1_1": {
         "recognition": {
             "type": "OCR",
@@ -549,13 +665,14 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "副本返回btn1_1"
+            "检测到已领取点返回btn"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 7067,
-                "y": -3311
+                "x": 7153,
+                "y": -3218
             }
         }
     },
@@ -707,19 +824,91 @@
             }
         }
     },
+    "检测是否处于任务列表界面_7": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    11,
+                    9,
+                    224,
+                    106
+                ],
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "next": [
+            "task_claim_7",
+            "task_日常副本_1",
+            "上划_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2308,
+                "y": -3793
+            }
+        }
+    },
     "等待logic_2": {
         "timeout": 800000,
         "next": [
             "Srank识别_1",
             "不领取_1"
         ],
-        "on_error": [
-            "副本返回btn_1"
-        ],
         "$__mpe_code": {
             "position": {
                 "x": 6135,
                 "y": -3315
+            }
+        }
+    },
+    "识别task对应入口是否已完成_7": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "param": {
+                                "expected": [
+                                    "完成1次日常副本"
+                                ]
+                            },
+                            "type": "OCR"
+                        },
+                        "sub_name": "ocr_node"
+                    },
+                    {
+                        "recognition": {
+                            "param": {
+                                "roi": "ocr_node",
+                                "roi_offset": [
+                                    482,
+                                    46,
+                                    -95,
+                                    53
+                                ],
+                                "template": [
+                                    "日常任务task已完成.png"
+                                ],
+                                "threshold": 0.7
+                            },
+                            "type": "TemplateMatch"
+                        }
+                    }
+                ]
+            }
+        },
+        "next": [
+            "已完成_7"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4176,
+                "y": -3769
             }
         }
     },
@@ -805,194 +994,15 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 2000,
         "next": [
-            "弹窗确定1_1"
+            "弹窗确定1_1",
+            "检测到已领取点返回btn"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6740,
-                "y": -3311
-            }
-        }
-    },
-    "识别task对应入口是否已完成_7": {
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    {
-                        "sub_name": "ocr_node",
-                        "recognition": {
-                            "type": "OCR",
-                            "param": {
-                                "expected": [
-                                    "完成1次日常副本"
-                                ]
-                            }
-                        }
-                    },
-                    {
-                        "recognition": {
-                            "type": "TemplateMatch",
-                            "param": {
-                                "template": [
-                                    "日常任务task已完成.png"
-                                ],
-                                "roi": "ocr_node",
-                                "roi_offset": [
-                                    482,
-                                    46,
-                                    -95,
-                                    53
-                                ],
-                                "threshold": 0.7
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "next": [
-            "已完成_7"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4176,
-                "y": -3769
-            }
-        }
-    },
-    "已完成_7": {
-        "$__mpe_code": {
-            "position": {
-                "x": 4170,
-                "y": -3564
-            }
-        }
-    },
-    "上划_7": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    156,
-                    1073,
-                    407,
-                    44
-                ],
-                "end": [
-                    [
-                        178,
-                        195,
-                        352,
-                        59
-                    ]
-                ],
-                "end_hold": [
-                    978
-                ]
-            }
-        },
-        "next": [
-            "task_日常副本_1",
-            "下滑_7"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3433,
-                "y": -3313
-            }
-        }
-    },
-    "下滑_7": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    141,
-                    201,
-                    457,
-                    51
-                ],
-                "end": [
-                    [
-                        133,
-                        1075,
-                        448,
-                        39
-                    ]
-                ],
-                "end_hold": [
-                    490
-                ]
-            }
-        },
-        "post_delay": 500,
-        "next": [
-            "task_日常副本_1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3435,
-                "y": -3065
-            }
-        }
-    },
-    "task_日常副本_1_副本1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "完成1次日常副本"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    431,
-                    50,
-                    -3,
-                    42
-                ]
-            }
-        },
-        "next": [
-            "副本选择"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4167,
-                "y": -3441
-            }
-        }
-    },
-    "检测是否处于任务列表界面_7": {
-        "max_hit": 1,
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    11,
-                    9,
-                    224,
-                    106
-                ],
-                "expected": [
-                    "日常任务"
-                ]
-            }
-        },
-        "next": [
-            "task_claim_7",
-            "task_日常副本_1",
-            "上划_7"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2308,
-                "y": -3793
+                "x": 6733,
+                "y": -3334
             }
         }
     }
