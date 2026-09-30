@@ -144,6 +144,10 @@
       "name": "公会讨伐定时",
       "entry": "start自动讨伐",
       "description": "自动讨伐，配合定时设置"      
+    },
+      {
+      "name": "push测试",
+      "entry": "start_push测试"        
     }
 
   ],

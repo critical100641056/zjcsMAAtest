@@ -3,15 +3,77 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\公会讨伐定时.json",
-            "lastSyncTime": 1790687910532,
+            "lastSyncTime": 1790690520426,
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -7380,
-                "y": 5001,
-                "zoom": 0.88
+                "x": -8072,
+                "y": 5290,
+                "zoom": 0.95
             },
             "filename": "公会讨伐定时",
             "version": "v2.0.1"
+        }
+    },
+    "只有8点前打了第二次才可能发生": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    196,
+                    938,
+                    338,
+                    91
+                ],
+                "expected": [
+                    "切回"
+                ]
+            }
+        },
+        "next": [
+            "说明已经是第二次了_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7731,
+                "y": -4626
+            }
+        }
+    },
+    "说明已经是第二次了_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    210,
+                    15,
+                    278,
+                    72
+                ],
+                "expected": [
+                    "今日剩余讨伐次数：1/2"
+                ]
+            }
+        },
+        "next": [
+            "本次讨伐任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8102,
+                "y": -4622
+            }
+        }
+    },
+    "$__mpe_sticker_便签_公会讨伐定时": {
+        "$__mpe_code": {
+            "position": {
+                "x": 6409,
+                "y": -5209
+            },
+            "content": "有时候讨伐过程中，点公会会有bug，直接进到讨伐界面的可能，",
+            "color": "purple",
+            "width": 200,
+            "height": 160
         }
     },
     "进入公会": {
@@ -221,7 +283,8 @@
         },
         "post_delay": 20000,
         "next": [
-            "讨伐开始战斗"
+            "讨伐开始战斗",
+            "本次讨伐任务结束"
         ],
         "$__mpe_code": {
             "position": {
@@ -271,7 +334,8 @@
         "next": [
             "点击挑战",
             "已击败",
-            "未解锁"
+            "未解锁",
+            "只有8点前打了第二次才可能发生"
         ],
         "$__mpe_code": {
             "position": {
@@ -359,6 +423,7 @@
                 ]
             }
         },
+        "post_delay": 5000,
         "next": [
             "执行是否继续讨伐检测",
             "说明已经是第二次了"
