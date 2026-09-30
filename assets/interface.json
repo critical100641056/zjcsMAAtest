@@ -145,10 +145,6 @@
       "entry": "start自动讨伐",
       "description": "自动讨伐，配合定时设置",
       "option": [ "讨伐推送设置" ]      
-    },
-      {
-      "name": "push测试",
-      "entry": "start_push测试"        
     }
 
   ],
@@ -302,7 +298,7 @@
     "讨伐推送设置": {
       "type": "input",
       "label": "讨伐推送设置",
-      "description": "「识别到已击败结束本次，等待8点」命中后，往 WxPusher 推一条消息。三个字段会在运行时替换进该节点的 Webhook 请求体——**节点本身不用在 MPE 里配 action**，override 会自动补上；推完仍照原样等 30 秒再走 next。凭据只存在 MFAA 各自的实例配置里（D:\\Software\\MFAAvalonia\\config\\instances），不进 git 仓库。appToken / UID 留空时请求会失败，但已用 on_error 兜到无副作用的节点，不会把任务判成失败。",
+      "description": "讨伐相关推送。",
       "inputs": [
         {
           "name": "apptoken",
@@ -323,13 +319,22 @@
           "pattern_msg": "UID 应以 UID_ 开头，且只含字母和数字（也可以留空）"
         },
         {
-          "name": "推送内容",
-          "label": "推送内容",
-          "description": "推送正文。想区分是哪台实例，就在这里写实例名，例如「老李：第一次讨伐的 BOSS 已击杀」。",
-          "default": "第一次讨伐的 BOSS 已击杀",
+          "name": "boss击杀等第2次",
+          "label": "boss击杀等第2次",
+          "description": "第一次击杀时推送",
+          "default": "第1次讨伐的BOSS已击杀，等待第2次ing...",
           "pipeline_type": "string",
           "verify": "^[^\"\\\\{}]{0,120}$",
           "pattern_msg": "不能含英文双引号、反斜杠或花括号（会破坏 JSON），120 字以内"
+        },
+        {
+          "name": "Boss未击杀继续进",
+          "label": "Boss未击杀继续进",
+          "description": "第一次未击杀时推送",
+          "default": "第1次回合结束，直接准备打第2次",
+          "pattern_msg": "不能含英文双引号、反斜杠或花括号（会破坏 JSON），120 字以内",
+          "pipeline_type": "string",
+          "verify": "^[^\"\\\\{}]{0,120}$"
         }
       ],
       "pipeline_override": {
@@ -342,15 +347,30 @@
                 "url": "https://wxpusher.zjiecode.com/api/send/message",
                 "method": "POST",
                 "content_type": "application/json",
-                "body": "{\"appToken\":\"{apptoken}\",\"contentType\":1,\"uids\":[\"{uid}\"],\"content\":\"{推送内容}\"}"
+                "body": "{\"appToken\":\"{apptoken}\",\"contentType\":1,\"uids\":[\"{uid}\"],\"content\":\"{boss击杀等第2次}\"}"
               }
             }
-          },
-          "on_error": [ "推送失败_忽略" ]
+          }
         },
-        "推送失败_忽略": {}
+        "识别到挑战则直接挑战第2次": {
+          "action": {
+            "type": "Custom",
+            "param": {
+              "custom_action": "WebhookAction",
+              "custom_action_param": {
+                "url": "https://wxpusher.zjiecode.com/api/send/message",
+                "method": "POST",
+                "content_type": "application/json",
+                "body": "{\"appToken\":\"{apptoken}\",\"contentType\":1,\"uids\":[\"{uid}\"],\"content\":\"{Boss未击杀继续进}\"}"
+              }
+            }
+          }
+        }
       }
     },
+    
+
+
 
 
     "商店刷新次数": {

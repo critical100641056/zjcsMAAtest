@@ -3,17 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790326956880,
+            "lastSyncTime": 1790743231808,
             "isModifiedExternally": false,
             "isDeleted": false,
-            "filePath": "C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_公会讨伐_8.json",
+            "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\task_公会讨伐_8.json",
             "savedViewport": {
-                "x": -700,
-                "y": 3304,
-                "zoom": 0.4
+                "x": -2987,
+                "y": 5031,
+                "zoom": 0.66
             },
             "filename": "task_公会讨伐_8",
-            "version": "v1.10.1"
+            "version": "v2.0.1"
         }
     },
     "$__mpe_external_位置检测与重置_1_task_公会讨伐_8": {
@@ -505,7 +505,7 @@
         }
     },
     "选择节点": {
-        "post_delay": 500,
+        "post_delay": 1500,
         "next": [
             "只捐赠和收菜"
         ],

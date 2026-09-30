@@ -3,49 +3,17 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790561624526,
+            "lastSyncTime": 1790578126778,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\杂项清理.json",
             "savedViewport": {
-                "x": -2428,
-                "y": 2413,
-                "zoom": 0.41
+                "x": -4172,
+                "y": 3413,
+                "zoom": 0.72
             },
             "filename": "杂项清理",
             "version": "v2.0.1"
-        }
-    },
-    "多次下划_副本1": {
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    257,
-                    186,
-                    237,
-                    28
-                ],
-                "end": [
-                    [
-                        249,
-                        1093,
-                        274,
-                        27
-                    ]
-                ]
-            }
-        },
-        "repeat": 5,
-        "repeat_delay": 800,
-        "next": [
-            "送礼物逻辑节点"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 6005,
-                "y": -5564
-            }
         }
     },
     "$__mpe_external_位置检测与重置_1_杂项清理": {
@@ -1130,7 +1098,8 @@
                     216
                 ],
                 "template": [
-                    "小推车.png"
+                    "小推车.png",
+                    "小推车2.png"
                 ]
             }
         },
@@ -1536,6 +1505,38 @@
             "position": {
                 "x": 6702,
                 "y": -5210
+            }
+        }
+    },
+    "多次下划_副本1": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    257,
+                    186,
+                    237,
+                    28
+                ],
+                "end": [
+                    [
+                        249,
+                        1093,
+                        274,
+                        27
+                    ]
+                ]
+            }
+        },
+        "repeat": 5,
+        "repeat_delay": 800,
+        "next": [
+            "送礼物逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6005,
+                "y": -5564
             }
         }
     }

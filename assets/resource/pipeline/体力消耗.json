@@ -1,0 +1,236 @@
+{
+    "$__mpe_config_体力消耗": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "体力消耗",
+            "prefix": "",
+            "savedViewport": {
+                "x": -323,
+                "y": 2099,
+                "zoom": 0.53
+            },
+            "version": "v2.0.1"
+        }
+    },
+    "下箭头": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1704,
+                "y": -3164
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "关闭共享弹窗"
+        ],
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "template": [
+                    "chatclose.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "共享弹窗邀请": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1137,
+                "y": -3374
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "频道目标选择"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "邀请采集"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "关闭共享弹窗": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1707,
+                "y": -2851
+            }
+        },
+        "action": {
+            "param": {
+                "target": [
+                    554,
+                    795,
+                    146,
+                    89
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "寻找大矿_副本1",
+            "结束"
+        ]
+    },
+    "关闭战斗结算界面_副本1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2360,
+                "y": -4135
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    218,
+                    184,
+                    50,
+                    162
+                ]
+            },
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "expected": [
+                    "战斗结束"
+                ],
+                "roi": [
+                    146,
+                    255,
+                    424,
+                    89
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "史莱姆识别_副本1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1758,
+                "y": -4149
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 20000,
+        "recognition": {
+            "param": {
+                "green_mask": true,
+                "template": [
+                    "史莱姆1.png",
+                    "史莱姆2.png",
+                    "史莱姆绿遮罩.png",
+                    "史莱姆遮罩3.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "寻找大矿_副本1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1136,
+                "y": -3720
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "共享弹窗邀请"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "大矿1.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "repeat": 2,
+        "repeat_delay": 6000
+    },
+    "开始战斗_副本1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2040,
+                "y": -4139
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "expected": [
+                    "开始战斗"
+                ]
+            },
+            "type": "OCR"
+        },
+        "timeout": 100000
+    },
+    "新建节点50_副本1": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1706,
+                "y": -3373
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "下箭头"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "发送"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2103,
+                "y": -2817
+            }
+        }
+    },
+    "频道目标选择": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1421,
+                "y": -3376
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "新建节点50_副本1"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "私聊"
+                ]
+            },
+            "type": "OCR"
+        }
+    }
+}

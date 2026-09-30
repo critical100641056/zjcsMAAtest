@@ -3,65 +3,15 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\公会讨伐定时.json",
-            "lastSyncTime": 1790690520426,
+            "lastSyncTime": 1790735603135,
             "coordinateMode": "absolute-v1",
             "savedViewport": {
-                "x": -8072,
-                "y": 5290,
-                "zoom": 0.95
+                "x": -7084,
+                "y": 4775,
+                "zoom": 0.83
             },
             "filename": "公会讨伐定时",
             "version": "v2.0.1"
-        }
-    },
-    "只有8点前打了第二次才可能发生": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    196,
-                    938,
-                    338,
-                    91
-                ],
-                "expected": [
-                    "切回"
-                ]
-            }
-        },
-        "next": [
-            "说明已经是第二次了_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 7731,
-                "y": -4626
-            }
-        }
-    },
-    "说明已经是第二次了_副本1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    210,
-                    15,
-                    278,
-                    72
-                ],
-                "expected": [
-                    "今日剩余讨伐次数：1/2"
-                ]
-            }
-        },
-        "next": [
-            "本次讨伐任务结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 8102,
-                "y": -4622
-            }
         }
     },
     "$__mpe_sticker_便签_公会讨伐定时": {
@@ -74,6 +24,17 @@
             "color": "purple",
             "width": 200,
             "height": 160
+        }
+    },
+    "避免push异常": {
+        "next": [
+            "是否击败逻辑节点"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 9369,
+                "y": -5341
+            }
         }
     },
     "进入公会": {
@@ -406,8 +367,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8103,
-                "y": -5452
+                "x": 8112,
+                "y": -5492
             }
         }
     },
@@ -430,8 +391,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 8113,
-                "y": -5163
+                "x": 8108,
+                "y": -5211
             }
         }
     },
@@ -545,8 +506,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 9065,
-                "y": -5757
+                "x": 9077,
+                "y": -5827
             }
         }
     },
@@ -593,10 +554,63 @@
         "next": [
             "是否击败逻辑节点"
         ],
+        "on_error": [
+            "避免push异常"
+        ],
         "$__mpe_code": {
             "position": {
-                "x": 9070,
-                "y": -5463
+                "x": 9066,
+                "y": -5492
+            }
+        }
+    },
+    "只有8点前打了第二次才可能发生": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    196,
+                    938,
+                    338,
+                    91
+                ],
+                "expected": [
+                    "切回"
+                ]
+            }
+        },
+        "next": [
+            "说明已经是第二次了_副本1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7731,
+                "y": -4626
+            }
+        }
+    },
+    "说明已经是第二次了_副本1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    210,
+                    15,
+                    278,
+                    72
+                ],
+                "expected": [
+                    "今日剩余讨伐次数：1/2"
+                ]
+            }
+        },
+        "next": [
+            "本次讨伐任务结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 8102,
+                "y": -4622
             }
         }
     }
