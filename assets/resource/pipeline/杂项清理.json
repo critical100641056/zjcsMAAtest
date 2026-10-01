@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
-            "lastSyncTime": 1790578126778,
+            "lastSyncTime": 1790743056433,
             "isModifiedExternally": false,
             "isDeleted": false,
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\杂项清理.json",
             "savedViewport": {
-                "x": -4172,
-                "y": 3413,
-                "zoom": 0.72
+                "x": -6626,
+                "y": 5312,
+                "zoom": 1.09
             },
             "filename": "杂项清理",
             "version": "v2.0.1"
@@ -1185,7 +1185,6 @@
                 ]
             }
         },
-        "pre_delay": 1000,
         "action": {
             "type": "Click",
             "param": {
@@ -1197,13 +1196,14 @@
                 ]
             }
         },
+        "post_delay": 1000,
         "next": [
             "一键找回"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 6499,
-                "y": -4723
+                "x": 6519,
+                "y": -4769
             }
         }
     },

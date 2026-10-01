@@ -3,14 +3,14 @@
         "$__mpe_code": {
             "prefix": "",
             "filePath": "\\\\?\\C:\\Users\\10064\\.qclaw\\workspace-zzjc\\zjcsMAAtest\\assets\\resource\\pipeline\\模拟器桌面进游戏.json",
-            "lastSyncTime": 1790688026819,
+            "lastSyncTime": 1790691490459,
             "coordinateMode": "absolute-v1",
             "isModifiedExternally": false,
             "isDeleted": false,
             "savedViewport": {
-                "x": -1936,
-                "y": 2323,
-                "zoom": 0.38
+                "x": -4232,
+                "y": 4766,
+                "zoom": 0.87
             },
             "filename": "模拟器桌面进游戏",
             "version": "v2.0.1"
@@ -123,10 +123,16 @@
     },
     "检测是否在桌面": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
-                "expected": [
-                    "游戏中心"
+                "roi": [
+                    34,
+                    1128,
+                    663,
+                    141
+                ],
+                "template": [
+                    "1.png"
                 ]
             }
         },
@@ -135,8 +141,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5348,
-                "y": -5284
+                "x": 5335,
+                "y": -5199
             }
         }
     },
@@ -145,10 +151,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    42,
+                    34,
                     389,
-                    637,
-                    178
+                    660,
+                    544
                 ],
                 "expected": [
                     "KuiperNova",
